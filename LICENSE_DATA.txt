@@ -1,0 +1,8 @@
+The religion shares in the resources/ directory come from the CIA World Factbook
+("People and Society: Religions"), a US government work in the public domain,
+as archived in factbook/factbook.json (CC0 1.0). About 25 countries have rows
+written by hand for this library (resources/raw/religion_curated.tsv); those
+rows and the grouping of religions are released with the library under the
+MIT License (see LICENSE.MIT). The Pew Research Center's estimates, as
+republished by Our World in Data, were used only to check the shares and are
+not part of this repository. See doc/data.md.

@@ -1,0 +1,1403 @@
+country_code	religion	group	weight	year	basis
+AD	Christian	christian	89.5	2020	factbook
+AD	other	other	8.8	2020	factbook
+AD	unaffiliated	unaffiliated	1.7	2020	factbook
+AE	Buddhist	buddhist	3.2	2020	factbook
+AE	Christian	christian	12.9	2020	factbook
+AE	Hindu	hindu	6.2	2020	factbook
+AE	Muslim	muslim	74.5	2020	factbook
+AE	agnostic	unaffiliated	1.3	2020	factbook
+AE	other	other	1.9	2020	factbook
+AF	Muslim	muslim	99.7	2009	factbook
+AF	other	other	0.15	2009	factbook
+AG	Protestant	christian	68.3	2011	factbook
+AG	Roman Catholic	christian	8.2	2011	factbook
+AG	none	unaffiliated	5.9	2011	factbook
+AG	other	other	12.2	2011	factbook
+AG	unspecified	other	5.5	2011	factbook
+AI	Jehovah's Witness	christian	1.1	2011	factbook
+AI	Protestant	christian	73.2	2011	factbook
+AI	Roman Catholic	christian	6.8	2011	factbook
+AI	none	unaffiliated	4.5	2011	factbook
+AI	other	other	3.2	2011	factbook
+AI	other Christian	christian	10.9	2011	factbook
+AI	unspecified	other	0.3	2011	factbook
+AL	Bektashi	other	2.1	2011	factbook
+AL	Muslim	muslim	56.7	2011	factbook
+AL	Orthodox	christian	6.8	2011	factbook
+AL	Roman Catholic	christian	10	2011	factbook
+AL	atheist	unaffiliated	2.5	2011	factbook
+AL	other	other	5.7	2011	factbook
+AL	unspecified	other	16.2	2011	factbook
+AM	Armenian Apostolic	christian	95.2	2022	factbook
+AM	not stated	other	1.7	2022	factbook
+AO	Protestant	christian	38.1	2014	factbook
+AO	Roman Catholic	christian	41.1	2014	factbook
+AO	none	unaffiliated	12.3	2014	factbook
+AO	other	other	8.6	2014	factbook
+AR	Evangelical	christian	15.3	2019	factbook
+AR	Jehovah's Witness and Church of Jesus Christ	christian	1.4	2019	factbook
+AR	Roman Catholic	christian	62.9	2019	factbook
+AR	none	unaffiliated	18.9	2019	factbook
+AR	other	other	1.2	2019	factbook
+AR	unspecified	other	0.3	2019	factbook
+AS	Christian	christian	98.3	2020	factbook
+AS	other	other	0.5	2020	factbook
+AS	unaffiliated	unaffiliated	0.5	2020	factbook
+AT	Evangelical Christian	christian	3.8	2021	factbook
+AT	Jewish	jewish	0.1	2021	factbook
+AT	Muslim	muslim	8.3	2021	factbook
+AT	Orthodox	christian	4.9	2021	factbook
+AT	Roman Catholic	christian	55.2	2021	factbook
+AT	none	unaffiliated	22.4	2021	factbook
+AT	other	other	5.4	2021	factbook
+AU	Buddhist	buddhist	2.4	2021	factbook
+AU	Hindu	hindu	2.7	2021	factbook
+AU	Muslim	muslim	3.2	2021	factbook
+AU	Orthodox	christian	2.3	2021	factbook
+AU	Protestant	christian	18.1	2021	factbook
+AU	Roman Catholic	christian	20	2021	factbook
+AU	none	unaffiliated	38.4	2021	factbook
+AU	other	other	2.1	2021	factbook
+AU	other Christian	christian	3.5	2021	factbook
+AU	unspecified	other	7.3	2021	factbook
+AW	Jehovah's Witness	christian	1.7	2010	factbook
+AW	Protestant	christian	4.9	2010	factbook
+AW	Roman Catholic	christian	75.3	2010	factbook
+AW	none	unaffiliated	5.5	2010	factbook
+AW	other	other	12	2010	factbook
+AW	unspecified	other	0.5	2010	factbook
+AX	Greek Orthodox	christian	1.1	2022	parent: FI
+AX	Lutheran	christian	66.6	2022	parent: FI
+AX	none	unaffiliated	30.6	2022	parent: FI
+AX	other	other	1.7	2022	parent: FI
+AZ	Christian	christian	2.6	2020	factbook
+AZ	Muslim	muslim	97.3	2020	factbook
+AZ	other	other	0.05	2020	factbook
+AZ	unaffiliated	unaffiliated	0.05	2020	factbook
+BA	Muslim	muslim	50.7	2013	factbook
+BA	Orthodox	christian	30.7	2013	factbook
+BA	Roman Catholic	christian	15.2	2013	factbook
+BA	agnostic	unaffiliated	0.3	2013	factbook
+BA	atheist	unaffiliated	0.8	2013	factbook
+BA	other	other	1.2	2013	factbook
+BA	undeclared/no answer	other	1.1	2013	factbook
+BB	Protestant	christian	66.4	2010	factbook
+BB	Rastafarian	other	1	2010	factbook
+BB	Roman Catholic	christian	3.8	2010	factbook
+BB	none	unaffiliated	20.6	2010	factbook
+BB	other	other	1.5	2010	factbook
+BB	other Christian	christian	5.4	2010	factbook
+BB	unspecified	other	1.2	2010	factbook
+BD	Hindu	hindu	8	2022	factbook
+BD	Muslim	muslim	91	2022	factbook
+BD	other	other	1	2022	factbook
+BE	Muslim	muslim	6.8	2018	factbook
+BE	Protestant	christian	2.3	2018	factbook
+BE	Roman Catholic	christian	57.1	2018	factbook
+BE	atheist	unaffiliated	9.1	2018	factbook
+BE	nonbeliever/agnostic	unaffiliated	20.2	2018	factbook
+BE	other	other	1.7	2018	factbook
+BE	other Christian	christian	2.8	2018	factbook
+BF	Animiste	other	9	2019	factbook
+BF	Muslim	muslim	63.8	2019	factbook
+BF	Protestant	christian	6.2	2019	factbook
+BF	Roman Catholic	christian	20.1	2019	factbook
+BF	none	unaffiliated	0.7	2019	factbook
+BF	other	other	0.2	2019	factbook
+BG	Christian	christian	64.7	2021	factbook
+BG	Muslim	muslim	9.8	2021	factbook
+BG	none	unaffiliated	4.7	2021	factbook
+BG	other	other	0.1	2021	factbook
+BG	unspecified	other	20.7	2021	factbook
+BH	Muslim	muslim	74.2	2020	factbook
+BH	other	other	25.9	2020	factbook
+BI	Christian	christian	93.9	2016	factbook
+BI	Muslim	muslim	3.4	2016	factbook
+BI	none	unaffiliated	1.3	2016	factbook
+BI	other	other	1.3	2016	factbook
+BJ	Muslim	muslim	27.7	2013	factbook
+BJ	Protestant	christian	13.5	2013	factbook
+BJ	Roman Catholic	christian	25.5	2013	factbook
+BJ	Vodoun	other	11.6	2013	factbook
+BJ	none	unaffiliated	5.8	2013	factbook
+BJ	other	other	2.6	2013	factbook
+BJ	other Christian	christian	9.5	2013	factbook
+BJ	other traditional religions	other	2.6	2013	factbook
+BL	Buddhist	buddhist	2	2021	parent: FR
+BL	Jewish	jewish	1	2021	parent: FR
+BL	Muslim	muslim	4	2021	parent: FR
+BL	Orthodox	christian	1	2021	parent: FR
+BL	Protestant	christian	2	2021	parent: FR
+BL	Roman Catholic	christian	47	2021	parent: FR
+BL	none	unaffiliated	33	2021	parent: FR
+BL	other	other	1	2021	parent: FR
+BL	unspecified	other	9	2021	parent: FR
+BM	Jehovah's Witness	christian	1.3	2010	factbook
+BM	Muslim	muslim	1	2010	factbook
+BM	Protestant	christian	46.2	2010	factbook
+BM	Roman Catholic	christian	14.5	2010	factbook
+BM	none	unaffiliated	17.8	2010	factbook
+BM	other	other	3.9	2010	factbook
+BM	other Christian	christian	9.1	2010	factbook
+BM	unspecified	other	6.2	2010	factbook
+BN	Buddhist	buddhist	6.3	2021	factbook
+BN	Christian	christian	6.7	2021	factbook
+BN	Muslim	muslim	82.1	2021	factbook
+BN	other	other	4.9	2021	factbook
+BO	Adventist	christian	2.8	2023	factbook
+BO	Believer	other	0.9	2023	factbook
+BO	Evangelical Baptist	christian	2.1	2023	factbook
+BO	Evangelical Methodist	christian	0.7	2023	factbook
+BO	Evangelical Pentecostal	christian	1.8	2023	factbook
+BO	Protestant	christian	0.3	2023	factbook
+BO	Protestant 19.6%	christian	11.9	2023	factbook
+BO	Roman Catholic	christian	65	2023	factbook
+BO	agnostic	unaffiliated	0.6	2023	factbook
+BO	atheist	unaffiliated	1.7	2023	factbook
+BO	none	unaffiliated	6.1	2023	factbook
+BO	other	other	4.8	2023	factbook
+BO	unspecified	other	1.3	2023	factbook
+BQ	Muslim	muslim	5	2019	parent: NL
+BQ	Protestant	christian	14.8	2019	parent: NL
+BQ	Roman Catholic	christian	20.1	2019	parent: NL
+BQ	none	unaffiliated	54.1	2019	parent: NL
+BQ	other	other	5.9	2019	parent: NL
+BR	Evangelical	christian	26.9	2022	factbook
+BR	Indigenous religions	other	0.06	2022	factbook
+BR	Roman Catholic	christian	56.8	2022	factbook
+BR	Spirtism	other	1.8	2022	factbook
+BR	Umbanda and Candomblé	other	1.1	2022	factbook
+BR	none	unaffiliated	9.3	2022	factbook
+BR	other	other	4	2022	factbook
+BR	undeclared	other	0.2	2022	factbook
+BR	unspecified	other	1.4	2022	factbook
+BS	Protestant	christian	69.9	2010	factbook
+BS	Roman Catholic	christian	12	2010	factbook
+BS	none	unaffiliated	1.9	2010	factbook
+BS	other	other	0.6	2010	factbook
+BS	other Christian	christian	13	2010	factbook
+BS	unspecified	other	2.6	2010	factbook
+BT	Indian- and Nepali-influenced Hinduism	hindu	22.1	2005	factbook
+BT	Lamaistic Buddhist	buddhist	75.3	2005	factbook
+BT	other	other	2.6	2005	factbook
+BV	Church of Norway	christian	67.5	2021	parent: NO
+BV	Muslim	muslim	3.1	2021	parent: NO
+BV	Roman Catholic	christian	3.1	2021	parent: NO
+BV	other	other	2.6	2021	parent: NO
+BV	other Christian	christian	3.8	2021	parent: NO
+BV	unspecified	other	19.9	2021	parent: NO
+BW	Badimo	other	4.1	2011	factbook
+BW	Christian	christian	79.1	2011	factbook
+BW	none	unaffiliated	15.2	2011	factbook
+BW	other	other	1.4	2011	factbook
+BW	unspecified	other	0.3	2011	factbook
+BY	Catholic	christian	7.1	2011	factbook
+BY	Orthodox	christian	48.3	2011	factbook
+BY	non-believers	other	41.1	2011	factbook
+BY	other	other	3.5	2011	factbook
+BZ	Jehovah's Witness	christian	1.7	2010	factbook
+BZ	Protestant	christian	31.5	2010	factbook
+BZ	Roman Catholic	christian	40.1	2010	factbook
+BZ	none	unaffiliated	15.5	2010	factbook
+BZ	other	other	10.5	2010	factbook
+BZ	unspecified	other	0.6	2010	factbook
+CA	Buddhist	buddhist	1	2021	factbook
+CA	Christian	christian	53.3	2021	factbook
+CA	Hindu	hindu	2.3	2021	factbook
+CA	Jewish	jewish	0.9	2021	factbook
+CA	Muslim	muslim	4.9	2021	factbook
+CA	Sikh	other	2.1	2021	factbook
+CA	Traditional	other	0.2	2021	factbook
+CA	none	unaffiliated	34.6	2021	factbook
+CA	other religions and traditional spirituality	other	0.6	2021	factbook
+CC	Anglican	christian	3.5	2016	factbook
+CC	Muslim	muslim	75	2016	factbook
+CC	Roman Catholic	christian	2.2	2016	factbook
+CC	none	unaffiliated	12.9	2016	factbook
+CC	unspecified	other	6.3	2016	factbook
+CD	Kimbanguist	christian	2.8	2014	factbook
+CD	Muslim	muslim	1.3	2014	factbook
+CD	None	unaffiliated	1.3	2014	factbook
+CD	Other	other	1.2	2014	factbook
+CD	Other Christian	christian	36.5	2014	factbook
+CD	Protestant	christian	26.7	2014	factbook
+CD	Roman Catholic	christian	29.9	2014	factbook
+CD	Unspecified	other	0.2	2014	factbook
+CF	Baha'i	other	0.2	2020	factbook
+CF	Muslim	muslim	13.8	2020	factbook
+CF	Protestant	christian	15.7	2020	factbook
+CF	Roman Catholic	christian	34.6	2020	factbook
+CF	agnostic/atheist	unaffiliated	0.7	2020	factbook
+CF	ethnic religionist	other	12	2020	factbook
+CF	other Christian	christian	22.9	2020	factbook
+CG	Awakening Churches/Christian Revival	christian	22.3	2007	factbook
+CG	Kimbanguist	christian	1.5	2007	factbook
+CG	Muslim	muslim	1.6	2007	factbook
+CG	Protestant	christian	19.9	2007	factbook
+CG	Roman Catholic	christian	33.1	2007	factbook
+CG	Salutiste	other	2.2	2007	factbook
+CG	none	unaffiliated	11.3	2007	factbook
+CG	other	other	8.1	2007	factbook
+CH	Muslim	muslim	5.4	2020	factbook
+CH	Protestant	christian	22.5	2020	factbook
+CH	Roman Catholic	christian	34.4	2020	factbook
+CH	none	unaffiliated	29.4	2020	factbook
+CH	other	other	1.5	2020	factbook
+CH	other Christian	christian	5.7	2020	factbook
+CH	unspecified	other	1.1	2020	factbook
+CI	Catholic	christian	17.2	2014	factbook
+CI	Evangelical	christian	11.8	2014	factbook
+CI	Methodist	christian	1.7	2014	factbook
+CI	Muslim	muslim	42.9	2014	factbook
+CI	animist	other	3.6	2014	factbook
+CI	none	unaffiliated	19.1	2014	factbook
+CI	other Christian	christian	3.2	2014	factbook
+CI	other religion	other	0.5	2014	factbook
+CK	Apostolic Church	christian	2.1	2021	factbook
+CK	Church of Jesus Christ	christian	3.9	2021	factbook
+CK	Jehovah's Witness	christian	2.2	2021	factbook
+CK	Protestant	christian	55	2021	factbook
+CK	Roman Catholic	christian	16.7	2021	factbook
+CK	none/unspecified	unaffiliated	15.6	2021	factbook
+CK	other	other	4.5	2021	factbook
+CL	Catholic	christian	57	2024	factbook
+CL	Evangelical or Protestant	christian	16.2	2024	factbook
+CL	none	unaffiliated	25.7	2024	factbook
+CL	other Christians and traditions related to Christ	christian	1.3	2024	factbook
+CM	Muslim	muslim	30.6	2022	factbook
+CM	Protestant	christian	27.1	2022	factbook
+CM	Roman Catholic	christian	33.1	2022	factbook
+CM	animist	other	1.3	2022	factbook
+CM	none	unaffiliated	1.2	2022	factbook
+CM	other	other	0.7	2022	factbook
+CM	other Christian	christian	6.1	2022	factbook
+CN	Buddhist	buddhist	18.2	2021	factbook
+CN	Christian	christian	5.1	2021	factbook
+CN	Folk religion	other	21.9	2021	factbook
+CN	Hindu	hindu	0.05	2021	factbook
+CN	Jewish	jewish	0.05	2021	factbook
+CN	Muslim	muslim	1.8	2021	factbook
+CN	Other	other	0.7	2021	factbook
+CN	Unaffiliated	unaffiliated	52.1	2021	factbook
+CO	Church of Jesus Christ	christian	0.1	2023	factbook
+CO	Jehovah's Witness	christian	0.6	2023	factbook
+CO	Protestant	christian	17.2	2023	factbook
+CO	Roman Catholic	christian	63.6	2023	factbook
+CO	agnostic	unaffiliated	1	2023	factbook
+CO	atheist	unaffiliated	1	2023	factbook
+CO	believer	other	0.2	2023	factbook
+CO	none	unaffiliated	14.2	2023	factbook
+CO	other	other	0.3	2023	factbook
+CO	unspecified	other	1.8	2023	factbook
+CR	Evangelical and Pentecostal	christian	19.8	2021	factbook
+CR	Jehovah's Witness	christian	1.4	2021	factbook
+CR	Roman Catholic	christian	47.5	2021	factbook
+CR	none	unaffiliated	27	2021	factbook
+CR	other	other	3.1	2021	factbook
+CR	other Protestant	christian	1.2	2021	factbook
+CU	Buddhist	buddhist	0.5	2020	factbook
+CU	Christian	christian	58.9	2020	factbook
+CU	Hindu	hindu	0.5	2020	factbook
+CU	Jewish	jewish	0.5	2020	factbook
+CU	Muslim	muslim	0.5	2020	factbook
+CU	folk religion	other	17.6	2020	factbook
+CU	none	unaffiliated	23.2	2020	factbook
+CU	other	other	0.5	2020	factbook
+CV	Christian Rationalism	christian	1.7	2021	factbook
+CV	Church of Jesus Christ	christian	1	2021	factbook
+CV	Jehovah's Witness	christian	1.2	2021	factbook
+CV	Muslim	muslim	1.3	2021	factbook
+CV	Protestant	christian	4	2021	factbook
+CV	Roman Catholic	christian	72.5	2021	factbook
+CV	no response	other	0.4	2021	factbook
+CV	none	unaffiliated	15.6	2021	factbook
+CV	other	other	1.2	2021	factbook
+CV	other Christian	christian	1.3	2021	factbook
+CW	Adventist	christian	3	2011	factbook
+CW	Evangelical	christian	1.9	2011	factbook
+CW	Jehovah's Witness	christian	2	2011	factbook
+CW	Pentecostal	christian	6.6	2011	factbook
+CW	Protestant	christian	3.2	2011	factbook
+CW	Roman Catholic	christian	72.8	2011	factbook
+CW	none	unaffiliated	6	2011	factbook
+CW	other	other	3.8	2011	factbook
+CW	unspecified	other	0.6	2011	factbook
+CX	Buddhist	buddhist	18.3	2016	factbook
+CX	Muslim	muslim	19.4	2016	factbook
+CX	Protestant	christian	6.5	2016	factbook
+CX	Roman Catholic	christian	8.8	2016	factbook
+CX	none	unaffiliated	15.3	2016	factbook
+CX	other	other	0.6	2016	factbook
+CX	other Christian	christian	3.3	2016	factbook
+CX	unspecified	other	27.7	2016	factbook
+CY	Buddhist	buddhist	1	2011	factbook
+CY	Eastern Orthodox Christian	christian	89.1	2011	factbook
+CY	Muslim	muslim	1.8	2011	factbook
+CY	Protestant/Anglican	christian	2	2011	factbook
+CY	Roman Catholic	christian	2.9	2011	factbook
+CY	none/atheist	unaffiliated	0.6	2011	factbook
+CY	other	other	1.4	2011	factbook
+CY	unknown	other	1.1	2011	factbook
+CZ	Roman Catholic	christian	7	2021	factbook
+CZ	believers unaffiliated with a religious society	unaffiliated	9.1	2021	factbook
+CZ	none	unaffiliated	47.8	2021	factbook
+CZ	other believers belonging to a church or religious society	christian	6	2021	factbook
+CZ	unspecified	other	30.1	2021	factbook
+DE	Muslim	muslim	3.7	2022	factbook
+DE	Protestant	christian	22.6	2022	factbook
+DE	Roman Catholic	christian	24.8	2022	factbook
+DE	none	unaffiliated	43.8	2022	factbook
+DE	other	other	5.1	2022	factbook
+DJ	Sunni Muslim	muslim	94		factbook
+DJ	other	other	6		factbook
+DK	Evangelical Lutheran	christian	71.4	2024	factbook
+DK	Muslim	muslim	4.3	2024	factbook
+DK	other/none/unspecified	unaffiliated	24.3	2024	factbook
+DM	Jehovah's Witness	christian	1.3	2011	factbook
+DM	Protestant	christian	29.7	2011	factbook
+DM	Rastafarian	other	1.1	2011	factbook
+DM	Roman Catholic	christian	52.7	2011	factbook
+DM	none	unaffiliated	9.4	2011	factbook
+DM	other	other	4.3	2011	factbook
+DM	unspecified	other	1.4	2011	factbook
+DO	Evangelical	christian	50.2	2023	factbook
+DO	Roman Catholic	christian	30.1	2023	factbook
+DO	none	unaffiliated	18.5	2023	factbook
+DO	unspecified	other	1.2	2023	factbook
+DZ	Muslim	muslim	99	2012	factbook
+DZ	other	other	0.5	2012	factbook
+EC	Jehovah's Witness	christian	1.4	2023	factbook
+EC	Protestant	christian	19	2023	factbook
+EC	Roman Catholic	christian	68.2	2023	factbook
+EC	don't know/no response	other	1	2023	factbook
+EC	none	unaffiliated	8.2	2023	factbook
+EC	other	other	2.3	2023	factbook
+EE	Orthodox	christian	16.5	2021	factbook
+EE	Protestant	christian	9.2	2021	factbook
+EE	none	unaffiliated	58.4	2021	factbook
+EE	other	other	3	2021	factbook
+EE	unspecified	other	12.9	2021	factbook
+EG	Christian	christian	10		factbook
+EG	Muslim	muslim	90		factbook
+EH	Muslim	muslim	99.7	2024	approximate: Factbook has no shares
+EH	Other	other	0.3	2024	approximate: Factbook has no shares
+ER	Eritrean Orthodox	christian	40	2024	approximate: Factbook lists groups without shares
+ER	Other	other	2	2024	approximate: Factbook lists groups without shares
+ER	Protestant	christian	4	2024	approximate: Factbook lists groups without shares
+ER	Roman Catholic	christian	4	2024	approximate: Factbook lists groups without shares
+ER	Sunni Muslim	muslim	50	2024	approximate: Factbook lists groups without shares
+ES	Roman Catholic	christian	58.2	2021	factbook
+ES	agnostic	unaffiliated	10.8	2021	factbook
+ES	atheist	unaffiliated	16.2	2021	factbook
+ES	non-believer	other	10.5	2021	factbook
+ES	other	other	2.7	2021	factbook
+ES	unspecified	other	1.7	2021	factbook
+ET	Catholic	christian	0.7	2016	factbook
+ET	Ethiopian Orthodox	christian	43.8	2016	factbook
+ET	Muslim	muslim	31.3	2016	factbook
+ET	Protestant	christian	22.8	2016	factbook
+ET	other	other	0.8	2016	factbook
+ET	traditional	other	0.6	2016	factbook
+FI	Greek Orthodox	christian	1.1	2022	factbook
+FI	Lutheran	christian	66.6	2022	factbook
+FI	none	unaffiliated	30.6	2022	factbook
+FI	other	other	1.7	2022	factbook
+FJ	Hindu	hindu	27.9	2007	factbook
+FJ	Muslim	muslim	6.3	2007	factbook
+FJ	Protestant	christian	45	2007	factbook
+FJ	Roman Catholic	christian	9.1	2007	factbook
+FJ	Sikh	other	0.3	2007	factbook
+FJ	none	unaffiliated	0.8	2007	factbook
+FJ	other	other	0.3	2007	factbook
+FJ	other Christian	christian	10.4	2007	factbook
+FK	Christian	christian	57.1	2016	factbook
+FK	none	unaffiliated	35.4	2016	factbook
+FK	other	other	1.6	2016	factbook
+FK	unspecified	other	6	2016	factbook
+FM	Church of Jesus Christ	christian	1.5	2010	factbook
+FM	Protestant	christian	41.1	2010	factbook
+FM	Roman Catholic	christian	54.7	2010	factbook
+FM	none	unaffiliated	0.7	2010	factbook
+FM	other	other	1.9	2010	factbook
+FM	unspecified	other	0.1	2010	factbook
+FO	Christian	christian	87	2011	factbook
+FO	none	unaffiliated	3.7	2011	factbook
+FO	other	other	0.9	2011	factbook
+FO	unspecified	other	8.9	2011	factbook
+FR	Buddhist	buddhist	2	2021	factbook
+FR	Jewish	jewish	1	2021	factbook
+FR	Muslim	muslim	4	2021	factbook
+FR	Orthodox	christian	1	2021	factbook
+FR	Protestant	christian	2	2021	factbook
+FR	Roman Catholic	christian	47	2021	factbook
+FR	none	unaffiliated	33	2021	factbook
+FR	other	other	1	2021	factbook
+FR	unspecified	other	9	2021	factbook
+GA	Muslim	muslim	10.8	2019	factbook
+GA	Protestant	christian	46.4	2019	factbook
+GA	Roman Catholic	christian	29.8	2019	factbook
+GA	none	unaffiliated	7	2019	factbook
+GA	other	other	0.9	2019	factbook
+GA	other Christian	christian	4	2019	factbook
+GA	traditional/animist	other	1.1	2019	factbook
+GB	Christian	christian	59.5	2011	factbook
+GB	Hindu	hindu	1.3	2011	factbook
+GB	Muslim	muslim	4.4	2011	factbook
+GB	none	unaffiliated	25.7	2011	factbook
+GB	other	other	2	2011	factbook
+GB	unspecified	other	7.2	2011	factbook
+GD	Jehovah's Witness	christian	1.2	2011	factbook
+GD	Protestant	christian	49.2	2011	factbook
+GD	Rastafarian	other	1.2	2011	factbook
+GD	Roman Catholic	christian	36	2011	factbook
+GD	none	unaffiliated	5.7	2011	factbook
+GD	other	other	5.5	2011	factbook
+GD	unspecified	other	1.3	2011	factbook
+GE	Armenian Apostolic Christian	christian	2.9	2014	factbook
+GE	Eastern Orthodox Christian	christian	83.4	2014	factbook
+GE	Muslim	muslim	10.7	2014	factbook
+GE	none	unaffiliated	0.5	2014	factbook
+GE	other	other	1.2	2014	factbook
+GE	unspecified/no answer	other	1.2	2014	factbook
+GF	Buddhist	buddhist	2	2021	parent: FR
+GF	Jewish	jewish	1	2021	parent: FR
+GF	Muslim	muslim	4	2021	parent: FR
+GF	Orthodox	christian	1	2021	parent: FR
+GF	Protestant	christian	2	2021	parent: FR
+GF	Roman Catholic	christian	47	2021	parent: FR
+GF	none	unaffiliated	33	2021	parent: FR
+GF	other	other	1	2021	parent: FR
+GF	unspecified	other	9	2021	parent: FR
+GG	None	unaffiliated	40	2021	approximate: Factbook has no shares
+GG	Other	other	5	2021	approximate: Factbook has no shares
+GG	Protestant	christian	45	2021	approximate: Factbook has no shares
+GG	Roman Catholic	christian	10	2021	approximate: Factbook has no shares
+GH	Christian	christian	71.3	2021	factbook
+GH	Muslim	muslim	19.9	2021	factbook
+GH	none	unaffiliated	1.1	2021	factbook
+GH	other	other	4.5	2021	factbook
+GH	traditionalist	other	3.2	2021	factbook
+GI	Church of England	christian	7.7	2012	factbook
+GI	Hindu	hindu	2	2012	factbook
+GI	Jewish	jewish	2.4	2012	factbook
+GI	Muslim	muslim	3.6	2012	factbook
+GI	Roman Catholic	christian	72.1	2012	factbook
+GI	none	unaffiliated	7.1	2012	factbook
+GI	other	other	1.1	2012	factbook
+GI	other Christian	christian	3.8	2012	factbook
+GI	unspecified	other	0.1	2012	factbook
+GL	Evangelical Lutheran	christian	96	2024	approximate: Factbook has no shares
+GL	Traditional Inuit spiritual beliefs	other	4	2024	approximate: Factbook has no shares
+GM	Christian	christian	3.5	2019	factbook
+GM	Muslim	muslim	96.4	2019	factbook
+GM	other or none	unaffiliated	0.1	2019	factbook
+GN	Christian	christian	13.4	2018	factbook
+GN	Muslim	muslim	85.2	2018	factbook
+GN	animist	other	0.2	2018	factbook
+GN	none	unaffiliated	1.2	2018	factbook
+GP	Buddhist	buddhist	2	2021	parent: FR
+GP	Jewish	jewish	1	2021	parent: FR
+GP	Muslim	muslim	4	2021	parent: FR
+GP	Orthodox	christian	1	2021	parent: FR
+GP	Protestant	christian	2	2021	parent: FR
+GP	Roman Catholic	christian	47	2021	parent: FR
+GP	none	unaffiliated	33	2021	parent: FR
+GP	other	other	1	2021	parent: FR
+GP	unspecified	other	9	2021	parent: FR
+GQ	Muslim	muslim	2	2015	factbook
+GQ	Protestant	christian	5	2015	factbook
+GQ	Roman Catholic	christian	88	2015	factbook
+GQ	other	other	5	2015	factbook
+GR	Greek Orthodox	christian	85.5	2015	factbook
+GR	Muslim	muslim	2	2015	factbook
+GR	none	unaffiliated	9.5	2015	factbook
+GR	other	other	3	2015	factbook
+GR	unspecified	other	1	2015	factbook
+GS	Christian	christian	59.5	2011	parent: GB
+GS	Hindu	hindu	1.3	2011	parent: GB
+GS	Muslim	muslim	4.4	2011	parent: GB
+GS	none	unaffiliated	25.7	2011	parent: GB
+GS	other	other	2	2011	parent: GB
+GS	unspecified	other	7.2	2011	parent: GB
+GT	Evangelical	christian	45.7	2023	factbook
+GT	Roman Catholic	christian	42.4	2023	factbook
+GT	none	unaffiliated	11	2023	factbook
+GT	unspecified	other	0.9	2023	factbook
+GU	Buddhist	buddhist	1.1	2020	factbook
+GU	Christian	christian	94.2	2020	factbook
+GU	folk religions	other	1.5	2020	factbook
+GU	other	other	1.6	2020	factbook
+GU	unaffiliated	unaffiliated	1.7	2020	factbook
+GW	Christian	christian	18.9	2020	factbook
+GW	Muslim	muslim	46.1	2020	factbook
+GW	folk religions	other	30.6	2020	factbook
+GW	other or unaffiliated	unaffiliated	4.4	2020	factbook
+GY	Hindu	hindu	24.8	2012	factbook
+GY	Jehovah's Witness	christian	1.3	2012	factbook
+GY	Muslim	muslim	6.8	2012	factbook
+GY	Protestant	christian	34.8	2012	factbook
+GY	Rastafarian	other	0.5	2012	factbook
+GY	Roman Catholic	christian	7.1	2012	factbook
+GY	none	unaffiliated	3.1	2012	factbook
+GY	other	other	0.9	2012	factbook
+GY	other Christian	christian	20.8	2012	factbook
+HK	Buddhist or Taoist	buddhist	27.9	2016	factbook
+HK	Hindu	hindu	1.4	2016	factbook
+HK	Muslim	muslim	4.2	2016	factbook
+HK	Protestant	christian	6.7	2016	factbook
+HK	Roman Catholic	christian	5.3	2016	factbook
+HK	Sikh	other	0.2	2016	factbook
+HK	other or none	unaffiliated	54.3	2016	factbook
+HM	Buddhist	buddhist	2.4	2021	parent: AU
+HM	Hindu	hindu	2.7	2021	parent: AU
+HM	Muslim	muslim	3.2	2021	parent: AU
+HM	Orthodox	christian	2.3	2021	parent: AU
+HM	Protestant	christian	18.1	2021	parent: AU
+HM	Roman Catholic	christian	20	2021	parent: AU
+HM	none	unaffiliated	38.4	2021	parent: AU
+HM	other	other	2.1	2021	parent: AU
+HM	other Christian	christian	3.5	2021	parent: AU
+HM	unspecified	other	7.3	2021	parent: AU
+HN	Evangelical	christian	55	2023	factbook
+HN	Roman Catholic	christian	33.4	2023	factbook
+HN	none	unaffiliated	10.1	2023	factbook
+HN	unspecified	other	1.5	2023	factbook
+HR	Muslim	muslim	1.3	2021	factbook
+HR	Orthodox	christian	3.3	2021	factbook
+HR	Protestant	christian	0.3	2021	factbook
+HR	Roman Catholic	christian	79	2021	factbook
+HR	agnostic	unaffiliated	1.7	2021	factbook
+HR	none or atheist	unaffiliated	4.7	2021	factbook
+HR	other	other	1.1	2021	factbook
+HR	other Christian	christian	4.8	2021	factbook
+HR	unspecified	other	3.9	2021	factbook
+HT	Catholic	christian	55	2018	factbook
+HT	Protestant	christian	29	2018	factbook
+HT	Vodou	other	2.1	2018	factbook
+HT	none	unaffiliated	10	2018	factbook
+HT	other	other	4.6	2018	factbook
+HU	Calvinist	other	9.8	2022	factbook
+HU	Catholic	christian	30.1	2022	factbook
+HU	Lutheran	christian	1.8	2022	factbook
+HU	no answer	other	40.1	2022	factbook
+HU	none	unaffiliated	16.1	2022	factbook
+HU	other	other	0.4	2022	factbook
+HU	other Christian	christian	1.6	2022	factbook
+ID	Hindu	hindu	1.7	2022	factbook
+ID	Muslim	muslim	87.4	2022	factbook
+ID	Protestant	christian	7.5	2022	factbook
+ID	Roman Catholic	christian	3.1	2022	factbook
+ID	other	other	0.8	2022	factbook
+IE	Muslim	muslim	1.6	2022	factbook
+IE	Orthodox	christian	2	2022	factbook
+IE	Protestant	christian	3.7	2022	factbook
+IE	Roman Catholic	christian	69.2	2022	factbook
+IE	agnostic/atheist	unaffiliated	0.1	2022	factbook
+IE	none	unaffiliated	14.5	2022	factbook
+IE	other	other	1.4	2022	factbook
+IE	other Christian	christian	0.9	2022	factbook
+IE	unspecified	other	6.7	2022	factbook
+IL	Christian	christian	1.9	2022	factbook
+IL	Druze	other	1.6	2022	factbook
+IL	Jewish	jewish	73.5	2022	factbook
+IL	Muslim	muslim	18.1	2022	factbook
+IL	other	other	4.9	2022	factbook
+IM	Buddhist	buddhist	0.5	2021	factbook
+IM	Christian	christian	54.7	2021	factbook
+IM	Hindu	hindu	0.4	2021	factbook
+IM	Jewish	jewish	0.2	2021	factbook
+IM	Muslim	muslim	0.5	2021	factbook
+IM	none	unaffiliated	43.8	2021	factbook
+IN	Christian	christian	2.3	2011	factbook
+IN	Hindu	hindu	79.8	2011	factbook
+IN	Muslim	muslim	14.2	2011	factbook
+IN	Sikh	other	1.7	2011	factbook
+IN	other and unspecified	other	2	2011	factbook
+IO	Christian	christian	59.5	2011	parent: GB
+IO	Hindu	hindu	1.3	2011	parent: GB
+IO	Muslim	muslim	4.4	2011	parent: GB
+IO	none	unaffiliated	25.7	2011	parent: GB
+IO	other	other	2	2011	parent: GB
+IO	unspecified	other	7.2	2011	parent: GB
+IQ	Christian	christian	1	2015	factbook
+IQ	Muslim	muslim	96.5	2015	factbook
+IQ	other	other	2.5	2015	factbook
+IR	Baha'i	other	0.3	2020	factbook
+IR	Christian	christian	0.7	2020	factbook
+IR	Muslim	muslim	98.5	2020	factbook
+IR	agnostic	unaffiliated	0.3	2020	factbook
+IR	other	other	0.2	2020	factbook
+IS	Evangelical Lutheran Church of Iceland	christian	58.6	2024	factbook
+IS	Icelandic Ethical Humanist Association	other	1.4	2024	factbook
+IS	Independent Congregation of Hafnarfjordur	other	1.9	2024	factbook
+IS	Independent Congregation of Reykjavik	other	2.6	2024	factbook
+IS	Roman Catholic	christian	3.8	2024	factbook
+IS	none	unaffiliated	7.7	2024	factbook
+IS	other  or unspecified	other	18.7	2024	factbook
+IS	pagan worship	other	1.5	2024	factbook
+IT	Christian	christian	80.8	2020	factbook
+IT	Muslim	muslim	4.9	2020	factbook
+IT	other	other	0.9	2020	factbook
+IT	unaffiliated	unaffiliated	13.4	2020	factbook
+JE	Baha'i	other	0.3	2020	factbook
+JE	Christian	christian	85.2	2020	factbook
+JE	Hindu	hindu	0.1	2020	factbook
+JE	Jewish	jewish	0.1	2020	factbook
+JE	Muslim	muslim	0.1	2020	factbook
+JE	agnostic	unaffiliated	13.1	2020	factbook
+JE	atheist	unaffiliated	1.1	2020	factbook
+JM	Jehovah's Witness	christian	1.9	2011	factbook
+JM	Protestant	christian	64.8	2011	factbook
+JM	Rastafarian	other	1.1	2011	factbook
+JM	Roman Catholic	christian	2.2	2011	factbook
+JM	none	unaffiliated	21.3	2011	factbook
+JM	other	other	6.5	2011	factbook
+JM	unspecified	other	2.3	2011	factbook
+JO	Buddhist	buddhist	0.4	2020	factbook
+JO	Christian	christian	2.1	2020	factbook
+JO	Hindu	hindu	0.1	2020	factbook
+JO	Jewish	jewish	0.05	2020	factbook
+JO	Muslim	muslim	97.1	2020	factbook
+JO	folk	other	0.05	2020	factbook
+JO	other	other	0.05	2020	factbook
+JO	unaffiliated	unaffiliated	0.05	2020	factbook
+JP	Buddhism	buddhist	46.4	2021	factbook
+JP	Christianity	christian	1.1	2021	factbook
+JP	Shintoism	other	48.6	2021	factbook
+JP	other	other	4	2021	factbook
+KE	Christian	christian	85.5	2019	factbook
+KE	Muslim	muslim	10.9	2019	factbook
+KE	don't know/no answer	other	0.2	2019	factbook
+KE	none	unaffiliated	1.6	2019	factbook
+KE	other	other	1.8	2019	factbook
+KG	Christian	christian	7	2017	factbook
+KG	Muslim	muslim	90	2017	factbook
+KG	other	other	3	2017	factbook
+KH	Buddhist	buddhist	97.1	2019	factbook
+KH	Christian	christian	0.3	2019	factbook
+KH	Muslim	muslim	2	2019	factbook
+KH	other	other	0.5	2019	factbook
+KI	Baha'i	other	2.1	2020	factbook
+KI	Church of Jesus Christ	christian	5.6	2020	factbook
+KI	Kiribati Protestant Church	christian	8.4	2020	factbook
+KI	Kiribati Uniting Church	christian	21.2	2020	factbook
+KI	Roman Catholic	christian	58.9	2020	factbook
+KI	Seventh Day Adventist	christian	2.1	2020	factbook
+KI	other	other	1.7	2020	factbook
+KM	Christian	christian	0.6	2020	factbook
+KM	Muslim	muslim	98.1	2020	factbook
+KM	ethnic religionist	other	1.1	2020	factbook
+KM	other	other	0.3	2020	factbook
+KN	None	unaffiliated	15	2024	approximate: Factbook has no shares
+KN	Other	other	8	2024	approximate: Factbook has no shares
+KN	Protestant	christian	70	2024	approximate: Factbook has no shares
+KN	Roman Catholic	christian	7	2024	approximate: Factbook has no shares
+KP	Buddhist	buddhist	4.5	2010	approximate: Factbook has no shares
+KP	Chondogyo	other	13.5	2010	approximate: Factbook has no shares
+KP	Christian	christian	1.7	2010	approximate: Factbook has no shares
+KP	None	unaffiliated	64.3	2010	approximate: Factbook has no shares
+KP	Shamanism	other	16	2010	approximate: Factbook has no shares
+KR	Buddhist	buddhist	16	2021	factbook
+KR	Catholic	christian	6	2021	factbook
+KR	Protestant	christian	17	2021	factbook
+KR	none	unaffiliated	60	2021	factbook
+KW	Christian	christian	18.2	2013	factbook
+KW	Muslim	muslim	74.6	2013	factbook
+KW	other and unspecified	other	7.2	2013	factbook
+KY	Hindu	hindu	1.7	2021	factbook
+KY	Jehovah's Witness	christian	0.9	2021	factbook
+KY	Protestant	christian	60.8	2021	factbook
+KY	Roman Catholic	christian	13.6	2021	factbook
+KY	none	unaffiliated	16.7	2021	factbook
+KY	other	other	4.8	2021	factbook
+KY	unspecified	other	1.4	2021	factbook
+KZ	Buddhism	buddhist	0.1	2021	factbook
+KZ	Christian	christian	17.2	2021	factbook
+KZ	Muslim	muslim	69.3	2021	factbook
+KZ	non-believers	other	2.3	2021	factbook
+KZ	other	other	0.1	2021	factbook
+KZ	unspecified	other	11	2021	factbook
+LA	Buddhist	buddhist	64.7	2015	factbook
+LA	Christian	christian	1.7	2015	factbook
+LA	none	unaffiliated	31.4	2015	factbook
+LA	other/not stated	other	2.1	2015	factbook
+LB	Christian	christian	32.4	2020	factbook
+LB	Druze	other	4.5	2020	factbook
+LB	Shia Muslim	muslim	31.2	2020	factbook
+LB	Sunni Muslim	muslim	31.9	2020	factbook
+LC	Protestant	christian	25.5	2010	factbook
+LC	Rastafarian	other	1.9	2010	factbook
+LC	Roman Catholic	christian	61.5	2010	factbook
+LC	none	unaffiliated	5.9	2010	factbook
+LC	other	other	0.4	2010	factbook
+LC	other Christian	christian	3.4	2010	factbook
+LC	unspecified	other	1.4	2010	factbook
+LI	Christian Orthodox	christian	1.3	2015	factbook
+LI	Lutheran	christian	1.2	2015	factbook
+LI	Muslim	muslim	5.9	2015	factbook
+LI	Protestant Reformed	christian	6.3	2015	factbook
+LI	Roman Catholic	christian	73.4	2015	factbook
+LI	none	unaffiliated	7	2015	factbook
+LI	other	other	0.8	2015	factbook
+LI	other Christian	christian	0.3	2015	factbook
+LI	other Protestant	christian	0.7	2015	factbook
+LI	unspecified	other	3.3	2015	factbook
+LK	Buddhist	buddhist	70.2	2012	factbook
+LK	Hindu	hindu	12.6	2012	factbook
+LK	Muslim	muslim	9.7	2012	factbook
+LK	Roman Catholic	christian	6.1	2012	factbook
+LK	other	other	0.05	2012	factbook
+LK	other Christian	christian	1.3	2012	factbook
+LR	Christian	christian	84.9	2022	factbook
+LR	Muslim	muslim	12	2022	factbook
+LR	Traditional	other	0.5	2022	factbook
+LR	none	unaffiliated	2.6	2022	factbook
+LR	other	other	0.1	2022	factbook
+LS	Protestant	christian	47.8	2014	factbook
+LS	Roman Catholic	christian	39.3	2014	factbook
+LS	non-Christian	christian	1.4	2014	factbook
+LS	none	unaffiliated	2.3	2014	factbook
+LS	other Christian	christian	9.1	2014	factbook
+LT	Evangelical Lutheran	christian	0.6	2021	factbook
+LT	Evangelical Reformist	christian	0.2	2021	factbook
+LT	Old Believer	other	0.6	2021	factbook
+LT	Roman Catholic	christian	74.2	2021	factbook
+LT	Russian Orthodox	christian	3.7	2021	factbook
+LT	none	unaffiliated	6.1	2021	factbook
+LT	other	other	0.9	2021	factbook
+LT	unspecified	other	13.7	2021	factbook
+LU	Christian	christian	70.6	2020	factbook
+LU	Muslim	muslim	2.3	2020	factbook
+LU	other	other	0.4	2020	factbook
+LU	unaffiliated	unaffiliated	26.7	2020	factbook
+LV	Lutheran	christian	36.2	2017	factbook
+LV	Orthodox	christian	19.1	2017	factbook
+LV	Roman Catholic	christian	19.5	2017	factbook
+LV	other	other	0.1	2017	factbook
+LV	other Christian	christian	1.6	2017	factbook
+LV	unspecified/none	unaffiliated	23.5	2017	factbook
+LY	Buddhist	buddhist	0.5	2020	factbook
+LY	Christian	christian	2.7	2020	factbook
+LY	Hindu	hindu	0.5	2020	factbook
+LY	Jewish	jewish	0.5	2020	factbook
+LY	Muslim	muslim	96.6	2020	factbook
+LY	folk religion	other	0.5	2020	factbook
+LY	other	other	0.5	2020	factbook
+LY	unaffiliated	unaffiliated	0.5	2020	factbook
+MA	Muslim	muslim	99	2020	factbook
+MA	other	other	1	2020	factbook
+MC	Roman Catholic	christian	90		factbook
+MC	other	other	10		factbook
+MD	Orthodox	christian	90.1	2014	factbook
+MD	agnostic	unaffiliated	0.05	2014	factbook
+MD	atheist	unaffiliated	0.2	2014	factbook
+MD	other	other	0.1	2014	factbook
+MD	other Christian	christian	2.6	2014	factbook
+MD	unspecified	other	6.9	2014	factbook
+ME	Catholic	christian	3.4	2011	factbook
+ME	Muslim	muslim	19.1	2011	factbook
+ME	Orthodox	christian	72.1	2011	factbook
+ME	atheist	unaffiliated	1.2	2011	factbook
+ME	other	other	1.5	2011	factbook
+ME	unspecified	other	2.6	2011	factbook
+MF	Hindu	hindu	3	2024	approximate: Factbook has no shares
+MF	Jehovah's Witness	christian	4	2024	approximate: Factbook has no shares
+MF	Other	other	5	2024	approximate: Factbook has no shares
+MF	Protestant	christian	16	2024	approximate: Factbook has no shares
+MF	Roman Catholic	christian	72	2024	approximate: Factbook has no shares
+MG	Church of Jesus Christ in Madagascar/Malagasy Lutheran Church/Anglican Church	christian	34	2021	factbook
+MG	Muslim	muslim	1.4	2021	factbook
+MG	Roman Catholic	christian	32.3	2021	factbook
+MG	none	unaffiliated	21.9	2021	factbook
+MG	other	other	0.6	2021	factbook
+MG	other Christian	christian	8.1	2021	factbook
+MG	traditional/Animist	other	1.7	2021	factbook
+MH	Church of Jesus Christ	christian	5.7	2021	factbook
+MH	Jehovah's Witness	christian	1.3	2021	factbook
+MH	Protestant	christian	79.3	2021	factbook
+MH	Roman Catholic	christian	9.3	2021	factbook
+MH	none	unaffiliated	1.1	2021	factbook
+MH	other	other	3.3	2021	factbook
+MK	Christian	christian	13.2	2021	factbook
+MK	Islam	muslim	32.2	2021	factbook
+MK	Orthodox	christian	46.1	2021	factbook
+MK	Other	other	7.2	2021	factbook
+ML	Christian	christian	2.8	2018	factbook
+ML	Muslim	muslim	93.9	2018	factbook
+ML	animist	other	0.7	2018	factbook
+ML	none	unaffiliated	2.5	2018	factbook
+MM	Animist	other	0.8	2014	factbook
+MM	Buddhist	buddhist	87.9	2014	factbook
+MM	Christian	christian	6.2	2014	factbook
+MM	Hindu	hindu	0.5	2014	factbook
+MM	Muslim	muslim	4.3	2014	factbook
+MM	none	unaffiliated	0.1	2014	factbook
+MM	other	other	0.2	2014	factbook
+MN	Buddhist	buddhist	51.8	2020	factbook
+MN	Christian	christian	1.3	2020	factbook
+MN	Muslim	muslim	3.2	2020	factbook
+MN	Other	other	0.6	2020	factbook
+MN	Shaman	other	2.5	2020	factbook
+MN	no religion	unaffiliated	40.6	2020	factbook
+MO	Buddhist	buddhist	17.3	2020	factbook
+MO	Christian	christian	7.2	2020	factbook
+MO	folk religion	other	58.9	2020	factbook
+MO	none	unaffiliated	15.4	2020	factbook
+MO	other	other	1.2	2020	factbook
+MP	Buddhist	buddhist	6	2024	approximate: Factbook has no shares
+MP	Folk religion	other	4	2024	approximate: Factbook has no shares
+MP	None	unaffiliated	10	2024	approximate: Factbook has no shares
+MP	Protestant	christian	20	2024	approximate: Factbook has no shares
+MP	Roman Catholic	christian	60	2024	approximate: Factbook has no shares
+MQ	Buddhist	buddhist	2	2021	parent: FR
+MQ	Jewish	jewish	1	2021	parent: FR
+MQ	Muslim	muslim	4	2021	parent: FR
+MQ	Orthodox	christian	1	2021	parent: FR
+MQ	Protestant	christian	2	2021	parent: FR
+MQ	Roman Catholic	christian	47	2021	parent: FR
+MQ	none	unaffiliated	33	2021	parent: FR
+MQ	other	other	1	2021	parent: FR
+MQ	unspecified	other	9	2021	parent: FR
+MR	Muslim	muslim	100		factbook
+MS	Hindu	hindu	1.2	2018	factbook
+MS	Jehovah's Witness	christian	1	2018	factbook
+MS	Muslim	muslim	0.4	2018	factbook
+MS	Protestant	christian	71.4	2018	factbook
+MS	Rastafarian	other	1.4	2018	factbook
+MS	Roman Catholic	christian	11.4	2018	factbook
+MS	none	unaffiliated	7.9	2018	factbook
+MS	other/not stated	other	5.1	2018	factbook
+MT	Roman Catholic  more than	christian	90	2006	factbook
+MU	Hindu	hindu	48.5	2011	factbook
+MU	Muslim	muslim	17.3	2011	factbook
+MU	Roman Catholic	christian	26.3	2011	factbook
+MU	none	unaffiliated	0.7	2011	factbook
+MU	other	other	0.6	2011	factbook
+MU	other Christian	christian	6.4	2011	factbook
+MU	unspecified	other	0.1	2011	factbook
+MV	Sunni Muslim	muslim	100	2024	Factbook (official religion; no shares)
+MW	Muslim	muslim	13.8	2018	factbook
+MW	Protestant	christian	33.5	2018	factbook
+MW	Roman Catholic	christian	17.2	2018	factbook
+MW	none	unaffiliated	2.1	2018	factbook
+MW	other	other	5.6	2018	factbook
+MW	other Christian	christian	26.6	2018	factbook
+MW	traditionalist	other	1.1	2018	factbook
+MX	Catholic	christian	77.7	2020	factbook
+MX	Jehovah Witness	christian	1.2	2020	factbook
+MX	no religion	unaffiliated	10.6	2020	factbook
+MX	other Evangelical Churches	christian	7.5	2020	factbook
+MY	Buddhist	buddhist	18.7	2020	factbook
+MY	Christian	christian	9.1	2020	factbook
+MY	Hindu	hindu	6.1	2020	factbook
+MY	Muslim	muslim	63.5	2020	factbook
+MY	none/unspecified	unaffiliated	1.8	2020	factbook
+MY	other	other	0.9	2020	factbook
+MZ	Anglican	christian	1.7	2017	factbook
+MZ	Catholic	christian	27.3	2017	factbook
+MZ	Islam	muslim	19.1	2017	factbook
+MZ	Pentecostal	christian	16.7	2017	factbook
+MZ	Saio/Zione	other	16.3	2017	factbook
+MZ	no religion	unaffiliated	13.5	2017	factbook
+MZ	other	other	4.3	2017	factbook
+MZ	unknown	other	1.2	2017	factbook
+NA	Christian	christian	97.5	2020	factbook
+NA	other	other	0.6	2020	factbook
+NA	unaffiliated	unaffiliated	1.9	2020	factbook
+NC	Christian	christian	85.2	2020	factbook
+NC	Muslim	muslim	2.8	2020	factbook
+NC	other	other	1.6	2020	factbook
+NC	unaffiliated	unaffiliated	10.4	2020	factbook
+NE	Christian	christian	0.3	2020	factbook
+NE	Muslim	muslim	95.5	2020	factbook
+NE	agnostics and other	unaffiliated	0.1	2020	factbook
+NE	ethnic religionist	other	4.1	2020	factbook
+NF	Protestant	christian	46.8	2016	factbook
+NF	Roman Catholic	christian	12.6	2016	factbook
+NF	none	unaffiliated	26.7	2016	factbook
+NF	other	other	1.4	2016	factbook
+NF	other Christian	christian	2.9	2016	factbook
+NF	unspecified	other	9.5	2016	factbook
+NG	Muslim	muslim	53.5	2018	factbook
+NG	Roman Catholic	christian	10.6	2018	factbook
+NG	other	other	0.6	2018	factbook
+NG	other Christian	christian	35.3	2018	factbook
+NI	Protestant	christian	38.7	2020	factbook
+NI	Roman Catholic	christian	44.9	2020	factbook
+NI	agnostic or atheist	unaffiliated	0.4	2020	factbook
+NI	believer but not belonging to a church	christian	1	2020	factbook
+NI	none	unaffiliated	13.7	2020	factbook
+NI	other	other	1.2	2020	factbook
+NI	unspecified	other	0.2	2020	factbook
+NL	Muslim	muslim	5	2019	factbook
+NL	Protestant	christian	14.8	2019	factbook
+NL	Roman Catholic	christian	20.1	2019	factbook
+NL	none	unaffiliated	54.1	2019	factbook
+NL	other	other	5.9	2019	factbook
+NO	Church of Norway	christian	67.5	2021	factbook
+NO	Muslim	muslim	3.1	2021	factbook
+NO	Roman Catholic	christian	3.1	2021	factbook
+NO	other	other	2.6	2021	factbook
+NO	other Christian	christian	3.8	2021	factbook
+NO	unspecified	other	19.9	2021	factbook
+NP	Buddhist	buddhist	8.2	2021	factbook
+NP	Christian	christian	1.8	2021	factbook
+NP	Hindu	hindu	81.2	2021	factbook
+NP	Kirat	other	3.2	2021	factbook
+NP	Muslim	muslim	5.1	2021	factbook
+NR	Protestant	christian	60.4	2021	factbook
+NR	Roman Catholic	christian	33.9	2021	factbook
+NR	no answer	other	0.3	2021	factbook
+NR	none	unaffiliated	1.3	2021	factbook
+NR	other	other	4.2	2021	factbook
+NU	Ekalesia Niue	other	61.7	2017	factbook
+NU	Jehovah's Witnesses	christian	2.7	2017	factbook
+NU	Latter Day Saints	other	8.7	2017	factbook
+NU	Roman Catholic	christian	8.4	2017	factbook
+NU	Seventh Day Adventist	christian	1.4	2017	factbook
+NU	none	unaffiliated	3.7	2017	factbook
+NU	not stated	other	5.1	2017	factbook
+NU	other	other	8.2	2017	factbook
+NZ	Buddhist	buddhist	1.1	2018	factbook
+NZ	Christian	christian	37.3	2018	factbook
+NZ	Hindu	hindu	2.7	2018	factbook
+NZ	Maori	other	1.3	2018	factbook
+NZ	Muslim	muslim	1.3	2018	factbook
+NZ	no religion	unaffiliated	48.6	2018	factbook
+NZ	objected to answering	other	6.7	2018	factbook
+NZ	other religion	other	1.6	2018	factbook
+OM	Christian	christian	6.4	2020	factbook
+OM	Hindu	hindu	5.7	2020	factbook
+OM	Muslim	muslim	85.9	2020	factbook
+OM	other and unaffiliated	unaffiliated	2	2020	factbook
+PA	Evangelical	christian	55	2023	factbook
+PA	Roman Catholic	christian	33.4	2023	factbook
+PA	none	unaffiliated	10.1	2023	factbook
+PA	unspecified	other	1.5	2023	factbook
+PE	Catholic	christian	76	2017	factbook
+PE	Evangelical Christian	christian	15.7	2017	factbook
+PE	no religion	unaffiliated	5.1	2017	factbook
+PE	other religions	other	3.2	2017	factbook
+PF	Protestant	christian	54		factbook
+PF	Roman Catholic	christian	30		factbook
+PF	no religion	unaffiliated	6		factbook
+PF	other	other	10		factbook
+PG	Protestant	christian	64.3	2011	factbook
+PG	Roman Catholic	christian	26	2011	factbook
+PG	non-Christian	christian	1.4	2011	factbook
+PG	other Christian	christian	5.3	2011	factbook
+PG	unspecified	other	3.1	2011	factbook
+PH	Iglesia ni Cristo	other	2.6	2020	factbook
+PH	Muslim	muslim	6.4	2020	factbook
+PH	Roman Catholic	christian	78.8	2020	factbook
+PH	none/unspecified	unaffiliated	0.05	2020	factbook
+PH	other	other	8.2	2020	factbook
+PH	other Christian	christian	3.9	2020	factbook
+PK	Christian	christian	1.4	2020	factbook
+PK	Hindu	hindu	1.6	2020	factbook
+PK	Muslim	muslim	96.4	2020	factbook
+PL	Roman Catholic	christian	70.7	2021	factbook
+PL	no religion	unaffiliated	6.9	2021	factbook
+PL	refused to answer	other	20.9	2021	factbook
+PM	Roman Catholic	christian	99		factbook
+PM	other	other	1		factbook
+PN	Seventh Day Adventist	christian	100		factbook
+PR	Protestant	christian	33	2014	factbook
+PR	Roman Catholic	christian	56	2014	factbook
+PR	atheist	unaffiliated	1	2014	factbook
+PR	none	unaffiliated	7	2014	factbook
+PR	other	other	2	2014	factbook
+PS	Christian	christian	1.3	2012	factbook, West Bank and Gaza combined by population (3.1M and 2.1M)
+PS	Jewish	jewish	7.7	2012	factbook, West Bank and Gaza combined by population (3.1M and 2.1M)
+PS	Muslim	muslim	89	2012	factbook, West Bank and Gaza combined by population (3.1M and 2.1M)
+PS	Other	other	2	2012	factbook, West Bank and Gaza combined by population (3.1M and 2.1M)
+PT	Catholic	christian	68.1	2021	factbook
+PT	Protestant	christian	1.8	2021	factbook
+PT	no religion	unaffiliated	12	2021	factbook
+PT	no response	other	2.2	2021	factbook
+PT	not applicable	other	12.9	2021	factbook
+PT	other	other	1	2021	factbook
+PW	Modekngei	other	5.1	2020	factbook
+PW	Muslim	muslim	4.9	2020	factbook
+PW	Protestant	christian	30.9	2020	factbook
+PW	Roman Catholic	christian	46.9	2020	factbook
+PW	other	other	12.3	2020	factbook
+PY	Adventist	christian	0.05	2023	factbook
+PY	Believer	other	5.7	2023	factbook
+PY	Evangelical Pentecostal	christian	0.05	2023	factbook
+PY	Protestant	christian	0.05	2023	factbook
+PY	Protestant 7%	christian	6.7	2023	factbook
+PY	Roman Catholic	christian	80.4	2023	factbook
+PY	agnostic	unaffiliated	0.05	2023	factbook
+PY	none	unaffiliated	0.2	2023	factbook
+PY	other	other	0.6	2023	factbook
+PY	unspecified	other	6.2	2023	factbook
+QA	Buddhist	buddhist	3.8	2020	factbook
+QA	Christian	christian	13.7	2020	factbook
+QA	Hindu	hindu	15.9	2020	factbook
+QA	Jewish	jewish	0.05	2020	factbook
+QA	Muslim	muslim	65.2	2020	factbook
+QA	folk religion	other	0.05	2020	factbook
+QA	other	other	0.5	2020	factbook
+QA	unaffiliated	unaffiliated	0.5	2020	factbook
+RE	Buddhist	buddhist	2	2021	parent: FR
+RE	Jewish	jewish	1	2021	parent: FR
+RE	Muslim	muslim	4	2021	parent: FR
+RE	Orthodox	christian	1	2021	parent: FR
+RE	Protestant	christian	2	2021	parent: FR
+RE	Roman Catholic	christian	47	2021	parent: FR
+RE	none	unaffiliated	33	2021	parent: FR
+RE	other	other	1	2021	parent: FR
+RE	unspecified	other	9	2021	parent: FR
+RO	Pentecostal	christian	2.5	2021	factbook
+RO	Reformed	christian	3	2021	factbook
+RO	Roman Catholic	christian	4.5	2021	factbook
+RO	Romanian Orthodox	christian	85.3	2021	factbook
+RO	other	other	4.7	2021	factbook
+RS	Catholic	christian	3.9	2022	factbook
+RS	Islam	muslim	4.2	2022	factbook
+RS	Serbian Orthodox	christian	81.1	2022	factbook
+RS	atheist	unaffiliated	1.1	2022	factbook
+RS	no response	other	2.5	2022	factbook
+RS	unknown	other	5.3	2022	factbook
+RU	Muslim	muslim	7	2020	approximate: Levada polling; Factbook 2006 figures are incomplete
+RU	None	unaffiliated	24	2020	approximate: Levada polling; Factbook 2006 figures are incomplete
+RU	Other	other	3	2020	approximate: Levada polling; Factbook 2006 figures are incomplete
+RU	Other Christian	christian	3	2020	approximate: Levada polling; Factbook 2006 figures are incomplete
+RU	Russian Orthodox	christian	63	2020	approximate: Levada polling; Factbook 2006 figures are incomplete
+RW	Adventist	christian	12.2	2022	factbook
+RW	Catholic	christian	39.9	2022	factbook
+RW	Muslim	muslim	2	2022	factbook
+RW	Pentecostal	christian	21.3	2022	factbook
+RW	Protestant	christian	14.6	2022	factbook
+RW	no religion	unaffiliated	3	2022	factbook
+RW	other Christians	christian	4.2	2022	factbook
+RW	other religions	other	2	2022	factbook
+SA	Buddhist	buddhist	0.6	2020	approximate: Factbook has no shares (includes expatriates)
+SA	Christian	christian	4	2020	approximate: Factbook has no shares (includes expatriates)
+SA	Hindu	hindu	1.5	2020	approximate: Factbook has no shares (includes expatriates)
+SA	Muslim	muslim	93	2020	approximate: Factbook has no shares (includes expatriates)
+SA	Other	other	0.9	2020	approximate: Factbook has no shares (includes expatriates)
+SB	Protestant	christian	73.4	2009	factbook
+SB	Roman Catholic	christian	19.6	2009	factbook
+SB	other	other	4	2009	factbook
+SB	other Christian	christian	2.9	2009	factbook
+SB	unspecified	other	0.1	2009	factbook
+SC	Hindu	hindu	2.4	2010	factbook
+SC	Muslim	muslim	1.6	2010	factbook
+SC	Protestant	christian	10.5	2010	factbook
+SC	Roman Catholic	christian	76.2	2010	factbook
+SC	none	unaffiliated	0.9	2010	factbook
+SC	other Christian	christian	2.4	2010	factbook
+SC	other non-Christian	christian	1.1	2010	factbook
+SC	unspecified	other	4.8	2010	factbook
+SD	Christian	christian	3	2024	approximate: Factbook has no shares
+SD	Sunni Muslim	muslim	97	2024	approximate: Factbook has no shares
+SE	Church of Sweden	christian	53.9	2021	factbook
+SE	none or unspecified	unaffiliated	37.2	2021	factbook
+SE	other	other	8.9	2021	factbook
+SG	Buddhist	buddhist	31.1	2020	factbook
+SG	Christian	christian	18.9	2020	factbook
+SG	Hindu	hindu	5	2020	factbook
+SG	Muslim	muslim	15.6	2020	factbook
+SG	Taoist	other	8.8	2020	factbook
+SG	none	unaffiliated	20	2020	factbook
+SG	other	other	0.6	2020	factbook
+SH	Anglican	christian	63.2	2021	factbook
+SH	Baptist	christian	2.3	2021	factbook
+SH	Jehovah's Witness	christian	3.8	2021	factbook
+SH	New Apostolic	christian	1.6	2021	factbook
+SH	Roman Catholic	christian	2.2	2021	factbook
+SH	Salvation Army	other	2	2021	factbook
+SH	Seventh Day Adventist	christian	1.9	2021	factbook
+SH	no religion	unaffiliated	9	2021	factbook
+SH	other	other	1.1	2021	factbook
+SH	other Christian	christian	1.4	2021	factbook
+SH	unspecified	other	11.4	2021	factbook
+SI	Catholic	christian	69	2019	factbook
+SI	Christian	christian	1	2019	factbook
+SI	Muslim	muslim	3	2019	factbook
+SI	Orthodox	christian	4	2019	factbook
+SI	atheist	unaffiliated	14	2019	factbook
+SI	non-believer/agnostic	unaffiliated	4	2019	factbook
+SI	other	other	3	2019	factbook
+SI	refused to answer	other	2	2019	factbook
+SJ	Church of Norway	christian	67.5	2021	parent: NO
+SJ	Muslim	muslim	3.1	2021	parent: NO
+SJ	Roman Catholic	christian	3.1	2021	parent: NO
+SJ	other	other	2.6	2021	parent: NO
+SJ	other Christian	christian	3.8	2021	parent: NO
+SJ	unspecified	other	19.9	2021	parent: NO
+SK	Evangelical Church of the Augsburg Confession	christian	5.3	2021	factbook
+SK	Greek Catholic	christian	4	2021	factbook
+SK	Reformed Christian	christian	1.6	2021	factbook
+SK	Roman Catholic	christian	55.8	2021	factbook
+SK	none	unaffiliated	23.8	2021	factbook
+SK	other	other	3	2021	factbook
+SK	unspecified	other	6.5	2021	factbook
+SL	Christian	christian	22.9	2019	factbook
+SL	Muslim	muslim	77.1	2019	factbook
+SM	Other	other	10	2024	approximate: Factbook has no shares
+SM	Roman Catholic	christian	90	2024	approximate: Factbook has no shares
+SN	Christian	christian	2.7	2019	factbook
+SN	Muslim	muslim	97.2	2019	factbook
+SO	Muslim	muslim	99.9	2020	factbook
+SO	ethnic religionist	other	0.1	2020	factbook
+SR	Hindu	hindu	22.3	2012	factbook
+SR	Jehovah's Witness	christian	1.2	2012	factbook
+SR	Muslim	muslim	13.8	2012	factbook
+SR	Protestant	christian	23.6	2012	factbook
+SR	Roman Catholic	christian	21.6	2012	factbook
+SR	Winti	other	1.8	2012	factbook
+SR	none	unaffiliated	7.5	2012	factbook
+SR	other	other	1.7	2012	factbook
+SR	other Christian	christian	3.2	2012	factbook
+SR	unspecified	other	3.2	2012	factbook
+SS	Christian	christian	60.5	2020	factbook
+SS	Muslim	muslim	6.2	2020	factbook
+SS	folk religion	other	32.9	2020	factbook
+SS	other	other	0.5	2020	factbook
+SS	unaffiliated	unaffiliated	0.5	2020	factbook
+ST	Adventist	christian	4.1	2012	factbook
+ST	Assembly of God	other	3.4	2012	factbook
+ST	Catholic	christian	55.7	2012	factbook
+ST	Jehovah's Witness	christian	1.2	2012	factbook
+ST	Mana	other	2.3	2012	factbook
+ST	New Apostolic	christian	2.9	2012	factbook
+ST	Universal Kingdom of God	other	2	2012	factbook
+ST	none	unaffiliated	21.2	2012	factbook
+ST	other	other	6.2	2012	factbook
+ST	unspecified	other	1	2012	factbook
+SV	Protestant	christian	39.6	2023	factbook
+SV	Roman Catholic	christian	43.9	2023	factbook
+SV	none	unaffiliated	16.3	2023	factbook
+SV	unspecified	other	0.2	2023	factbook
+SX	Christian	christian	4.1	2011	factbook
+SX	Evangelical	christian	1.4	2011	factbook
+SX	Hindu	hindu	5.2	2011	factbook
+SX	Jehovah's Witness	christian	1.7	2011	factbook
+SX	Muslim/Jewish	muslim	1.1	2011	factbook
+SX	Protestant	christian	41.9	2011	factbook
+SX	Roman Catholic	christian	33.1	2011	factbook
+SX	no response	other	2.4	2011	factbook
+SX	none	unaffiliated	7.9	2011	factbook
+SX	other	other	1.3	2011	factbook
+SY	Christian	christian	10		factbook
+SY	Druze	other	3		factbook
+SY	Muslim	muslim	87		factbook
+SZ	Christian	christian	90	2015	factbook
+SZ	Muslim	muslim	2	2015	factbook
+SZ	other	other	8	2015	factbook
+TC	Jehovah's Witness	christian	1.8	2006	factbook
+TC	Protestant	christian	72.8	2006	factbook
+TC	Roman Catholic	christian	11.4	2006	factbook
+TC	other	other	14	2006	factbook
+TD	Muslim	muslim	52.1	2014	factbook
+TD	Protestant	christian	23.9	2014	factbook
+TD	Roman Catholic	christian	20	2014	factbook
+TD	animist	other	0.3	2014	factbook
+TD	none	unaffiliated	2.8	2014	factbook
+TD	other Christian	christian	0.2	2014	factbook
+TD	unspecified	other	0.7	2014	factbook
+TF	Buddhist	buddhist	2	2021	parent: FR
+TF	Jewish	jewish	1	2021	parent: FR
+TF	Muslim	muslim	4	2021	parent: FR
+TF	Orthodox	christian	1	2021	parent: FR
+TF	Protestant	christian	2	2021	parent: FR
+TF	Roman Catholic	christian	47	2021	parent: FR
+TF	none	unaffiliated	33	2021	parent: FR
+TF	other	other	1	2021	parent: FR
+TF	unspecified	other	9	2021	parent: FR
+TG	Buddhist	buddhist	0.5	2020	factbook
+TG	Christian	christian	42.3	2020	factbook
+TG	Hindu	hindu	0.5	2020	factbook
+TG	Jewish	jewish	0.5	2020	factbook
+TG	Muslim	muslim	14	2020	factbook
+TG	folk religion	other	36.9	2020	factbook
+TG	none	unaffiliated	6.2	2020	factbook
+TG	other	other	0.5	2020	factbook
+TH	Buddhist	buddhist	92.5	2021	factbook
+TH	Christian	christian	1.2	2021	factbook
+TH	Muslim	muslim	5.4	2021	factbook
+TH	other	other	0.9	2021	factbook
+TJ	Muslim	muslim	98	2014	factbook
+TJ	other	other	2	2014	factbook
+TK	Congregational Christian Church	christian	50.4	2016	factbook
+TK	Presbyterian	christian	5.9	2016	factbook
+TK	Roman Catholic	christian	38.7	2016	factbook
+TK	other Christian	christian	4.2	2016	factbook
+TK	unspecified	other	0.8	2016	factbook
+TL	Catholic	christian	90.7	2022	factbook
+TL	Protestant Evangelical	christian	1.9	2022	factbook
+TL	other	other	7.1	2022	factbook
+TM	Buddhist	buddhist	0.5	2020	factbook
+TM	Christian	christian	6.4	2020	factbook
+TM	Jewish	jewish	0.5	2020	factbook
+TM	Muslim	muslim	93	2020	factbook
+TM	folk religion	other	0.5	2020	factbook
+TM	other	other	0.5	2020	factbook
+TM	unspecified	other	0.5	2020	factbook
+TN	Muslim	muslim	99		factbook
+TN	other	other	0.5		factbook
+TO	Church of Jesus Christ	christian	19.7	2021	factbook
+TO	Protestant	christian	63.9	2021	factbook
+TO	Roman Catholic	christian	13.7	2021	factbook
+TO	no answer	other	0.1	2021	factbook
+TO	none	unaffiliated	0.6	2021	factbook
+TO	other	other	2.1	2021	factbook
+TR	Muslim	muslim	99.8		factbook
+TR	other	other	0.2		factbook
+TT	Hindu	hindu	18.2	2011	factbook
+TT	Jehovah's Witness	christian	1.5	2011	factbook
+TT	Muslim	muslim	5	2011	factbook
+TT	Protestant	christian	32.1	2011	factbook
+TT	Roman Catholic	christian	21.6	2011	factbook
+TT	none	unaffiliated	2.2	2011	factbook
+TT	other	other	8.4	2011	factbook
+TT	unspecified	other	11.1	2011	factbook
+TV	Baha'i	other	1.5	2017	factbook
+TV	Jehovah's Witness	christian	1.5	2017	factbook
+TV	Protestant	christian	92.7	2017	factbook
+TV	none or refused	unaffiliated	0.4	2017	factbook
+TV	other	other	3.9	2017	factbook
+TW	Buddhist	buddhist	35.3	2005	factbook
+TW	Christian	christian	3.9	2005	factbook
+TW	Taoist	other	33.2	2005	factbook
+TW	folk religion  approximately	other	10	2005	factbook
+TW	none or unspecified	unaffiliated	18.2	2005	factbook
+TZ	Buddhist	buddhist	0.5	2020	factbook
+TZ	Christian	christian	63.1	2020	factbook
+TZ	Hindu	hindu	0.5	2020	factbook
+TZ	Jewish	jewish	0.5	2020	factbook
+TZ	Muslim	muslim	34.1	2020	factbook
+TZ	folk religion	other	1.1	2020	factbook
+TZ	other	other	0.5	2020	factbook
+TZ	unspecified	other	1.6	2020	factbook
+UA	Jewish	jewish	0.2	2022	approximate: public opinion surveys; Factbook has no shares
+UA	Muslim	muslim	0.8	2022	approximate: public opinion surveys; Factbook has no shares
+UA	None	unaffiliated	15	2022	approximate: public opinion surveys; Factbook has no shares
+UA	Orthodox	christian	66	2022	approximate: public opinion surveys; Factbook has no shares
+UA	Other or unspecified	other	6	2022	approximate: public opinion surveys; Factbook has no shares
+UA	Protestant	christian	2	2022	approximate: public opinion surveys; Factbook has no shares
+UA	Roman Catholic	christian	1	2022	approximate: public opinion surveys; Factbook has no shares
+UA	Ukrainian Greek Catholic	christian	9	2022	approximate: public opinion surveys; Factbook has no shares
+UG	Muslim	muslim	13.7	2014	factbook
+UG	Protestant	christian	45.1	2014	factbook
+UG	Roman Catholic	christian	39.3	2014	factbook
+UG	none	unaffiliated	0.2	2014	factbook
+UG	other	other	1.6	2014	factbook
+US	Buddhist	buddhist	0.7	2014	factbook
+US	Church of Jesus Christ	christian	1.6	2014	factbook
+US	Hindu	hindu	0.7	2014	factbook
+US	Jehovah's Witness	christian	0.8	2014	factbook
+US	Jewish	jewish	1.9	2014	factbook
+US	Muslim	muslim	0.9	2014	factbook
+US	Protestant	christian	46.5	2014	factbook
+US	Roman Catholic	christian	20.8	2014	factbook
+US	don't know/refused	other	0.6	2014	factbook
+US	other	other	1.8	2014	factbook
+US	other Christian	christian	0.9	2014	factbook
+US	unaffiliated	unaffiliated	22.8	2014	factbook
+UY	Adventist	christian	0.2		factbook
+UY	African American Cults/Umbanda	other	2.8		factbook
+UY	Believer	other	1.8		factbook
+UY	Church of Jesus Christ	christian	0.2		factbook
+UY	Jehovah's Witness	christian	0.6		factbook
+UY	Protestant	christian	0.3		factbook
+UY	Protestant 5%	christian	4.6		factbook
+UY	Roman Catholic	christian	36.5		factbook
+UY	agnostic	unaffiliated	0.3		factbook
+UY	atheist	unaffiliated	1.3		factbook
+UY	none	unaffiliated	47.3		factbook
+UY	other	other	1		factbook
+UY	unspecified	other	3.4		factbook
+UZ	Eastern Orthodox	christian	9		factbook
+UZ	Muslim	muslim	88		factbook
+UZ	other	other	3		factbook
+VA	Roman Catholic	christian	100	2024	Factbook (no shares)
+VC	Jehovah's Witness	christian	0.8	2012	factbook
+VC	Protestant	christian	75	2012	factbook
+VC	Rastafarian	other	1.1	2012	factbook
+VC	Roman Catholic	christian	6.3	2012	factbook
+VC	none	unaffiliated	7.5	2012	factbook
+VC	other	other	4.7	2012	factbook
+VC	unspecified	other	4.7	2012	factbook
+VE	African American/umbanda	other	0.7	2023	factbook
+VE	Jehovah's Witness	christian	1.4	2023	factbook
+VE	Protestant	christian	31.6	2023	factbook
+VE	Roman Catholic	christian	48.1	2023	factbook
+VE	agnostic	unaffiliated	0.1	2023	factbook
+VE	atheist	unaffiliated	0.4	2023	factbook
+VE	believer	other	3.5	2023	factbook
+VE	none	unaffiliated	13.6	2023	factbook
+VE	other	other	0.1	2023	factbook
+VE	unspecified	other	0.6	2023	factbook
+VG	Hindu	hindu	1.9	2010	factbook
+VG	Jehovah's Witness	christian	2.5	2010	factbook
+VG	Protestant	christian	70.2	2010	factbook
+VG	Roman Catholic	christian	8.9	2010	factbook
+VG	none	unaffiliated	7.9	2010	factbook
+VG	other	other	6.2	2010	factbook
+VG	unspecified	other	2.4	2010	factbook
+VI	Protestant	christian	65.5	2010	factbook
+VI	Roman Catholic	christian	27.1	2010	factbook
+VI	none	unaffiliated	3.7	2010	factbook
+VI	other	other	1.5	2010	factbook
+VI	other Christians	christian	2.2	2010	factbook
+VN	Buddhist	buddhist	5.8	2019	factbook
+VN	Catholic	christian	6.1	2019	factbook
+VN	Protestant	christian	1	2019	factbook
+VN	none	unaffiliated	86.3	2019	factbook
+VN	other	other	0.8	2019	factbook
+VU	Apostolic	christian	2.3	2020	factbook
+VU	Church of Jesus Christ	christian	1.8	2020	factbook
+VU	Customary beliefs	other	3.1	2020	factbook
+VU	None	unaffiliated	1.4	2020	factbook
+VU	Other	other	12	2020	factbook
+VU	Protestant	christian	67.1	2020	factbook; top-level 39.9 contradicts its own denomination breakdown (sums to 67.1)
+VU	Roman Catholic	christian	12.1	2020	factbook
+VU	Unspecified	other	0.1	2020	factbook
+WF	Roman Catholic	christian	99		factbook
+WF	other	other	1		factbook
+WS	Church of Jesus Christ	christian	16.9	2016	factbook
+WS	Protestant	christian	54.9	2016	factbook
+WS	Roman Catholic	christian	18.8	2016	factbook
+WS	Worship Centre	other	2.8	2016	factbook
+WS	none	unaffiliated	0.2	2016	factbook
+WS	other	other	2.9	2016	factbook
+WS	other Christian	christian	3.6	2016	factbook
+XK	Muslim	muslim	95.6	2011	factbook
+XK	Orthodox	christian	1.5	2011	factbook
+XK	Roman Catholic	christian	2.2	2011	factbook
+XK	none	unaffiliated	0.1	2011	factbook
+XK	other	other	0.1	2011	factbook
+XK	unspecified	other	0.6	2011	factbook
+YE	Muslim	muslim	99.1	2020	factbook
+YE	other	other	0.9	2020	factbook
+YT	Buddhist	buddhist	2	2021	parent: FR
+YT	Jewish	jewish	1	2021	parent: FR
+YT	Muslim	muslim	4	2021	parent: FR
+YT	Orthodox	christian	1	2021	parent: FR
+YT	Protestant	christian	2	2021	parent: FR
+YT	Roman Catholic	christian	47	2021	parent: FR
+YT	none	unaffiliated	33	2021	parent: FR
+YT	other	other	1	2021	parent: FR
+YT	unspecified	other	9	2021	parent: FR
+ZA	Christian	christian	86	2015	factbook
+ZA	Muslim	muslim	1.9	2015	factbook
+ZA	None	unaffiliated	5.2	2015	factbook
+ZA	Other	other	1.5	2015	factbook
+ZA	Traditional African religions	other	5.4	2015	factbook
+ZM	Protestant	christian	75.3	2010	factbook
+ZM	Roman Catholic	christian	20.2	2010	factbook
+ZM	none	unaffiliated	1.8	2010	factbook
+ZM	other	other	2.7	2010	factbook
+ZW	African traditionalist	other	5	2022	factbook
+ZW	Apostolic Sect	christian	40.3	2022	factbook
+ZW	Pentecostal	christian	17	2022	factbook
+ZW	Protestant	christian	13.8	2022	factbook
+ZW	Roman Catholic	christian	6.4	2022	factbook
+ZW	none	unaffiliated	8.3	2022	factbook
+ZW	other	other	1.5	2022	factbook
+ZW	other Christian	christian	7.8	2022	factbook

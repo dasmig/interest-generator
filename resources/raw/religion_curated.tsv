@@ -1,0 +1,94 @@
+cca2	religion	share	year	basis
+CD	Roman Catholic	29.9	2014	factbook
+CD	Protestant	26.7	2014	factbook
+CD	Other Christian	36.5	2014	factbook
+CD	Kimbanguist	2.8	2014	factbook
+CD	Muslim	1.3	2014	factbook
+CD	Other	1.2	2014	factbook
+CD	None	1.3	2014	factbook
+CD	Unspecified	0.2	2014	factbook
+ZA	Christian	86	2015	factbook
+ZA	Traditional African religions	5.4	2015	factbook
+ZA	Muslim	1.9	2015	factbook
+ZA	Other	1.5	2015	factbook
+ZA	None	5.2	2015	factbook
+CN	Folk religion	21.9	2021	factbook
+CN	Buddhist	18.2	2021	factbook
+CN	Christian	5.1	2021	factbook
+CN	Muslim	1.8	2021	factbook
+CN	Hindu	0.05	2021	factbook
+CN	Jewish	0.05	2021	factbook
+CN	Other	0.7	2021	factbook
+CN	Unaffiliated	52.1	2021	factbook
+PS	Muslim	89	2012	factbook, West Bank and Gaza combined by population (3.1M and 2.1M)
+PS	Jewish	7.7	2012	factbook, West Bank and Gaza combined by population (3.1M and 2.1M)
+PS	Christian	1.3	2012	factbook, West Bank and Gaza combined by population (3.1M and 2.1M)
+PS	Other	2	2012	factbook, West Bank and Gaza combined by population (3.1M and 2.1M)
+LB	Sunni Muslim	31.9	2020	factbook
+LB	Shia Muslim	31.2	2020	factbook
+LB	Druze	4.5	2020	factbook
+LB	Christian	32.4	2020	factbook
+ER	Eritrean Orthodox	40	2024	approximate: Factbook lists groups without shares
+ER	Roman Catholic	4	2024	approximate: Factbook lists groups without shares
+ER	Protestant	4	2024	approximate: Factbook lists groups without shares
+ER	Sunni Muslim	50	2024	approximate: Factbook lists groups without shares
+ER	Other	2	2024	approximate: Factbook lists groups without shares
+SD	Sunni Muslim	97	2024	approximate: Factbook has no shares
+SD	Christian	3	2024	approximate: Factbook has no shares
+EH	Muslim	99.7	2024	approximate: Factbook has no shares
+EH	Other	0.3	2024	approximate: Factbook has no shares
+MV	Sunni Muslim	100	2024	Factbook (official religion; no shares)
+SA	Muslim	93	2020	approximate: Factbook has no shares (includes expatriates)
+SA	Christian	4	2020	approximate: Factbook has no shares (includes expatriates)
+SA	Hindu	1.5	2020	approximate: Factbook has no shares (includes expatriates)
+SA	Buddhist	0.6	2020	approximate: Factbook has no shares (includes expatriates)
+SA	Other	0.9	2020	approximate: Factbook has no shares (includes expatriates)
+VA	Roman Catholic	100	2024	Factbook (no shares)
+SM	Roman Catholic	90	2024	approximate: Factbook has no shares
+SM	Other	10	2024	approximate: Factbook has no shares
+UA	Orthodox	66	2022	approximate: public opinion surveys; Factbook has no shares
+UA	Ukrainian Greek Catholic	9	2022	approximate: public opinion surveys; Factbook has no shares
+UA	Roman Catholic	1	2022	approximate: public opinion surveys; Factbook has no shares
+UA	Protestant	2	2022	approximate: public opinion surveys; Factbook has no shares
+UA	Muslim	0.8	2022	approximate: public opinion surveys; Factbook has no shares
+UA	Jewish	0.2	2022	approximate: public opinion surveys; Factbook has no shares
+UA	None	15	2022	approximate: public opinion surveys; Factbook has no shares
+UA	Other or unspecified	6	2022	approximate: public opinion surveys; Factbook has no shares
+RU	Russian Orthodox	63	2020	approximate: Levada polling; Factbook 2006 figures are incomplete
+RU	Other Christian	3	2020	approximate: Levada polling; Factbook 2006 figures are incomplete
+RU	Muslim	7	2020	approximate: Levada polling; Factbook 2006 figures are incomplete
+RU	Other	3	2020	approximate: Levada polling; Factbook 2006 figures are incomplete
+RU	None	24	2020	approximate: Levada polling; Factbook 2006 figures are incomplete
+KP	None	64.3	2010	approximate: Factbook has no shares
+KP	Shamanism	16	2010	approximate: Factbook has no shares
+KP	Chondogyo	13.5	2010	approximate: Factbook has no shares
+KP	Buddhist	4.5	2010	approximate: Factbook has no shares
+KP	Christian	1.7	2010	approximate: Factbook has no shares
+GG	Protestant	45	2021	approximate: Factbook has no shares
+GG	Roman Catholic	10	2021	approximate: Factbook has no shares
+GG	Other	5	2021	approximate: Factbook has no shares
+GG	None	40	2021	approximate: Factbook has no shares
+GL	Evangelical Lutheran	96	2024	approximate: Factbook has no shares
+GL	Traditional Inuit spiritual beliefs	4	2024	approximate: Factbook has no shares
+MP	Roman Catholic	60	2024	approximate: Factbook has no shares
+MP	Protestant	20	2024	approximate: Factbook has no shares
+MP	Buddhist	6	2024	approximate: Factbook has no shares
+MP	Folk religion	4	2024	approximate: Factbook has no shares
+MP	None	10	2024	approximate: Factbook has no shares
+MF	Roman Catholic	72	2024	approximate: Factbook has no shares
+MF	Protestant	16	2024	approximate: Factbook has no shares
+MF	Jehovah's Witness	4	2024	approximate: Factbook has no shares
+MF	Hindu	3	2024	approximate: Factbook has no shares
+MF	Other	5	2024	approximate: Factbook has no shares
+VU	Protestant	67.1	2020	factbook; top-level 39.9 contradicts its own denomination breakdown (sums to 67.1)
+VU	Roman Catholic	12.1	2020	factbook
+VU	Apostolic	2.3	2020	factbook
+VU	Church of Jesus Christ	1.8	2020	factbook
+VU	Customary beliefs	3.1	2020	factbook
+VU	Other	12	2020	factbook
+VU	None	1.4	2020	factbook
+VU	Unspecified	0.1	2020	factbook
+KN	Protestant	70	2024	approximate: Factbook has no shares
+KN	Roman Catholic	7	2024	approximate: Factbook has no shares
+KN	Other	8	2024	approximate: Factbook has no shares
+KN	None	15	2024	approximate: Factbook has no shares
