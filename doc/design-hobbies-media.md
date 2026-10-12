@@ -19,6 +19,7 @@ struct interest_request
     std::string_view country;       // ISO alpha-2; empty = random country, as today
     std::optional<std::uint8_t> age; // completed years
     std::optional<sex> sex;          // dasmig::sex, shared with biodata and birth (DASMIG_SEX_DEFINED)
+    std::string_view religion_group; // from this library's own religion draw; empty = no religion factor
     std::size_t hobbies = 3;
     std::size_t media = 2;           // genres per medium
 };
@@ -62,7 +63,7 @@ All keyed and layerable like the rest (`extend`, `disabled`, hashes in the signa
 
 An item's factor in a dimension is its own row times its class row. A `country` row replaces the `region` row for that country; the rest multiply.
 
-**`age_bands.tsv`**, key `band`, with `min_age` and `max_age`: 5-12, 13-17, 18-24, 25-34, 35-49, 50-64, 65+. Ages under 5 draw nothing. Bands are data, so a game can change them.
+**`age_bands.tsv`**, key `band`, with `min_age` and `max_age`: 5-12, 13-17, 18-24, 25-34, 35-49, 50-64, 65+. Ages under 5 draw nothing. Children use the same factors where the data allows (see decision 3). Bands are data, so a game can change them.
 
 **`regions.tsv`**, key `country_code`, with `region`: the UN subregion from country-generator (22 values), built by a script. A country with no row has no region factor.
 
@@ -70,7 +71,7 @@ An item's factor in a dimension is its own row times its class row. A `country` 
 
 Per kind, a stream of its own (`"hobby"`, `"film"`, ...): compute each eligible item's weight for the person, then draw `n` without replacement (the trait-generator pattern). Eligible means within `min_age`/`max_age`. If fewer than `n` items have a positive weight, return those. Adding a medium later does not move any existing draw.
 
-Religion as a dimension lets the pipeline pass the religion group already drawn, so that, for example, choral singing leans Christian and calligraphy leans Muslim. It is optional and the factors are curated, so it ships only where there is a reason.
+Religion as a dimension lets the pipeline pass the religion group already drawn (see decision 4 for what ships).
 
 ## Where the numbers come from
 
@@ -90,12 +91,12 @@ Because the class factors come from time-use data, the work is: about 15 classes
 
 `lite`: about 60 hobbies, 12 genres per medium, factors for sex and age band and for region only. `full`: the whole catalogue, with country rows where HETUS provides them.
 
-## Decisions for you
+## Decisions (2026-10-12)
 
-1. **One `interests.tsv` for all five kinds** (proposed), or one file per kind. One file keeps a single layer and a single key shape; separate files give clearer errors.
-2. **Class factors** (proposed) or item factors only. Classes cut the curation, at the cost of coarser results; item overrides fix the worst cases.
-3. **Children.** Do characters under 18 need hobbies and media? The age bands start at 5; say if they should start at 13.
-4. **Religion as a dimension** now, or later.
+1. **One `interests.tsv` for all five kinds.**
+2. **Class factors with item overrides.**
+3. **Children get hobbies and media.** The bands stay 5-12, 13-17, and so on. ATUS only covers ages 15 and up, so the 13-17 band uses its 15-19 group, and the 5-12 band is **curated** (`basis` says so), as are all media factors for under-18s. Eurostat HETUS covers ages 10 and up in some countries and can replace the 5-12 guesses for Europe.
+4. **Religion is a dimension in the schema and code, but the shipped factors are few.** No open source breaks hobbies down by religion, a character's religion here is only a country-level share (not how observant they are), and curated "group X likes Y" factors tend to be stereotypes. The base data therefore carries religion factors only for the religious-practice class (ATUS "religious and spiritual activities": high for any religious group, near zero for the unaffiliated). Further factors are the job of layers (`extend()`) from the game or a mod. The request takes an optional religion group; without one the factor is 1.
 5. **Defaults:** 3 hobbies and 2 genres per medium.
 
 ## Build order
