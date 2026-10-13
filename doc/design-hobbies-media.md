@@ -1,6 +1,6 @@
 # Design: Hobbies and Favourite Media
 
-Status: proposal (2026-10-12). Nothing here is implemented. It extends the religion model in [data.md](data.md) and follows the same rules: layered TSV tables, one random stream per field, every table described in `data.md`, derived data rebuilt by a script in `scripts/`.
+Status: implemented (2026-10-12); the data and the code are described in [data.md](data.md) and [usage.md](usage.md). Where they differ from this page, they are right: this page records the reasoning. It extends the religion model in [data.md](data.md) and follows the same rules: layered TSV tables, one random stream per field, every table described in `data.md`, derived data rebuilt by a script in `scripts/`.
 
 ## What it must do
 
@@ -18,8 +18,7 @@ struct interest_request
 {
     std::string_view country;       // ISO alpha-2; empty = random country, as today
     std::optional<std::uint8_t> age; // completed years
-    std::optional<sex> sex;          // dasmig::sex, shared with biodata and birth (DASMIG_SEX_DEFINED)
-    std::string_view religion_group; // from this library's own religion draw; empty = no religion factor
+    std::optional<sex> person_sex;   // dasmig::sex, shared with biodata and birth (DASMIG_SEX_DEFINED)
     std::size_t hobbies = 3;
     std::size_t media = 2;           // genres per medium
 };
@@ -51,7 +50,7 @@ All keyed and layerable like the rest (`extend`, `disabled`, hashes in the signa
 | `tags` | `;`-separated themes, for the game and for trait links |
 | `min_age`, `max_age` | Hard limits (no weight for a seven-year-old's gambling); optional |
 
-**`affinity.tsv`**, key `target` + `dimension` + `value`:
+**`affinity.tsv`**, key `target` + `dimension` + `value` (a class target is written `class:<name>`, so it cannot be mistaken for an item with the same name):
 
 | Column | Meaning |
 | --- | --- |
@@ -96,7 +95,7 @@ Because the class factors come from time-use data, the work is: about 15 classes
 1. **One `interests.tsv` for all five kinds.**
 2. **Class factors with item overrides.**
 3. **Children get hobbies and media.** The bands stay 5-12, 13-17, and so on. ATUS only covers ages 15 and up, so the 13-17 band uses its 15-19 group, and the 5-12 band is **curated** (`basis` says so), as are all media factors for under-18s. Eurostat HETUS covers ages 10 and up in some countries and can replace the 5-12 guesses for Europe.
-4. **Religion is a dimension in the schema and code, but the shipped factors are few.** No open source breaks hobbies down by religion, a character's religion here is only a country-level share (not how observant they are), and curated "group X likes Y" factors tend to be stereotypes. The base data therefore carries religion factors only for the religious-practice class (ATUS "religious and spiritual activities": high for any religious group, near zero for the unaffiliated). Further factors are the job of layers (`extend()`) from the game or a mod. The request takes an optional religion group; without one the factor is 1.
+4. **Religion is a dimension in the schema and code, but the shipped factors are few.** No open source breaks hobbies down by religion, a character's religion here is only a country-level share (not how observant they are), and curated "group X likes Y" factors tend to be stereotypes. The base data therefore carries religion factors only for the religious-practice class (ATUS "religious and spiritual activities": high for any religious group, near zero for the unaffiliated). Further factors are the job of layers (`extend()`) from the game or a mod. The library uses the religion group it drew itself; the request does not take one.
 5. **Defaults:** 3 hobbies and 2 genres per medium.
 
 ## Build order

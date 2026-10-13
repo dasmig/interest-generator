@@ -1,0 +1,652 @@
+target	dimension	value	factor	basis
+baking	sex	female	1.6	curated
+baking	sex	male	0.7	curated
+basketball	sex	female	0.8	curated
+basketball	sex	male	1.2	curated
+book_biography	age_band	13-17	0.4	curated
+book_biography	age_band	18-24	0.6	curated
+book_biography	age_band	25-34	0.9	curated
+book_biography	age_band	35-49	1.2	curated
+book_biography	age_band	5-12	0.05	curated
+book_biography	age_band	50-64	1.6	curated
+book_biography	age_band	65+	1.6	curated
+book_comics	age_band	13-17	2	curated
+book_comics	age_band	18-24	2	curated
+book_comics	age_band	35-49	0.5	curated
+book_comics	age_band	5-12	2.5	curated
+book_comics	age_band	50-64	0.4	curated
+book_comics	age_band	65+	0.2	curated
+book_comics	sex	female	0.8	curated
+book_comics	sex	male	1.2	curated
+book_crime	age_band	13-17	0.5	curated
+book_crime	age_band	18-24	0.7	curated
+book_crime	age_band	35-49	1.3	curated
+book_crime	age_band	5-12	0.05	curated
+book_crime	age_band	50-64	1.6	curated
+book_crime	age_band	65+	1.8	curated
+book_crime	sex	female	1.1	curated
+book_crime	sex	male	0.9	curated
+book_fantasy	age_band	13-17	1.8	curated
+book_fantasy	age_band	18-24	1.8	curated
+book_fantasy	age_band	25-34	1.3	curated
+book_fantasy	age_band	35-49	0.9	curated
+book_fantasy	age_band	5-12	1.5	curated
+book_fantasy	age_band	50-64	0.6	curated
+book_fantasy	age_band	65+	0.6	curated
+book_historical_fiction	age_band	13-17	0.4	curated
+book_historical_fiction	age_band	18-24	0.6	curated
+book_historical_fiction	age_band	25-34	0.8	curated
+book_historical_fiction	age_band	35-49	1.2	curated
+book_historical_fiction	age_band	5-12	0.05	curated
+book_historical_fiction	age_band	50-64	1.6	curated
+book_historical_fiction	age_band	65+	1.6	curated
+book_history	age_band	13-17	0.4	curated
+book_history	age_band	18-24	0.5	curated
+book_history	age_band	25-34	0.8	curated
+book_history	age_band	35-49	1.2	curated
+book_history	age_band	5-12	0.1	curated
+book_history	age_band	50-64	1.8	curated
+book_history	age_band	65+	2.2	curated
+book_history	sex	female	0.8	curated
+book_history	sex	male	1.4	curated
+book_horror	age_band	13-17	1.4	curated
+book_horror	age_band	18-24	1.4	curated
+book_horror	age_band	25-34	1.4	curated
+book_horror	age_band	5-12	0.05	curated
+book_horror	age_band	50-64	0.6	curated
+book_horror	age_band	65+	0.4	curated
+book_horror	sex	female	0.9	curated
+book_horror	sex	male	1.1	curated
+book_literary	age_band	13-17	0.4	curated
+book_literary	age_band	18-24	0.7	curated
+book_literary	age_band	25-34	0.9	curated
+book_literary	age_band	35-49	1.3	curated
+book_literary	age_band	5-12	0.05	curated
+book_literary	age_band	50-64	1.3	curated
+book_literary	age_band	65+	1.3	curated
+book_romance	age_band	13-17	1.3	curated
+book_romance	age_band	18-24	1.2	curated
+book_romance	age_band	25-34	1.2	curated
+book_romance	age_band	35-49	1.1	curated
+book_romance	age_band	5-12	0.05	curated
+book_romance	age_band	50-64	1.2	curated
+book_romance	age_band	65+	1.2	curated
+book_romance	sex	female	2	curated
+book_romance	sex	male	0.4	curated
+book_scifi	age_band	13-17	1.3	curated
+book_scifi	age_band	18-24	1.3	curated
+book_scifi	age_band	25-34	1.3	curated
+book_scifi	age_band	5-12	0.2	curated
+book_scifi	age_band	50-64	0.8	curated
+book_scifi	age_band	65+	0.6	curated
+book_scifi	sex	female	0.8	curated
+book_scifi	sex	male	1.3	curated
+book_self_help	age_band	13-17	0.4	curated
+book_self_help	age_band	18-24	0.9	curated
+book_self_help	age_band	25-34	1.3	curated
+book_self_help	age_band	35-49	1.3	curated
+book_self_help	age_band	5-12	0.05	curated
+book_self_help	age_band	65+	0.8	curated
+book_self_help	sex	female	1.3	curated
+book_self_help	sex	male	0.8	curated
+book_thriller	age_band	13-17	0.6	curated
+book_thriller	age_band	18-24	0.8	curated
+book_thriller	age_band	35-49	1.1	curated
+book_thriller	age_band	5-12	0.05	curated
+book_thriller	age_band	50-64	1.3	curated
+book_thriller	age_band	65+	1.3	curated
+building_blocks	sex	female	0.8	curated
+building_blocks	sex	male	1.2	curated
+car_mechanics	sex	female	0.3	curated
+car_mechanics	sex	male	2.2	curated
+chess	age_band	18-24	0.9	curated
+chess	age_band	25-34	0.9	curated
+chess	age_band	35-49	0.9	curated
+chess	age_band	5-12	1.1	curated
+chess	age_band	50-64	1.1	curated
+chess	age_band	65+	1.4	curated
+class:computing	age_band	13-17	1.72	eurostat HETUS 2000/2010
+class:computing	age_band	18-24	1.67	eurostat HETUS 2000/2010
+class:computing	age_band	25-34	1.15	eurostat HETUS 2000/2010
+class:computing	age_band	35-49	1.15	eurostat HETUS 2000/2010
+class:computing	age_band	5-12	0.6	curated: no time-use data under 15
+class:computing	age_band	50-64	0.84	eurostat HETUS 2000/2010
+class:computing	age_band	65+	0.50	eurostat HETUS 2000/2010
+class:computing	region	Central Europe	0.82	eurostat HETUS 2000/2010
+class:computing	region	Northern Europe	1.22	eurostat HETUS 2000/2010
+class:computing	region	Southeast Europe	0.57	eurostat HETUS 2000/2010
+class:computing	region	Southern Europe	0.90	eurostat HETUS 2000/2010
+class:computing	region	Western Asia	0.52	eurostat HETUS 2000/2010
+class:computing	region	Western Europe	1.53	eurostat HETUS 2000/2010
+class:computing	sex	female	0.88	eurostat HETUS 2000/2010
+class:computing	sex	male	1.13	eurostat HETUS 2000/2010
+class:culture	age_band	13-17	1.35	eurostat HETUS 2000/2010
+class:culture	age_band	18-24	1.64	eurostat HETUS 2000/2010
+class:culture	age_band	25-34	1.10	eurostat HETUS 2000/2010
+class:culture	age_band	35-49	1.10	eurostat HETUS 2000/2010
+class:culture	age_band	5-12	0.6	curated: no time-use data under 15
+class:culture	age_band	50-64	0.82	eurostat HETUS 2000/2010
+class:culture	age_band	65+	0.78	eurostat HETUS 2000/2010
+class:culture	region	Central Europe	0.74	eurostat HETUS 2000/2010
+class:culture	region	Northern Europe	1.17	eurostat HETUS 2000/2010
+class:culture	region	Southeast Europe	0.40	eurostat HETUS 2000/2010
+class:culture	region	Southern Europe	0.85	eurostat HETUS 2000/2010
+class:culture	region	Western Asia	0.53	eurostat HETUS 2000/2010
+class:culture	region	Western Europe	1.62	eurostat HETUS 2000/2010
+class:culture	sex	female	1.01	eurostat HETUS 2000/2010
+class:culture	sex	male	0.99	eurostat HETUS 2000/2010
+class:diy	age_band	13-17	0.38	eurostat HETUS 2000/2010
+class:diy	age_band	18-24	0.60	eurostat HETUS 2000/2010
+class:diy	age_band	25-34	0.96	eurostat HETUS 2000/2010
+class:diy	age_band	35-49	0.96	eurostat HETUS 2000/2010
+class:diy	age_band	5-12	0.1	curated: no time-use data under 15
+class:diy	age_band	50-64	1.20	eurostat HETUS 2000/2010
+class:diy	age_band	65+	1.13	eurostat HETUS 2000/2010
+class:diy	region	Northern Europe	1.27	eurostat HETUS 2000/2010
+class:diy	region	Southeast Europe	0.87	eurostat HETUS 2000/2010
+class:diy	region	Southern Europe	0.57	eurostat HETUS 2000/2010
+class:diy	region	Western Asia	0.40	eurostat HETUS 2000/2010
+class:diy	region	Western Europe	1.17	eurostat HETUS 2000/2010
+class:diy	sex	female	0.35	eurostat HETUS 2000/2010
+class:diy	sex	male	1.71	eurostat HETUS 2000/2010
+class:gaming	age_band	13-17	3.66	eurostat HETUS 2000/2010
+class:gaming	age_band	18-24	2.61	eurostat HETUS 2000/2010
+class:gaming	age_band	25-34	0.97	eurostat HETUS 2000/2010
+class:gaming	age_band	35-49	0.97	eurostat HETUS 2000/2010
+class:gaming	age_band	5-12	1.2	curated: no time-use data under 15
+class:gaming	age_band	50-64	0.46	eurostat HETUS 2000/2010
+class:gaming	age_band	65+	0.34	eurostat HETUS 2000/2010
+class:gaming	region	Central Europe	0.91	eurostat HETUS 2000/2010
+class:gaming	region	Northern Europe	1.08	eurostat HETUS 2000/2010
+class:gaming	region	Southeast Europe	0.55	eurostat HETUS 2000/2010
+class:gaming	region	Southern Europe	0.89	eurostat HETUS 2000/2010
+class:gaming	region	Western Asia	0.89	eurostat HETUS 2000/2010
+class:gaming	region	Western Europe	1.44	eurostat HETUS 2000/2010
+class:gaming	sex	female	0.58	eurostat HETUS 2000/2010
+class:gaming	sex	male	1.45	eurostat HETUS 2000/2010
+class:gardening	age_band	13-17	0.22	eurostat HETUS 2000/2010
+class:gardening	age_band	18-24	0.29	eurostat HETUS 2000/2010
+class:gardening	age_band	25-34	0.60	eurostat HETUS 2000/2010
+class:gardening	age_band	35-49	0.60	eurostat HETUS 2000/2010
+class:gardening	age_band	5-12	0.3	curated: no time-use data under 15
+class:gardening	age_band	50-64	1.26	eurostat HETUS 2000/2010
+class:gardening	age_band	65+	1.89	eurostat HETUS 2000/2010
+class:gardening	region	Central Europe	1.43	eurostat HETUS 2000/2010
+class:gardening	region	Northern Europe	0.92	eurostat HETUS 2000/2010
+class:gardening	region	Southeast Europe	1.14	eurostat HETUS 2000/2010
+class:gardening	region	Southern Europe	0.74	eurostat HETUS 2000/2010
+class:gardening	region	Western Asia	0.43	eurostat HETUS 2000/2010
+class:gardening	region	Western Europe	0.94	eurostat HETUS 2000/2010
+class:gardening	sex	female	0.98	eurostat HETUS 2000/2010
+class:gardening	sex	male	1.01	eurostat HETUS 2000/2010
+class:handicraft	age_band	13-17	0.20	eurostat HETUS 2000/2010
+class:handicraft	age_band	18-24	0.31	eurostat HETUS 2000/2010
+class:handicraft	age_band	25-34	0.56	eurostat HETUS 2000/2010
+class:handicraft	age_band	35-49	0.56	eurostat HETUS 2000/2010
+class:handicraft	age_band	5-12	0.9	curated: no time-use data under 15
+class:handicraft	age_band	50-64	1.20	eurostat HETUS 2000/2010
+class:handicraft	age_band	65+	2.05	eurostat HETUS 2000/2010
+class:handicraft	region	Central Europe	0.78	eurostat HETUS 2000/2010
+class:handicraft	region	Northern Europe	1.31	eurostat HETUS 2000/2010
+class:handicraft	region	Southeast Europe	1.41	eurostat HETUS 2000/2010
+class:handicraft	region	Southern Europe	0.85	eurostat HETUS 2000/2010
+class:handicraft	region	Western Asia	1.34	eurostat HETUS 2000/2010
+class:handicraft	region	Western Europe	0.59	eurostat HETUS 2000/2010
+class:handicraft	sex	female	1.79	eurostat HETUS 2000/2010
+class:handicraft	sex	male	0.20	eurostat HETUS 2000/2010
+class:hobbyist	age_band	13-17	1.12	eurostat HETUS 2000/2010
+class:hobbyist	age_band	18-24	0.86	eurostat HETUS 2000/2010
+class:hobbyist	age_band	25-34	0.71	eurostat HETUS 2000/2010
+class:hobbyist	age_band	35-49	0.71	eurostat HETUS 2000/2010
+class:hobbyist	age_band	5-12	1.2	curated: no time-use data under 15
+class:hobbyist	age_band	50-64	0.97	eurostat HETUS 2000/2010
+class:hobbyist	age_band	65+	1.60	eurostat HETUS 2000/2010
+class:hobbyist	region	Southeast Europe	0.51	eurostat HETUS 2000/2010
+class:hobbyist	region	Southern Europe	0.90	eurostat HETUS 2000/2010
+class:hobbyist	region	Western Asia	0.57	eurostat HETUS 2000/2010
+class:hobbyist	region	Western Europe	1.41	eurostat HETUS 2000/2010
+class:hobbyist	sex	female	0.97	eurostat HETUS 2000/2010
+class:hobbyist	sex	male	1.03	eurostat HETUS 2000/2010
+class:music	age_band	13-17	1.59	eurostat HETUS 2000/2010
+class:music	age_band	18-24	1.15	eurostat HETUS 2000/2010
+class:music	age_band	25-34	0.67	eurostat HETUS 2000/2010
+class:music	age_band	35-49	0.67	eurostat HETUS 2000/2010
+class:music	age_band	5-12	1	curated: no time-use data under 15
+class:music	age_band	50-64	0.85	eurostat HETUS 2000/2010
+class:music	age_band	65+	1.62	eurostat HETUS 2000/2010
+class:music	region	Northern Europe	1.34	eurostat HETUS 2000/2010
+class:music	region	Southeast Europe	0.90	eurostat HETUS 2000/2010
+class:music	region	Western Asia	0.43	eurostat HETUS 2000/2010
+class:music	region	Western Europe	0.76	eurostat HETUS 2000/2010
+class:music	sex	female	0.93	eurostat HETUS 2000/2010
+class:music	sex	male	1.08	eurostat HETUS 2000/2010
+class:outdoors	age_band	13-17	0.86	eurostat HETUS 2000/2010
+class:outdoors	age_band	18-24	0.96	eurostat HETUS 2000/2010
+class:outdoors	age_band	25-34	0.81	eurostat HETUS 2000/2010
+class:outdoors	age_band	35-49	0.81	eurostat HETUS 2000/2010
+class:outdoors	age_band	5-12	1.5	curated: no time-use data under 15
+class:outdoors	age_band	50-64	1.00	eurostat HETUS 2000/2010
+class:outdoors	age_band	65+	1.51	eurostat HETUS 2000/2010
+class:outdoors	region	Central Europe	1.06	eurostat HETUS 2000/2010
+class:outdoors	region	Northern Europe	0.92	eurostat HETUS 2000/2010
+class:outdoors	region	Southern Europe	1.51	eurostat HETUS 2000/2010
+class:outdoors	region	Western Asia	0.55	eurostat HETUS 2000/2010
+class:outdoors	region	Western Europe	0.84	eurostat HETUS 2000/2010
+class:outdoors	sex	female	1.02	eurostat HETUS 2000/2010
+class:outdoors	sex	male	0.97	eurostat HETUS 2000/2010
+class:pets	age_band	13-17	0.46	eurostat HETUS 2000/2010
+class:pets	age_band	18-24	0.57	eurostat HETUS 2000/2010
+class:pets	age_band	25-34	0.84	eurostat HETUS 2000/2010
+class:pets	age_band	35-49	0.84	eurostat HETUS 2000/2010
+class:pets	age_band	5-12	1	curated: no time-use data under 15
+class:pets	age_band	50-64	1.25	eurostat HETUS 2000/2010
+class:pets	age_band	65+	1.22	eurostat HETUS 2000/2010
+class:pets	region	Central Europe	1.37	eurostat HETUS 2000/2010
+class:pets	region	Northern Europe	1.25	eurostat HETUS 2000/2010
+class:pets	region	Southeast Europe	0.56	eurostat HETUS 2000/2010
+class:pets	region	Southern Europe	0.57	eurostat HETUS 2000/2010
+class:pets	region	Western Asia	0.40	eurostat HETUS 2000/2010
+class:pets	region	Western Europe	1.11	eurostat HETUS 2000/2010
+class:pets	sex	female	1.20	eurostat HETUS 2000/2010
+class:pets	sex	male	0.78	eurostat HETUS 2000/2010
+class:reading	age_band	13-17	0.87	eurostat HETUS 2000/2010
+class:reading	age_band	18-24	0.86	eurostat HETUS 2000/2010
+class:reading	age_band	25-34	0.88	eurostat HETUS 2000/2010
+class:reading	age_band	35-49	0.88	eurostat HETUS 2000/2010
+class:reading	age_band	5-12	0.8	curated: no time-use data under 15
+class:reading	age_band	50-64	1.07	eurostat HETUS 2000/2010
+class:reading	age_band	65+	1.20	eurostat HETUS 2000/2010
+class:reading	region	Northern Europe	1.34	eurostat HETUS 2000/2010
+class:reading	region	Southeast Europe	0.76	eurostat HETUS 2000/2010
+class:reading	region	Southern Europe	0.91	eurostat HETUS 2000/2010
+class:reading	region	Western Europe	0.81	eurostat HETUS 2000/2010
+class:reading	sex	female	1.25	eurostat HETUS 2000/2010
+class:reading	sex	male	0.73	eurostat HETUS 2000/2010
+class:religious	age_band	13-17	0.52	eurostat HETUS 2000/2010
+class:religious	age_band	18-24	0.52	eurostat HETUS 2000/2010
+class:religious	age_band	25-34	0.68	eurostat HETUS 2000/2010
+class:religious	age_band	35-49	0.68	eurostat HETUS 2000/2010
+class:religious	age_band	5-12	0.8	curated: no time-use data under 15
+class:religious	age_band	50-64	1.12	eurostat HETUS 2000/2010
+class:religious	age_band	65+	1.94	eurostat HETUS 2000/2010
+class:religious	region	Central Europe	1.16	eurostat HETUS 2000/2010
+class:religious	region	Northern Europe	0.60	eurostat HETUS 2000/2010
+class:religious	region	Southeast Europe	0.73	eurostat HETUS 2000/2010
+class:religious	region	Southern Europe	1.05	eurostat HETUS 2000/2010
+class:religious	region	Western Asia	2.50	eurostat HETUS 2000/2010
+class:religious	region	Western Europe	0.68	eurostat HETUS 2000/2010
+class:religious	religion	buddhist	1.3	curated: religious practice is higher for any religion than for the unaffiliated
+class:religious	religion	christian	1.4	curated: religious practice is higher for any religion than for the unaffiliated
+class:religious	religion	hindu	1.4	curated: religious practice is higher for any religion than for the unaffiliated
+class:religious	religion	jewish	1.5	curated: religious practice is higher for any religion than for the unaffiliated
+class:religious	religion	muslim	1.6	curated: religious practice is higher for any religion than for the unaffiliated
+class:religious	religion	other	1.2	curated: religious practice is higher for any religion than for the unaffiliated
+class:religious	religion	unaffiliated	0.15	curated: religious practice is higher for any religion than for the unaffiliated
+class:religious	sex	female	1.19	eurostat HETUS 2000/2010
+class:religious	sex	male	0.80	eurostat HETUS 2000/2010
+class:screen	age_band	13-17	0.91	eurostat HETUS 2000/2010
+class:screen	age_band	18-24	0.89	eurostat HETUS 2000/2010
+class:screen	age_band	25-34	0.96	eurostat HETUS 2000/2010
+class:screen	age_band	35-49	0.96	eurostat HETUS 2000/2010
+class:screen	age_band	5-12	1.3	curated: no time-use data under 15
+class:screen	age_band	50-64	1.03	eurostat HETUS 2000/2010
+class:screen	age_band	65+	1.10	eurostat HETUS 2000/2010
+class:screen	region	Southeast Europe	1.06	eurostat HETUS 2000/2010
+class:screen	sex	female	0.99	eurostat HETUS 2000/2010
+class:screen	sex	male	1.01	eurostat HETUS 2000/2010
+class:socialising	age_band	13-17	0.85	eurostat HETUS 2000/2010
+class:socialising	age_band	18-24	1.00	eurostat HETUS 2000/2010
+class:socialising	age_band	25-34	0.90	eurostat HETUS 2000/2010
+class:socialising	age_band	35-49	0.90	eurostat HETUS 2000/2010
+class:socialising	age_band	5-12	1	curated: no time-use data under 15
+class:socialising	age_band	50-64	0.99	eurostat HETUS 2000/2010
+class:socialising	age_band	65+	1.26	eurostat HETUS 2000/2010
+class:socialising	region	Central Europe	0.85	eurostat HETUS 2000/2010
+class:socialising	region	Northern Europe	1.18	eurostat HETUS 2000/2010
+class:socialising	region	Southeast Europe	0.92	eurostat HETUS 2000/2010
+class:socialising	region	Southern Europe	1.13	eurostat HETUS 2000/2010
+class:socialising	region	Western Europe	0.92	eurostat HETUS 2000/2010
+class:socialising	sex	female	1.14	eurostat HETUS 2000/2010
+class:socialising	sex	male	0.85	eurostat HETUS 2000/2010
+class:sport	age_band	13-17	1.64	eurostat HETUS 2000/2010
+class:sport	age_band	18-24	1.38	eurostat HETUS 2000/2010
+class:sport	age_band	25-34	0.98	eurostat HETUS 2000/2010
+class:sport	age_band	35-49	0.98	eurostat HETUS 2000/2010
+class:sport	age_band	5-12	1.3	curated: no time-use data under 15
+class:sport	age_band	50-64	0.86	eurostat HETUS 2000/2010
+class:sport	age_band	65+	0.87	eurostat HETUS 2000/2010
+class:sport	region	Northern Europe	1.31	eurostat HETUS 2000/2010
+class:sport	region	Southeast Europe	0.45	eurostat HETUS 2000/2010
+class:sport	region	Southern Europe	0.85	eurostat HETUS 2000/2010
+class:sport	region	Western Asia	0.40	eurostat HETUS 2000/2010
+class:sport	region	Western Europe	1.25	eurostat HETUS 2000/2010
+class:sport	sex	female	0.83	eurostat HETUS 2000/2010
+class:sport	sex	male	1.18	eurostat HETUS 2000/2010
+class:study	age_band	13-17	2.66	eurostat HETUS 2000/2010
+class:study	age_band	18-24	1.81	eurostat HETUS 2000/2010
+class:study	age_band	25-34	1.07	eurostat HETUS 2000/2010
+class:study	age_band	35-49	1.07	eurostat HETUS 2000/2010
+class:study	age_band	5-12	0.2	curated: no time-use data under 15
+class:study	age_band	50-64	0.66	eurostat HETUS 2000/2010
+class:study	age_band	65+	0.52	eurostat HETUS 2000/2010
+class:study	region	Northern Europe	0.84	eurostat HETUS 2000/2010
+class:study	region	Southeast Europe	0.46	eurostat HETUS 2000/2010
+class:study	region	Southern Europe	1.17	eurostat HETUS 2000/2010
+class:study	region	Western Asia	0.40	eurostat HETUS 2000/2010
+class:study	region	Western Europe	1.44	eurostat HETUS 2000/2010
+class:study	sex	female	1.11	eurostat HETUS 2000/2010
+class:study	sex	male	0.90	eurostat HETUS 2000/2010
+class:volunteering	age_band	13-17	0.69	eurostat HETUS 2000/2010
+class:volunteering	age_band	18-24	0.84	eurostat HETUS 2000/2010
+class:volunteering	age_band	25-34	0.76	eurostat HETUS 2000/2010
+class:volunteering	age_band	35-49	0.76	eurostat HETUS 2000/2010
+class:volunteering	age_band	5-12	0.1	curated: no time-use data under 15
+class:volunteering	age_band	50-64	1.06	eurostat HETUS 2000/2010
+class:volunteering	age_band	65+	1.45	eurostat HETUS 2000/2010
+class:volunteering	region	Central Europe	0.82	eurostat HETUS 2000/2010
+class:volunteering	region	Southeast Europe	0.40	eurostat HETUS 2000/2010
+class:volunteering	region	Southern Europe	0.61	eurostat HETUS 2000/2010
+class:volunteering	region	Western Asia	0.40	eurostat HETUS 2000/2010
+class:volunteering	region	Western Europe	1.89	eurostat HETUS 2000/2010
+class:volunteering	sex	female	0.92	eurostat HETUS 2000/2010
+class:volunteering	sex	male	1.06	eurostat HETUS 2000/2010
+clubbing	age_band	18-24	2.5	curated
+clubbing	age_band	25-34	1.5	curated
+clubbing	age_band	35-49	0.5	curated
+clubbing	age_band	50-64	0.1	curated
+clubbing	age_band	65+	0.05	curated
+collecting	age_band	18-24	0.8	curated
+collecting	age_band	25-34	0.8	curated
+collecting	age_band	5-12	1.6	curated
+collecting	age_band	50-64	1.2	curated
+collecting	age_band	65+	1.2	curated
+cooking	sex	female	1.2	curated
+cooking	sex	male	0.9	curated
+dancing	sex	female	1.7	curated
+dancing	sex	male	0.6	curated
+diy	sex	female	0.7	curated
+diy	sex	male	1.3	curated
+electronics	sex	female	0.4	curated
+electronics	sex	male	1.8	curated
+film_action	age_band	13-17	1.3	curated
+film_action	age_band	18-24	1.3	curated
+film_action	age_band	25-34	1.3	curated
+film_action	age_band	5-12	0.4	curated
+film_action	age_band	50-64	0.8	curated
+film_action	age_band	65+	0.6	curated
+film_action	sex	female	0.8	curated
+film_action	sex	male	1.4	curated
+film_animation	age_band	13-17	1.3	curated
+film_animation	age_band	25-34	0.9	curated
+film_animation	age_band	35-49	0.9	curated
+film_animation	age_band	5-12	3	curated
+film_animation	age_band	50-64	0.7	curated
+film_animation	age_band	65+	0.7	curated
+film_crime	age_band	13-17	0.5	curated
+film_crime	age_band	18-24	0.8	curated
+film_crime	age_band	35-49	1.2	curated
+film_crime	age_band	5-12	0.05	curated
+film_crime	age_band	50-64	1.4	curated
+film_crime	age_band	65+	1.4	curated
+film_documentary	age_band	13-17	0.4	curated
+film_documentary	age_band	18-24	0.6	curated
+film_documentary	age_band	25-34	0.9	curated
+film_documentary	age_band	35-49	1.2	curated
+film_documentary	age_band	5-12	0.2	curated
+film_documentary	age_band	50-64	1.6	curated
+film_documentary	age_band	65+	1.6	curated
+film_documentary	sex	female	0.9	curated
+film_documentary	sex	male	1.1	curated
+film_drama	age_band	13-17	0.7	curated
+film_drama	age_band	18-24	0.9	curated
+film_drama	age_band	35-49	1.1	curated
+film_drama	age_band	5-12	0.2	curated
+film_drama	age_band	50-64	1.3	curated
+film_drama	age_band	65+	1.3	curated
+film_horror	age_band	13-17	1.5	curated
+film_horror	age_band	18-24	1.6	curated
+film_horror	age_band	25-34	1.3	curated
+film_horror	age_band	5-12	0.1	curated
+film_horror	age_band	50-64	0.6	curated
+film_horror	age_band	65+	0.3	curated
+film_horror	sex	female	0.9	curated
+film_horror	sex	male	1	curated
+film_romance	sex	female	1.8	curated
+film_romance	sex	male	0.5	curated
+film_scifi	age_band	13-17	1.3	curated
+film_scifi	age_band	18-24	1.3	curated
+film_scifi	age_band	25-34	1.3	curated
+film_scifi	age_band	5-12	0.4	curated
+film_scifi	age_band	50-64	0.8	curated
+film_scifi	age_band	65+	0.6	curated
+film_scifi	sex	female	0.8	curated
+film_scifi	sex	male	1.3	curated
+film_thriller	age_band	13-17	0.8	curated
+film_thriller	age_band	5-12	0.1	curated
+film_war	age_band	13-17	0.5	curated
+film_war	age_band	18-24	0.7	curated
+film_war	age_band	25-34	0.9	curated
+film_war	age_band	35-49	1.2	curated
+film_war	age_band	5-12	0.1	curated
+film_war	age_band	50-64	1.6	curated
+film_war	age_band	65+	1.6	curated
+film_war	sex	female	0.4	curated
+film_war	sex	male	1.8	curated
+fishing	age_band	13-17	0.8	curated
+fishing	age_band	18-24	0.9	curated
+fishing	age_band	5-12	0.8	curated
+fishing	age_band	50-64	1.2	curated
+fishing	age_band	65+	1.2	curated
+fishing	sex	female	0.5	curated
+fishing	sex	male	1.7	curated
+fitness	age_band	13-17	1.2	curated
+fitness	age_band	18-24	1.5	curated
+fitness	age_band	25-34	1.5	curated
+fitness	age_band	5-12	0.1	curated
+fitness	age_band	50-64	0.7	curated
+fitness	age_band	65+	0.4	curated
+fitness	sex	female	0.9	curated
+fitness	sex	male	1.2	curated
+football	sex	female	0.6	curated
+football	sex	male	1.5	curated
+game_action_adventure	age_band	13-17	1.2	curated
+game_action_adventure	age_band	18-24	1.2	curated
+game_action_adventure	age_band	25-34	1.2	curated
+game_action_adventure	age_band	5-12	0.5	curated
+game_action_adventure	age_band	50-64	0.7	curated
+game_action_adventure	age_band	65+	0.4	curated
+game_fighting	age_band	13-17	1.5	curated
+game_fighting	age_band	18-24	1.5	curated
+game_fighting	age_band	35-49	0.7	curated
+game_fighting	age_band	5-12	0.6	curated
+game_fighting	age_band	50-64	0.2	curated
+game_fighting	age_band	65+	0.1	curated
+game_fighting	sex	female	0.6	curated
+game_fighting	sex	male	1.5	curated
+game_platformer	age_band	13-17	1.3	curated
+game_platformer	age_band	25-34	0.9	curated
+game_platformer	age_band	35-49	0.8	curated
+game_platformer	age_band	5-12	2	curated
+game_platformer	age_band	50-64	0.4	curated
+game_platformer	age_band	65+	0.3	curated
+game_puzzle	age_band	13-17	0.8	curated
+game_puzzle	age_band	18-24	0.8	curated
+game_puzzle	age_band	35-49	1.2	curated
+game_puzzle	age_band	5-12	0.6	curated
+game_puzzle	age_band	50-64	1.8	curated
+game_puzzle	age_band	65+	1.8	curated
+game_puzzle	sex	female	1.3	curated
+game_puzzle	sex	male	0.8	curated
+game_racing	age_band	13-17	1.2	curated
+game_racing	age_band	18-24	1.2	curated
+game_racing	age_band	5-12	0.8	curated
+game_racing	age_band	50-64	0.8	curated
+game_racing	age_band	65+	0.5	curated
+game_racing	sex	female	0.6	curated
+game_racing	sex	male	1.4	curated
+game_rpg	age_band	13-17	1.3	curated
+game_rpg	age_band	18-24	1.3	curated
+game_rpg	age_band	25-34	1.3	curated
+game_rpg	age_band	5-12	0.4	curated
+game_rpg	age_band	50-64	0.6	curated
+game_rpg	age_band	65+	0.3	curated
+game_sandbox	age_band	13-17	1.8	curated
+game_sandbox	age_band	18-24	1.2	curated
+game_sandbox	age_band	25-34	0.9	curated
+game_sandbox	age_band	35-49	0.7	curated
+game_sandbox	age_band	5-12	2.5	curated
+game_sandbox	age_band	50-64	0.4	curated
+game_sandbox	age_band	65+	0.3	curated
+game_shooter	age_band	13-17	1.6	curated
+game_shooter	age_band	18-24	1.7	curated
+game_shooter	age_band	25-34	1.4	curated
+game_shooter	age_band	35-49	0.9	curated
+game_shooter	age_band	5-12	0.3	curated
+game_shooter	age_band	50-64	0.4	curated
+game_shooter	age_band	65+	0.2	curated
+game_shooter	sex	female	0.5	curated
+game_shooter	sex	male	1.6	curated
+game_simulation	age_band	13-17	0.8	curated
+game_simulation	age_band	18-24	0.9	curated
+game_simulation	age_band	35-49	1.2	curated
+game_simulation	age_band	5-12	0.6	curated
+game_simulation	age_band	50-64	1.2	curated
+game_sports	age_band	13-17	1.2	curated
+game_sports	age_band	18-24	1.2	curated
+game_sports	age_band	25-34	1.2	curated
+game_sports	age_band	5-12	0.8	curated
+game_sports	age_band	50-64	0.7	curated
+game_sports	age_band	65+	0.4	curated
+game_sports	sex	female	0.6	curated
+game_sports	sex	male	1.5	curated
+game_strategy	age_band	13-17	0.9	curated
+game_strategy	age_band	18-24	1.1	curated
+game_strategy	age_band	25-34	1.2	curated
+game_strategy	age_band	35-49	1.2	curated
+game_strategy	age_band	5-12	0.4	curated
+game_strategy	age_band	65+	0.8	curated
+game_strategy	sex	female	0.7	curated
+game_strategy	sex	male	1.3	curated
+game_survival	age_band	13-17	1.3	curated
+game_survival	age_band	18-24	1.3	curated
+game_survival	age_band	25-34	1.3	curated
+game_survival	age_band	5-12	0.4	curated
+game_survival	age_band	50-64	0.6	curated
+game_survival	age_band	65+	0.3	curated
+hiking	age_band	13-17	0.9	curated
+hiking	age_band	5-12	0.8	curated
+hiking	age_band	50-64	1.3	curated
+hiking	age_band	65+	1.3	curated
+knitting	age_band	13-17	0.4	curated
+knitting	age_band	18-24	0.4	curated
+knitting	age_band	25-34	0.7	curated
+knitting	age_band	5-12	0.2	curated
+knitting	age_band	50-64	1.6	curated
+knitting	age_band	65+	1.6	curated
+knitting	sex	female	1.9	curated
+knitting	sex	male	0.4	curated
+martial_arts	sex	female	0.8	curated
+martial_arts	sex	male	1.3	curated
+music_classical	age_band	13-17	0.3	curated
+music_classical	age_band	18-24	0.4	curated
+music_classical	age_band	25-34	0.6	curated
+music_classical	age_band	35-49	0.9	curated
+music_classical	age_band	5-12	0.3	curated
+music_classical	age_band	50-64	1.6	curated
+music_classical	age_band	65+	2.6	curated
+music_country	age_band	13-17	0.5	curated
+music_country	age_band	18-24	0.7	curated
+music_country	age_band	25-34	0.9	curated
+music_country	age_band	35-49	1.1	curated
+music_country	age_band	5-12	0.3	curated
+music_country	age_band	50-64	1.5	curated
+music_country	age_band	65+	1.8	curated
+music_electronic	age_band	13-17	1.2	curated
+music_electronic	age_band	18-24	2	curated
+music_electronic	age_band	25-34	1.8	curated
+music_electronic	age_band	5-12	0.1	curated
+music_electronic	age_band	50-64	0.4	curated
+music_electronic	age_band	65+	0.15	curated
+music_electronic	sex	female	0.8	curated
+music_electronic	sex	male	1.2	curated
+music_folk	age_band	13-17	0.5	curated
+music_folk	age_band	18-24	0.7	curated
+music_folk	age_band	25-34	0.9	curated
+music_folk	age_band	5-12	0.3	curated
+music_folk	age_band	50-64	1.3	curated
+music_folk	age_band	65+	1.6	curated
+music_hiphop	age_band	13-17	2	curated
+music_hiphop	age_band	18-24	2	curated
+music_hiphop	age_band	25-34	1.4	curated
+music_hiphop	age_band	35-49	0.8	curated
+music_hiphop	age_band	5-12	0.5	curated
+music_hiphop	age_band	50-64	0.4	curated
+music_hiphop	age_band	65+	0.2	curated
+music_hiphop	sex	female	0.9	curated
+music_hiphop	sex	male	1.1	curated
+music_jazz	age_band	13-17	0.3	curated
+music_jazz	age_band	18-24	0.5	curated
+music_jazz	age_band	25-34	0.8	curated
+music_jazz	age_band	5-12	0.1	curated
+music_jazz	age_band	50-64	1.6	curated
+music_jazz	age_band	65+	2.2	curated
+music_metal	age_band	13-17	1.2	curated
+music_metal	age_band	18-24	1.3	curated
+music_metal	age_band	25-34	1.3	curated
+music_metal	age_band	35-49	1.2	curated
+music_metal	age_band	5-12	0.1	curated
+music_metal	age_band	50-64	0.7	curated
+music_metal	age_band	65+	0.2	curated
+music_metal	sex	female	0.5	curated
+music_metal	sex	male	1.8	curated
+music_pop	age_band	13-17	1.5	curated
+music_pop	age_band	18-24	1.4	curated
+music_pop	age_band	50-64	0.8	curated
+music_pop	age_band	65+	0.5	curated
+music_pop	sex	female	1.3	curated
+music_pop	sex	male	0.8	curated
+music_rnb	sex	female	1.2	curated
+music_rnb	sex	male	0.8	curated
+music_rock	age_band	13-17	0.9	curated
+music_rock	age_band	25-34	1.1	curated
+music_rock	age_band	35-49	1.4	curated
+music_rock	age_band	5-12	0.3	curated
+music_rock	age_band	50-64	1.7	curated
+music_rock	age_band	65+	1.2	curated
+music_rock	sex	female	0.9	curated
+music_rock	sex	male	1.2	curated
+pet_keeping	sex	female	1.1	curated
+pet_keeping	sex	male	0.9	curated
+photography	sex	female	0.9	curated
+photography	sex	male	1.1	curated
+programming	age_band	13-17	1.5	curated
+programming	age_band	18-24	1.5	curated
+programming	age_band	25-34	1.5	curated
+programming	age_band	5-12	0.3	curated
+programming	age_band	50-64	0.5	curated
+programming	age_band	65+	0.1	curated
+programming	sex	female	0.5	curated
+programming	sex	male	1.8	curated
+pubs_and_bars	age_band	25-34	1.2	curated
+pubs_and_bars	age_band	35-49	1.2	curated
+pubs_and_bars	age_band	65+	0.7	curated
+pubs_and_bars	religion	muslim	0.15	curated: alcohol and gambling are forbidden in Islam; many still do
+puzzles	age_band	13-17	0.6	curated
+puzzles	age_band	18-24	0.7	curated
+puzzles	age_band	25-34	0.9	curated
+puzzles	age_band	35-49	1.1	curated
+puzzles	age_band	5-12	0.6	curated
+puzzles	age_band	50-64	1.6	curated
+puzzles	age_band	65+	1.6	curated
+sewing	sex	female	2	curated
+sewing	sex	male	0.4	curated
+social_media	age_band	13-17	2	curated
+social_media	age_band	18-24	1.8	curated
+social_media	age_band	25-34	1.4	curated
+social_media	age_band	5-12	0.5	curated
+social_media	age_band	50-64	0.5	curated
+social_media	age_band	65+	0.3	curated
+woodworking	sex	female	0.4	curated
+woodworking	sex	male	1.9	curated
+yoga	sex	female	1.8	curated
+yoga	sex	male	0.5	curated

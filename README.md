@@ -11,11 +11,13 @@
 
 **[API Reference](https://dasmig.github.io/interest-generator/)** · **[Usage Guide](doc/usage.md)** · **[Data and Method](doc/data.md)** · **[Releases](https://github.com/dasmig/interest-generator/releases)**
 
-Religion, hobbies and favourite media by country, age and sex. This version draws a **religion** from the shares of a country (195 countries in `lite`, 248 with detail in `full`); hobbies and media are planned.
+Religion, hobbies and favourite media by country, age and sex. A call draws a **religion** from the shares of a country, a few **hobbies**, and favourite **film, game, book and music genres**, shaped by the person's sex, age, country and religion (195 countries in `lite`, 248 with detail in `full`).
 
 ## Features
 
 - **Country-based Religion**. Each country's shares come from the CIA World Factbook, with hand-written rows where it has none (see [Data and Method](doc/data.md) for what is estimated).
+
+- **Hobbies and Media by Sex, Age and Country**. An item's weight is multiplied by factors for the person's sex, age band, country or region, and religion. The sex, age and country differences in activities are measured (Eurostat time-use surveys, Europe), the catalogue and the genre tastes are curated, and each factor row says which.
 
 - **Deterministic Seeding**. Per-call `get_interest(seed)` for reproducible results, generator-level `seed()` / `unseed()` for deterministic sequences, and `interest::seed()` for replaying a previous generation.
 
@@ -47,12 +49,13 @@ to the files you want to use it in, and supply the [`resources`](https://github.
 
 auto& gen = dasmig::intg::instance(); // loads the lite tier
 
-auto v = gen.get_interest("BR");  // a Brazilian; omit the code for a random country
+auto v = gen.get_interest({.country = "BR", .age = 34, .person_sex = dasmig::sex::female});
 std::cout << v << '\n';           // the religion, e.g. "Christian"
-std::cout << v.to_json() << '\n'; // {"country":"BR","religion":...,"religion_group":...,"signature":{...}}
+for (const auto& h : v.hobbies) std::cout << h.label << '\n'; // also films, games, books, music
+std::cout << v.to_json() << '\n'; // {"country":"BR","religion":...,"hobbies":[...],...,"signature":{...}}
 
-// The same seed and country give the same result everywhere.
-auto again = gen.get_interest("BR", v.seed());
+// The same seed and request give the same result everywhere.
+auto again = gen.get_interest({.country = "BR", .age = 34, .person_sex = dasmig::sex::female}, v.seed());
 ```
 
 See the [usage guide](doc/usage.md) for everything else.

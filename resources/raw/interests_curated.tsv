@@ -1,0 +1,189 @@
+kind	key	label	class	category	tags	weight	min_age	max_age	tier
+hobby	football	Football	sport	sport	physical;team;outdoor	1.4			lite
+hobby	basketball	Basketball	sport	sport	physical;team	0.9			lite
+hobby	swimming	Swimming	sport	sport	physical;solo	1.1			lite
+hobby	running	Running	sport	sport	physical;solo;outdoor	1.1			lite
+hobby	cycling	Cycling	sport	sport	physical;outdoor	1.2			lite
+hobby	fitness	Gym and fitness	sport	sport	physical;solo	1.2	14		lite
+hobby	martial_arts	Martial arts	sport	sport	physical;discipline	0.7			lite
+hobby	tennis	Tennis	sport	sport	physical	0.6			lite
+hobby	yoga	Yoga	sport	sport	physical;calm	0.7			lite
+hobby	dancing	Dancing	sport	sport	physical;social;creative	0.9			lite
+hobby	skiing	Skiing and snowboarding	sport	sport	physical;outdoor	0.5			full
+hobby	volleyball	Volleyball	sport	sport	physical;team	0.5			full
+hobby	cricket	Cricket	sport	sport	physical;team;outdoor	0.5			full
+hobby	baseball	Baseball	sport	sport	physical;team;outdoor	0.5			full
+hobby	boxing	Boxing	sport	sport	physical;combat	0.4			full
+hobby	golf	Golf	sport	sport	outdoor;calm	0.4			full
+hobby	climbing	Climbing	sport	sport	physical;outdoor;risk	0.4			full
+hobby	skateboarding	Skateboarding	sport	sport	physical;outdoor;risk	0.4		40	full
+hobby	table_tennis	Table tennis	sport	sport	physical	0.4			full
+hobby	surfing	Surfing	sport	sport	physical;outdoor;risk	0.3			full
+hobby	rugby	Rugby	sport	sport	physical;team;combat	0.3			full
+hobby	archery	Archery and shooting	sport	sport	discipline;outdoor	0.3			full
+hobby	horse_riding	Horse riding	sport	sport	physical;outdoor;animals	0.4			full
+hobby	hiking	Hiking	outdoors	outdoors	physical;outdoor;calm	1.2			lite
+hobby	camping	Camping	outdoors	outdoors	outdoor;survival	0.8			lite
+hobby	fishing	Fishing	outdoors	outdoors	outdoor;calm;survival	0.9			lite
+hobby	hunting	Hunting	outdoors	outdoors	outdoor;survival;combat	0.4	14		full
+hobby	birdwatching	Birdwatching	outdoors	outdoors	outdoor;calm;animals	0.4			full
+hobby	foraging	Foraging	outdoors	outdoors	outdoor;survival	0.3			full
+hobby	sailing	Sailing	outdoors	outdoors	outdoor;skill	0.3			full
+hobby	knitting	Knitting	handicraft	craft	creative;calm;solo	0.7			lite
+hobby	sewing	Sewing	handicraft	craft	creative;practical	0.7			lite
+hobby	pottery	Pottery	handicraft	craft	creative;calm	0.4			full
+hobby	woodworking	Woodworking	handicraft	craft	creative;practical;skill	0.6			lite
+hobby	embroidery	Embroidery	handicraft	craft	creative;calm	0.4			full
+hobby	crochet	Crochet	handicraft	craft	creative;calm	0.4			full
+hobby	jewellery_making	Jewellery making	handicraft	craft	creative;skill	0.3			full
+hobby	leatherwork	Leatherwork	handicraft	craft	creative;practical;skill	0.2			full
+hobby	gardening	Gardening	gardening	home	calm;outdoor;practical	1.3			lite
+hobby	bonsai	Bonsai	gardening	home	calm;patient	0.2			full
+hobby	beekeeping	Beekeeping	gardening	home	practical;animals;patient	0.2			full
+hobby	pet_keeping	Keeping pets	pets	animals	animals;care	1.1			lite
+hobby	dog_training	Dog training	pets	animals	animals;discipline	0.4			full
+hobby	aquarium	Aquarium keeping	pets	animals	animals;calm	0.3			full
+hobby	diy	Home repair and DIY	diy	home	practical;skill	1.0	14		lite
+hobby	car_mechanics	Car and motorbike mechanics	diy	home	practical;skill	0.6	14		lite
+hobby	electronics	Electronics tinkering	diy	tech	practical;skill;intellectual	0.4			lite
+hobby	bicycle_repair	Bicycle repair	diy	home	practical;skill	0.3			full
+hobby	volunteering	Volunteering	volunteering	service	social;care	0.8	12		lite
+hobby	community_organising	Community organising	volunteering	service	social;leadership	0.3	16		full
+hobby	religious_practice	Attending services	religious	faith	faith;social	0.9			lite
+hobby	scripture_study	Scripture study	religious	faith	faith;intellectual;calm	0.3			full
+hobby	hosting_dinners	Hosting dinners	socialising	social	social;food	0.8			lite
+hobby	cafes	Cafes and coffee with friends	socialising	social	social;calm	0.9			lite
+hobby	clubbing	Clubbing	socialising	social	social;music;night	0.5	18		lite
+hobby	pubs_and_bars	Pubs and bars	socialising	social	social;night	0.6	18		lite
+hobby	karaoke	Karaoke	socialising	social	social;music	0.3			full
+hobby	picnics	Picnics	socialising	social	social;outdoor;calm	0.4			full
+hobby	museums	Museums and galleries	culture	culture	intellectual;calm	0.7			lite
+hobby	theatre	Theatre	culture	culture	creative;social	0.4			lite
+hobby	concerts	Going to concerts	culture	culture	music;social	0.8			lite
+hobby	cinema	Going to the cinema	culture	culture	social;screen	1.0			lite
+hobby	festivals	Festivals	culture	culture	social;music	0.5			full
+hobby	sightseeing	Travel and sightseeing	culture	culture	curious;outdoor	0.9			lite
+hobby	programming	Programming	computing	tech	intellectual;solo;skill	0.6			lite
+hobby	social_media	Social media	computing	tech	social;screen	1.2	10		lite
+hobby	photo_editing	Photo and video editing	computing	tech	creative;skill	0.4			full
+hobby	blogging	Blogging and vlogging	computing	tech	creative;social	0.3			full
+hobby	3d_printing	3D printing	computing	tech	practical;skill;intellectual	0.2			full
+hobby	chess	Chess	hobbyist	games	intellectual;solo	0.7			lite
+hobby	board_games	Board games	hobbyist	games	social;intellectual	0.8			lite
+hobby	card_games	Card games	hobbyist	games	social	0.8			lite
+hobby	puzzles	Puzzles and crosswords	hobbyist	games	intellectual;calm;solo	0.8			lite
+hobby	collecting	Collecting	hobbyist	collecting	patient;solo	0.7			lite
+hobby	model_building	Model building	hobbyist	craft	creative;patient;skill	0.4			full
+hobby	drawing	Drawing	hobbyist	arts	creative;solo;calm	1.0			lite
+hobby	painting	Painting	hobbyist	arts	creative;calm	0.7			lite
+hobby	photography	Photography	hobbyist	arts	creative;outdoor;skill	0.8			lite
+hobby	writing	Writing	hobbyist	arts	creative;solo;intellectual	0.6			lite
+hobby	poetry	Poetry	hobbyist	arts	creative;calm	0.2			full
+hobby	calligraphy	Calligraphy	hobbyist	arts	creative;calm;patient	0.2			full
+hobby	magic_tricks	Magic tricks	hobbyist	arts	creative;social;skill	0.2			full
+hobby	astronomy	Stargazing	hobbyist	learning	intellectual;calm;curious	0.3			full
+hobby	genealogy	Genealogy	hobbyist	learning	patient;intellectual	0.2	16		full
+hobby	gambling	Cards and betting for money	hobbyist	games	risk;social	0.3	18		full
+hobby	tabletop_rpg	Tabletop role-playing	hobbyist	games	social;creative;intellectual	0.3			full
+hobby	cooking	Cooking		home	practical;food;creative	1.3			lite
+hobby	baking	Baking		home	practical;food;creative	0.8			lite
+hobby	home_brewing	Home brewing		home	practical;food;patient	0.2	18		full
+hobby	video_games	Video games	gaming	games	screen;solo;social	1.4			lite
+hobby	esports	Esports	gaming	games	screen;competitive	0.3			full
+hobby	reading	Reading	reading	learning	intellectual;calm;solo	1.5			lite
+hobby	comics	Comics and manga	reading	learning	creative;solo	0.6			lite
+hobby	watching_films	Watching films and series	screen	screen	screen;calm	1.6			lite
+hobby	anime	Anime	screen	screen	screen;creative	0.4			full
+hobby	playing_music	Playing an instrument	music	music	creative;skill;discipline	0.8			lite
+hobby	singing	Singing	music	music	creative;social	0.7			lite
+hobby	listening_music	Listening to music	music	music	calm;solo	1.5			lite
+hobby	dj_and_producing	DJing and music production	music	music	creative;tech;night	0.2			full
+hobby	languages	Learning languages	study	learning	intellectual;curious	0.6			lite
+hobby	history	History and documentaries	study	learning	intellectual;curious	0.5			lite
+hobby	science	Popular science	study	learning	intellectual;curious	0.4			full
+hobby	playing_outside	Playing outside	outdoors	play	physical;outdoor;social	1.5		13	lite
+hobby	building_blocks	Building with blocks	hobbyist	play	creative;patient	0.8		16	lite
+hobby	hide_and_seek	Tag and hide-and-seek	outdoors	play	physical;social;outdoor	0.7		12	full
+hobby	pretend_play	Pretend play	hobbyist	play	creative;social	0.7		11	full
+film	film_action	Action	screen	film	action	1.4			lite
+film	film_comedy	Comedy	screen	film	humour	1.5			lite
+film	film_drama	Drama	screen	film	emotion	1.3			lite
+film	film_horror	Horror	screen	film	fear	0.9			lite
+film	film_thriller	Thriller	screen	film	suspense	1.1			lite
+film	film_scifi	Science fiction	screen	film	speculative	1.0			lite
+film	film_fantasy	Fantasy	screen	film	speculative	0.9			lite
+film	film_romance	Romance	screen	film	emotion;love	0.9			lite
+film	film_animation	Animation	screen	film	family;creative	1.0			lite
+film	film_documentary	Documentary	screen	film	curious	0.6			lite
+film	film_crime	Crime	screen	film	suspense	0.8			lite
+film	film_war	War	screen	film	history;combat	0.4			lite
+film	film_western	Western	screen	film	history	0.3			full
+film	film_musical	Musical	screen	film	music	0.4			full
+film	film_mystery	Mystery	screen	film	suspense;intellectual	0.6			full
+film	film_adventure	Adventure	screen	film	action;curious	0.9			full
+film	film_family	Family	screen	film	family	0.8			full
+film	film_historical	Historical	screen	film	history	0.5			full
+film	film_superhero	Superhero	screen	film	action;speculative	0.8			full
+film	film_sports	Sports	screen	film	physical	0.3			full
+game	game_action_adventure	Action-adventure	gaming	game	action;exploration	1.3			lite
+game	game_shooter	Shooter	gaming	game	action;combat;competitive	1.2	12		lite
+game	game_rpg	Role-playing	gaming	game	story;speculative	1.2			lite
+game	game_strategy	Strategy	gaming	game	intellectual;planning	0.9			lite
+game	game_simulation	Simulation	gaming	game	calm;creative	0.8			lite
+game	game_sports	Sports	gaming	game	competitive;physical	0.8			lite
+game	game_racing	Racing	gaming	game	competitive;speed	0.6			lite
+game	game_platformer	Platformer	gaming	game	skill	0.7			lite
+game	game_puzzle	Puzzle	gaming	game	intellectual;calm	0.8			lite
+game	game_survival	Survival	gaming	game	survival;crafting	0.8			lite
+game	game_sandbox	Sandbox and building	gaming	game	creative;crafting	0.9			lite
+game	game_fighting	Fighting	gaming	game	combat;competitive	0.5			lite
+game	game_mmo	Online multiplayer worlds	gaming	game	social;story	0.5			full
+game	game_horror	Horror	gaming	game	fear	0.5	14		full
+game	game_rhythm	Rhythm and music	gaming	game	music;skill	0.3			full
+game	game_card	Card and board (digital)	gaming	game	intellectual;social	0.4			full
+game	game_casual	Casual mobile	gaming	game	calm	1.1			full
+game	game_roguelike	Roguelike	gaming	game	skill;risk	0.4			full
+game	game_farming	Farming and life	gaming	game	calm;practical	0.5			full
+game	game_stealth	Stealth	gaming	game	skill;planning	0.4			full
+book	book_crime	Crime and mystery	reading	book	suspense;intellectual	1.3			lite
+book	book_thriller	Thriller	reading	book	suspense	1.1			lite
+book	book_romance	Romance	reading	book	emotion;love	1.1			lite
+book	book_scifi	Science fiction	reading	book	speculative	0.9			lite
+book	book_fantasy	Fantasy	reading	book	speculative	1.0			lite
+book	book_historical_fiction	Historical fiction	reading	book	history	0.7			lite
+book	book_literary	Literary fiction	reading	book	emotion;intellectual	0.7			lite
+book	book_history	History	reading	book	history;intellectual	0.7			lite
+book	book_biography	Biography and memoir	reading	book	curious	0.8			lite
+book	book_self_help	Self-help	reading	book	practical	0.6			lite
+book	book_horror	Horror	reading	book	fear	0.5			lite
+book	book_comics	Comics and graphic novels	reading	book	creative	0.6			lite
+book	book_poetry	Poetry	reading	book	creative;calm	0.2			full
+book	book_science	Popular science	reading	book	intellectual;curious	0.5			full
+book	book_business	Business	reading	book	practical;ambition	0.4			full
+book	book_travel	Travel writing	reading	book	curious	0.3			full
+book	book_cooking	Cookbooks	reading	book	food;practical	0.4			full
+book	book_children	Children's stories	reading	book	family	0.6		12	full
+book	book_religion	Faith and spirituality	reading	book	faith	0.5			full
+book	book_true_crime	True crime	reading	book	suspense	0.5			full
+music	music_pop	Pop	music	music	mainstream	1.6			lite
+music	music_rock	Rock	music	music	guitars	1.3			lite
+music	music_hiphop	Hip hop	music	music	urban	1.2			lite
+music	music_electronic	Electronic and dance	music	music	night	0.9			lite
+music	music_classical	Classical	music	music	calm;intellectual	0.6			lite
+music	music_jazz	Jazz	music	music	calm;skill	0.5			lite
+music	music_country	Country	music	music	roots	0.6			lite
+music	music_folk	Folk and traditional	music	music	roots	0.5			lite
+music	music_metal	Metal	music	music	heavy	0.5			lite
+music	music_rnb	R&B and soul	music	music	emotion	0.8			lite
+music	music_reggae	Reggae	music	music	calm	0.4			lite
+music	music_latin	Latin	music	music	dance	0.7			lite
+music	music_blues	Blues	music	music	roots;emotion	0.3			full
+music	music_punk	Punk	music	music	heavy;rebel	0.3			full
+music	music_indie	Indie	music	music	creative	0.6			full
+music	music_gospel	Gospel	music	music	faith	0.3			full
+music	music_world	World music	music	music	roots;curious	0.3			full
+music	music_opera	Opera	music	music	calm;intellectual	0.2			full
+music	music_kpop	K-pop	music	music	mainstream;dance	0.4			full
+music	music_afrobeats	Afrobeats	music	music	dance	0.3			full
+music	music_reggaeton	Reggaeton	music	music	dance;urban	0.4			full
+music	music_childrens	Children's songs	music	music	family	0.6		10	full

@@ -27,7 +27,8 @@ This guide covers every feature of the interest-generator library. For a quick o
 int main()
 {
     auto& gen = dasmig::intg::instance();
-    std::cout << gen.get_interest("BR") << '\n'; // a Brazilian's religion
+    auto v = gen.get_interest({.country = "BR", .age = 34, .person_sex = dasmig::sex::female});
+    std::cout << v.religion << ", " << v.hobbies.front().label << '\n';
 }
 ```
 
@@ -43,59 +44,101 @@ Copy `dasmig/interestgen.hpp`, `dasmig/core.hpp` and the `dasmig/core/` director
 dasmig::intg gen;                       // an empty, independent instance
 bool ok = gen.load(dasmig::dataset::lite); // false when the tier is not found
 gen.load(std::filesystem::path{"path/to/resources/lite"}); // a directory
-gen.has_data();
-gen.country_count();
-gen.shares("US"); // the loaded religion shares of a country
+gen.has_data();       // religion data is loaded
+gen.country_count();  // countries with religion shares
+gen.item_count();     // hobbies and genres
+gen.shares("US");     // the loaded religion shares of a country
 ```
 
-Each `load` replaces the data and every layer loaded before. The `lite` tier has 195 countries with seven major groups each; `full` has 248 with the detailed religions. See [Data and Method](data.md).
+Each `load` replaces the data and every layer loaded before. A tier is five tables (`religion`, `interests`, `affinity`, `age_bands`, `regions`); a directory with only `religion.tsv` still loads and then draws no hobbies or media. The `lite` tier has 195 countries and 104 hobbies and genres; `full` has 248 and 188, with the detailed religions. See [Data and Method](data.md).
 
 ## Generating
 
 ```cpp
-auto v = gen.get_interest("BR");                 // a country, seed from the instance engine
-auto w = gen.get_interest("BR", std::uint64_t{1234}); // deterministic; does not touch the engine
-auto x = gen.get_interest();                     // a random country
-auto y = gen.get_interest(std::uint64_t{1234});  // a random country, deterministic
+auto v = gen.get_interest({.country = "BR", .age = 34, .person_sex = dasmig::sex::female});
+
 v.country_code;   // "BR"
 v.religion;       // "Christian" (lite) or "Roman Catholic" (full)
 v.religion_group; // "christian": comparable between tiers
+v.hobbies;        // 3 items, each with key, label and category
+v.films;          // 2 genres; likewise v.games, v.books, v.music
 ```
 
-- The country is an ISO 3166-1 alpha-2 code in capitals, the same key as country-generator.
-- A religion is drawn by the `weight` column of the country's rows. A row with weight 0 is loaded but never drawn.
-- Without a country, one is drawn uniformly from the countries loaded. The data has no population, so for a population-weighted world pass the country that country-generator chose.
-- The country and the religion use separate random streams. Asking for the country a seed would have drawn gives the same religion as asking for no country.
+Every field of `interest_request` is optional:
+
+| Field | Default | Meaning |
+|-------|---------|---------|
+| `country` | empty | ISO 3166-1 alpha-2 code in capitals (the key of country-generator). Empty draws a country uniformly from those loaded; the data has no population, so for a population-weighted world pass the country country-generator chose |
+| `age` | unknown | Age in completed years (birth-generator's `age`). Unknown applies no age factor and no age limit. Younger than 5 draws no hobbies or media |
+| `person_sex` | unknown | `dasmig::sex` (shared with biodata-generator and birth-generator). Unknown applies no sex factor |
+| `hobbies` | 3 | How many hobbies |
+| `media` | 2 | How many genres in each of film, games, books and music |
+
+There are shorthands for the common cases:
+
+```cpp
+auto a = gen.get_interest("BR");                          // a country; age and sex unknown
+auto b = gen.get_interest();                              // a random country
+auto c = gen.get_interest(request, std::uint64_t{1234});  // deterministic; does not touch the engine
+auto d = gen.get_interest("BR", std::uint64_t{1234});
+auto e = gen.get_interest(std::uint64_t{1234});
+```
+
+How a draw works:
+
+- The religion comes from the country's shares, by the `weight` column; a row with weight 0 is loaded but never drawn.
+- Each hobby and genre has a base `weight`, multiplied by factors for the person's sex, age band, country (or else region) and religion group, for the item and for its activity class. A missing factor is 1. Items are drawn without replacement, and only those the person is old enough (and young enough) for. If fewer than asked have a positive weight, fewer are returned.
+- Country, religion and each kind of item use random streams of their own. Asking for more hobbies keeps the first ones the same; asking for no media leaves the hobbies unchanged; the religion does not depend on age, sex or counts.
 
 ## Seeding and Deterministic Generation
 
-- `get_interest(seed)` and `get_interest(country, seed)` give the same result for the same seed, country and data, on every platform.
+- `get_interest(request, seed)` and its shorthands give the same result for the same seed, request and data, on every platform.
 - `seed(s)` makes the instance engine deterministic, so a sequence of `get_interest()` calls repeats; `unseed()` reseeds it from the system.
-- `v.seed()` is the seed a result was generated from: `get_interest(v.country_code, v.seed())` replays it.
+- `v.seed()` is the seed a result was generated from. With a random country, `get_interest(v.country_code, v.seed())` replays the religion; pass the same request for the rest.
 
 ## Extending Data
 
-The shipped data is a base layer. Files with the same columns as `religion.tsv` can be loaded on top of it to add countries or religions, change shares or remove rows, without editing the shipped file. Rows are keyed by `country_code` and `religion`; `group` and `weight` are required, `year` and `basis` are optional.
+The shipped data is a base layer. Files with the same columns as the shipped tables can be loaded on top of it to add countries, religions, hobbies or genres, change shares or factors, or remove rows, without editing the shipped files. Each table has a key, and a row with the same key replaces the loaded row:
+
+| `table` | File | Key | Required columns |
+|---------|------|-----|------------------|
+| `religion` | `religion.tsv` | `country_code`, `religion` | `group`, `weight` (optional: `year`, `basis`) |
+| `interests` | `interests.tsv` | `kind`, `key` | `label`, `weight` (optional: `class`, `category`, `tags`, `min_age`, `max_age`) |
+| `affinity` | `affinity.tsv` | `target`, `dimension`, `value` | `factor` (optional: `basis`) |
+| `age_bands` | `age_bands.tsv` | `band` | `min_age`, `max_age` |
+| `regions` | `regions.tsv` | `country_code` | `region` |
+
+`kind` is `hobby`, `film`, `game`, `book` or `music`. An affinity `target` is an item `key`, or `class:` and an activity class (it then applies to every item of that class); `dimension` is `sex` (`male`, `female`), `age_band`, `region`, `country` or `religion` (a group such as `christian`).
 
 ```cpp
+using table = dasmig::intg::table;
+
 // Override mode (the default): a row replaces the loaded row with its key;
-// new keys are added.
-gen.extend("mods/extra.tsv");
+// new keys are added. A file or a directory with any of the table files.
+gen.extend("mods/extra");
+gen.extend("mods/interests.tsv");
 
-// From text, for example supplied by a WebAssembly host: a made-up country
-// (the code is two capital letters) with its own religion.
-gen.extend_from_string("country_code\treligion\tgroup\tweight\nXX\tSun Worship\tother\t2\n", "scenario");
+// From text, for example supplied by a WebAssembly host: a new hobby,
+// and a made-up country with its own religion.
+gen.extend_from_string(table::interests,
+    "kind\tkey\tlabel\tweight\nhobby\tfalconry\tFalconry\t0.3\n", "scenario");
+gen.extend_from_string(table::religion,
+    "country_code\treligion\tgroup\tweight\nXX\tSun Worship\tother\t2\n", "scenario");
 
-// To change a country's mix, set the shares you want. Rows you leave out stay.
+// Make falconry popular with men in Kazakhstan.
+gen.extend_from_string(table::affinity,
+    "target\tdimension\tvalue\tfactor\nfalconry\tsex\tmale\t3\nfalconry\tcountry\tKZ\t8\n", "scenario");
+
 // Remove rows: a layer needs only the keys and a disabled column.
-gen.extend_from_string("country_code\treligion\tdisabled\nXX\tSun Worship\t1\n", "cleanup");
+gen.extend_from_string(table::religion, "country_code\treligion\tdisabled\nXX\tSun Worship\t1\n", "cleanup");
 
 // Add mode refuses to touch keys that are already loaded.
 gen.extend("mods/new.tsv", dasmig::core::layer_mode::add);
 ```
 
-- Every value in a layer is checked before anything changes. A bad layer throws `dasmig::core::tsv_error` with the file, line and column, and the data stays as it was.
-- `layers()` lists what is loaded: source, mode, rows added, replaced and removed, and warnings such as unknown columns.
+- Every value in a layer is checked before anything changes. A directory layer applies to all its tables or to none. A bad layer throws `dasmig::core::tsv_error` with the file, line and column, and the data stays as it was.
+- Affinity rows whose target is not a loaded item or class are ignored, so removing an item needs no other change; `unresolved()` lists them to catch misspelt names.
+- `layers(table)` lists what is loaded for a table: source, mode, rows added, replaced and removed, and warnings such as unknown columns.
 - `load(...)` replaces the base and drops every layer.
 
 ## Replay and JSON
@@ -125,5 +168,5 @@ Each `intg` instance is independent. Concurrent calls to `get_interest()` on the
 | Exception | When |
 |-----------|------|
 | `std::runtime_error` | Any generation call before data is loaded |
-| `std::invalid_argument` | The country code has no data (codes are two capital letters), or every share of the country has weight 0, or no country has a positive weight (random country) |
-| `dasmig::core::tsv_error` | A malformed `religion.tsv` or layer (message gives file, line and column); the data is unchanged |
+| `std::invalid_argument` | The country code has no data (codes are two capital letters), or every share of the country has weight 0, or no country has a positive weight (random country); `extend(path)` with a file that is not one of the table names |
+| `dasmig::core::tsv_error` | A malformed table file or layer (message gives file, line and column); the data is unchanged |

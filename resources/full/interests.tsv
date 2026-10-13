@@ -1,0 +1,189 @@
+kind	key	label	weight	class	category	tags	min_age	max_age
+hobby	football	Football	1.4	sport	sport	physical;team;outdoor		
+hobby	basketball	Basketball	0.9	sport	sport	physical;team		
+hobby	swimming	Swimming	1.1	sport	sport	physical;solo		
+hobby	running	Running	1.1	sport	sport	physical;solo;outdoor		
+hobby	cycling	Cycling	1.2	sport	sport	physical;outdoor		
+hobby	fitness	Gym and fitness	1.2	sport	sport	physical;solo	14	
+hobby	martial_arts	Martial arts	0.7	sport	sport	physical;discipline		
+hobby	tennis	Tennis	0.6	sport	sport	physical		
+hobby	yoga	Yoga	0.7	sport	sport	physical;calm		
+hobby	dancing	Dancing	0.9	sport	sport	physical;social;creative		
+hobby	skiing	Skiing and snowboarding	0.5	sport	sport	physical;outdoor		
+hobby	volleyball	Volleyball	0.5	sport	sport	physical;team		
+hobby	cricket	Cricket	0.5	sport	sport	physical;team;outdoor		
+hobby	baseball	Baseball	0.5	sport	sport	physical;team;outdoor		
+hobby	boxing	Boxing	0.4	sport	sport	physical;combat		
+hobby	golf	Golf	0.4	sport	sport	outdoor;calm		
+hobby	climbing	Climbing	0.4	sport	sport	physical;outdoor;risk		
+hobby	skateboarding	Skateboarding	0.4	sport	sport	physical;outdoor;risk		40
+hobby	table_tennis	Table tennis	0.4	sport	sport	physical		
+hobby	surfing	Surfing	0.3	sport	sport	physical;outdoor;risk		
+hobby	rugby	Rugby	0.3	sport	sport	physical;team;combat		
+hobby	archery	Archery and shooting	0.3	sport	sport	discipline;outdoor		
+hobby	horse_riding	Horse riding	0.4	sport	sport	physical;outdoor;animals		
+hobby	hiking	Hiking	1.2	outdoors	outdoors	physical;outdoor;calm		
+hobby	camping	Camping	0.8	outdoors	outdoors	outdoor;survival		
+hobby	fishing	Fishing	0.9	outdoors	outdoors	outdoor;calm;survival		
+hobby	hunting	Hunting	0.4	outdoors	outdoors	outdoor;survival;combat	14	
+hobby	birdwatching	Birdwatching	0.4	outdoors	outdoors	outdoor;calm;animals		
+hobby	foraging	Foraging	0.3	outdoors	outdoors	outdoor;survival		
+hobby	sailing	Sailing	0.3	outdoors	outdoors	outdoor;skill		
+hobby	knitting	Knitting	0.7	handicraft	craft	creative;calm;solo		
+hobby	sewing	Sewing	0.7	handicraft	craft	creative;practical		
+hobby	pottery	Pottery	0.4	handicraft	craft	creative;calm		
+hobby	woodworking	Woodworking	0.6	handicraft	craft	creative;practical;skill		
+hobby	embroidery	Embroidery	0.4	handicraft	craft	creative;calm		
+hobby	crochet	Crochet	0.4	handicraft	craft	creative;calm		
+hobby	jewellery_making	Jewellery making	0.3	handicraft	craft	creative;skill		
+hobby	leatherwork	Leatherwork	0.2	handicraft	craft	creative;practical;skill		
+hobby	gardening	Gardening	1.3	gardening	home	calm;outdoor;practical		
+hobby	bonsai	Bonsai	0.2	gardening	home	calm;patient		
+hobby	beekeeping	Beekeeping	0.2	gardening	home	practical;animals;patient		
+hobby	pet_keeping	Keeping pets	1.1	pets	animals	animals;care		
+hobby	dog_training	Dog training	0.4	pets	animals	animals;discipline		
+hobby	aquarium	Aquarium keeping	0.3	pets	animals	animals;calm		
+hobby	diy	Home repair and DIY	1.0	diy	home	practical;skill	14	
+hobby	car_mechanics	Car and motorbike mechanics	0.6	diy	home	practical;skill	14	
+hobby	electronics	Electronics tinkering	0.4	diy	tech	practical;skill;intellectual		
+hobby	bicycle_repair	Bicycle repair	0.3	diy	home	practical;skill		
+hobby	volunteering	Volunteering	0.8	volunteering	service	social;care	12	
+hobby	community_organising	Community organising	0.3	volunteering	service	social;leadership	16	
+hobby	religious_practice	Attending services	0.9	religious	faith	faith;social		
+hobby	scripture_study	Scripture study	0.3	religious	faith	faith;intellectual;calm		
+hobby	hosting_dinners	Hosting dinners	0.8	socialising	social	social;food		
+hobby	cafes	Cafes and coffee with friends	0.9	socialising	social	social;calm		
+hobby	clubbing	Clubbing	0.5	socialising	social	social;music;night	18	
+hobby	pubs_and_bars	Pubs and bars	0.6	socialising	social	social;night	18	
+hobby	karaoke	Karaoke	0.3	socialising	social	social;music		
+hobby	picnics	Picnics	0.4	socialising	social	social;outdoor;calm		
+hobby	museums	Museums and galleries	0.7	culture	culture	intellectual;calm		
+hobby	theatre	Theatre	0.4	culture	culture	creative;social		
+hobby	concerts	Going to concerts	0.8	culture	culture	music;social		
+hobby	cinema	Going to the cinema	1.0	culture	culture	social;screen		
+hobby	festivals	Festivals	0.5	culture	culture	social;music		
+hobby	sightseeing	Travel and sightseeing	0.9	culture	culture	curious;outdoor		
+hobby	programming	Programming	0.6	computing	tech	intellectual;solo;skill		
+hobby	social_media	Social media	1.2	computing	tech	social;screen	10	
+hobby	photo_editing	Photo and video editing	0.4	computing	tech	creative;skill		
+hobby	blogging	Blogging and vlogging	0.3	computing	tech	creative;social		
+hobby	3d_printing	3D printing	0.2	computing	tech	practical;skill;intellectual		
+hobby	chess	Chess	0.7	hobbyist	games	intellectual;solo		
+hobby	board_games	Board games	0.8	hobbyist	games	social;intellectual		
+hobby	card_games	Card games	0.8	hobbyist	games	social		
+hobby	puzzles	Puzzles and crosswords	0.8	hobbyist	games	intellectual;calm;solo		
+hobby	collecting	Collecting	0.7	hobbyist	collecting	patient;solo		
+hobby	model_building	Model building	0.4	hobbyist	craft	creative;patient;skill		
+hobby	drawing	Drawing	1.0	hobbyist	arts	creative;solo;calm		
+hobby	painting	Painting	0.7	hobbyist	arts	creative;calm		
+hobby	photography	Photography	0.8	hobbyist	arts	creative;outdoor;skill		
+hobby	writing	Writing	0.6	hobbyist	arts	creative;solo;intellectual		
+hobby	poetry	Poetry	0.2	hobbyist	arts	creative;calm		
+hobby	calligraphy	Calligraphy	0.2	hobbyist	arts	creative;calm;patient		
+hobby	magic_tricks	Magic tricks	0.2	hobbyist	arts	creative;social;skill		
+hobby	astronomy	Stargazing	0.3	hobbyist	learning	intellectual;calm;curious		
+hobby	genealogy	Genealogy	0.2	hobbyist	learning	patient;intellectual	16	
+hobby	gambling	Cards and betting for money	0.3	hobbyist	games	risk;social	18	
+hobby	tabletop_rpg	Tabletop role-playing	0.3	hobbyist	games	social;creative;intellectual		
+hobby	cooking	Cooking	1.3		home	practical;food;creative		
+hobby	baking	Baking	0.8		home	practical;food;creative		
+hobby	home_brewing	Home brewing	0.2		home	practical;food;patient	18	
+hobby	video_games	Video games	1.4	gaming	games	screen;solo;social		
+hobby	esports	Esports	0.3	gaming	games	screen;competitive		
+hobby	reading	Reading	1.5	reading	learning	intellectual;calm;solo		
+hobby	comics	Comics and manga	0.6	reading	learning	creative;solo		
+hobby	watching_films	Watching films and series	1.6	screen	screen	screen;calm		
+hobby	anime	Anime	0.4	screen	screen	screen;creative		
+hobby	playing_music	Playing an instrument	0.8	music	music	creative;skill;discipline		
+hobby	singing	Singing	0.7	music	music	creative;social		
+hobby	listening_music	Listening to music	1.5	music	music	calm;solo		
+hobby	dj_and_producing	DJing and music production	0.2	music	music	creative;tech;night		
+hobby	languages	Learning languages	0.6	study	learning	intellectual;curious		
+hobby	history	History and documentaries	0.5	study	learning	intellectual;curious		
+hobby	science	Popular science	0.4	study	learning	intellectual;curious		
+hobby	playing_outside	Playing outside	1.5	outdoors	play	physical;outdoor;social		13
+hobby	building_blocks	Building with blocks	0.8	hobbyist	play	creative;patient		16
+hobby	hide_and_seek	Tag and hide-and-seek	0.7	outdoors	play	physical;social;outdoor		12
+hobby	pretend_play	Pretend play	0.7	hobbyist	play	creative;social		11
+film	film_action	Action	1.4	screen	film	action		
+film	film_comedy	Comedy	1.5	screen	film	humour		
+film	film_drama	Drama	1.3	screen	film	emotion		
+film	film_horror	Horror	0.9	screen	film	fear		
+film	film_thriller	Thriller	1.1	screen	film	suspense		
+film	film_scifi	Science fiction	1.0	screen	film	speculative		
+film	film_fantasy	Fantasy	0.9	screen	film	speculative		
+film	film_romance	Romance	0.9	screen	film	emotion;love		
+film	film_animation	Animation	1.0	screen	film	family;creative		
+film	film_documentary	Documentary	0.6	screen	film	curious		
+film	film_crime	Crime	0.8	screen	film	suspense		
+film	film_war	War	0.4	screen	film	history;combat		
+film	film_western	Western	0.3	screen	film	history		
+film	film_musical	Musical	0.4	screen	film	music		
+film	film_mystery	Mystery	0.6	screen	film	suspense;intellectual		
+film	film_adventure	Adventure	0.9	screen	film	action;curious		
+film	film_family	Family	0.8	screen	film	family		
+film	film_historical	Historical	0.5	screen	film	history		
+film	film_superhero	Superhero	0.8	screen	film	action;speculative		
+film	film_sports	Sports	0.3	screen	film	physical		
+game	game_action_adventure	Action-adventure	1.3	gaming	game	action;exploration		
+game	game_shooter	Shooter	1.2	gaming	game	action;combat;competitive	12	
+game	game_rpg	Role-playing	1.2	gaming	game	story;speculative		
+game	game_strategy	Strategy	0.9	gaming	game	intellectual;planning		
+game	game_simulation	Simulation	0.8	gaming	game	calm;creative		
+game	game_sports	Sports	0.8	gaming	game	competitive;physical		
+game	game_racing	Racing	0.6	gaming	game	competitive;speed		
+game	game_platformer	Platformer	0.7	gaming	game	skill		
+game	game_puzzle	Puzzle	0.8	gaming	game	intellectual;calm		
+game	game_survival	Survival	0.8	gaming	game	survival;crafting		
+game	game_sandbox	Sandbox and building	0.9	gaming	game	creative;crafting		
+game	game_fighting	Fighting	0.5	gaming	game	combat;competitive		
+game	game_mmo	Online multiplayer worlds	0.5	gaming	game	social;story		
+game	game_horror	Horror	0.5	gaming	game	fear	14	
+game	game_rhythm	Rhythm and music	0.3	gaming	game	music;skill		
+game	game_card	Card and board (digital)	0.4	gaming	game	intellectual;social		
+game	game_casual	Casual mobile	1.1	gaming	game	calm		
+game	game_roguelike	Roguelike	0.4	gaming	game	skill;risk		
+game	game_farming	Farming and life	0.5	gaming	game	calm;practical		
+game	game_stealth	Stealth	0.4	gaming	game	skill;planning		
+book	book_crime	Crime and mystery	1.3	reading	book	suspense;intellectual		
+book	book_thriller	Thriller	1.1	reading	book	suspense		
+book	book_romance	Romance	1.1	reading	book	emotion;love		
+book	book_scifi	Science fiction	0.9	reading	book	speculative		
+book	book_fantasy	Fantasy	1.0	reading	book	speculative		
+book	book_historical_fiction	Historical fiction	0.7	reading	book	history		
+book	book_literary	Literary fiction	0.7	reading	book	emotion;intellectual		
+book	book_history	History	0.7	reading	book	history;intellectual		
+book	book_biography	Biography and memoir	0.8	reading	book	curious		
+book	book_self_help	Self-help	0.6	reading	book	practical		
+book	book_horror	Horror	0.5	reading	book	fear		
+book	book_comics	Comics and graphic novels	0.6	reading	book	creative		
+book	book_poetry	Poetry	0.2	reading	book	creative;calm		
+book	book_science	Popular science	0.5	reading	book	intellectual;curious		
+book	book_business	Business	0.4	reading	book	practical;ambition		
+book	book_travel	Travel writing	0.3	reading	book	curious		
+book	book_cooking	Cookbooks	0.4	reading	book	food;practical		
+book	book_children	Children's stories	0.6	reading	book	family		12
+book	book_religion	Faith and spirituality	0.5	reading	book	faith		
+book	book_true_crime	True crime	0.5	reading	book	suspense		
+music	music_pop	Pop	1.6	music	music	mainstream		
+music	music_rock	Rock	1.3	music	music	guitars		
+music	music_hiphop	Hip hop	1.2	music	music	urban		
+music	music_electronic	Electronic and dance	0.9	music	music	night		
+music	music_classical	Classical	0.6	music	music	calm;intellectual		
+music	music_jazz	Jazz	0.5	music	music	calm;skill		
+music	music_country	Country	0.6	music	music	roots		
+music	music_folk	Folk and traditional	0.5	music	music	roots		
+music	music_metal	Metal	0.5	music	music	heavy		
+music	music_rnb	R&B and soul	0.8	music	music	emotion		
+music	music_reggae	Reggae	0.4	music	music	calm		
+music	music_latin	Latin	0.7	music	music	dance		
+music	music_blues	Blues	0.3	music	music	roots;emotion		
+music	music_punk	Punk	0.3	music	music	heavy;rebel		
+music	music_indie	Indie	0.6	music	music	creative		
+music	music_gospel	Gospel	0.3	music	music	faith		
+music	music_world	World music	0.3	music	music	roots;curious		
+music	music_opera	Opera	0.2	music	music	calm;intellectual		
+music	music_kpop	K-pop	0.4	music	music	mainstream;dance		
+music	music_afrobeats	Afrobeats	0.3	music	music	dance		
+music	music_reggaeton	Reggaeton	0.4	music	music	dance;urban		
+music	music_childrens	Children's songs	0.6	music	music	family		10
