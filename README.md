@@ -21,7 +21,7 @@ Religion, hobbies and favourite media by country, age and sex. A call draws a **
 
 - **Hobbies and Media by Sex, Age and Country**. An item's weight is multiplied by factors for the person's sex, age band, country or region, and religion. The sex, age and country differences in activities are measured (Eurostat time-use surveys, Europe), the catalogue and the genre tastes are curated, and each factor row says which.
 
-- **Deterministic Seeding**. Per-call `get_interest(seed)` for reproducible results, generator-level `seed()` / `unseed()` for deterministic sequences, and `interest::seed()` for replaying a previous generation.
+- **Request-First Generation**. All per-call choices live in `interest_request`; use `get_interest(request)` for random generation or `get_interest(request, seed)` for reproducible results. `interest::seed()` records the seed for replay.
 
 - **Identical Everywhere**. A seed gives the same result on every compiler, standard library and CPU (GCC, Clang, MSVC, Emscripten; x86-64 and ARM64), checked by known-answer tests.
 
@@ -51,14 +51,17 @@ to the files you want to use it in, and supply the [`resources`](https://github.
 
 auto& gen = dasmig::intg::instance(); // loads the lite tier
 
-auto v = gen.get_interest({.country = "BR", .age = 34, .person_sex = dasmig::sex::female});
+const dasmig::interest_request request{.country = "BR", .age = 34, .person_sex = dasmig::sex::female};
+auto v = gen.get_interest(request);
 std::cout << v << '\n';           // the religion, e.g. "Christian"
 for (const auto& h : v.hobbies) std::cout << h.label << '\n'; // also films, games, books, music
 std::cout << v.to_json() << '\n'; // {"country":"BR","religion":...,"hobbies":[...],...,"signature":{...}}
 
 // The same seed and request give the same result everywhere.
-auto again = gen.get_interest({.country = "BR", .age = 34, .person_sex = dasmig::sex::female}, v.seed());
+auto again = gen.get_interest(request, v.seed());
 ```
+
+Use `get_interest({})` for a random country, unknown age and sex, three hobbies and two genres per medium. Generation has no mutable instance defaults or generator-level seeding controls; data loading and layers remain instance-level. The old country-only, seed-only and no-argument overloads have been removed.
 
 See the [usage guide](doc/usage.md) for everything else.
 

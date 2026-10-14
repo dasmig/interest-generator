@@ -27,7 +27,8 @@ This guide covers every feature of the interest-generator library. For a quick o
 int main()
 {
     auto& gen = dasmig::intg::instance();
-    auto v = gen.get_interest({.country = "BR", .age = 34, .person_sex = dasmig::sex::female});
+        const dasmig::interest_request request{.country = "BR", .age = 34, .person_sex = dasmig::sex::female};
+        auto v = gen.get_interest(request);
     std::cout << v.religion << ", " << v.hobbies.front().label << '\n';
 }
 ```
@@ -55,7 +56,8 @@ Each `load` replaces the data and every layer loaded before. A tier is five tabl
 ## Generating
 
 ```cpp
-auto v = gen.get_interest({.country = "BR", .age = 34, .person_sex = dasmig::sex::female});
+const dasmig::interest_request request{.country = "BR", .age = 34, .person_sex = dasmig::sex::female};
+auto v = gen.get_interest(request);
 
 v.country_code;   // "BR"
 v.religion;       // "Christian" (lite) or "Roman Catholic" (full)
@@ -64,7 +66,7 @@ v.hobbies;        // 3 items, each with key, label and category
 v.films;          // 2 genres; likewise v.games, v.books, v.music
 ```
 
-Every field of `interest_request` is optional:
+Generation has exactly two overloads: `get_interest(request)` and `get_interest(request, seed)`. Every per-call choice lives in `dasmig::interest_request`; it does not change the instance's configuration. Every field has a default:
 
 | Field | Default | Meaning |
 |-------|---------|---------|
@@ -74,15 +76,17 @@ Every field of `interest_request` is optional:
 | `hobbies` | 3 | How many hobbies |
 | `media` | 2 | How many genres in each of film, games, books and music |
 
-There are shorthands for the common cases:
+Use a request for every call, including the default case:
 
 ```cpp
-auto a = gen.get_interest("BR");                          // a country; age and sex unknown
-auto b = gen.get_interest();                              // a random country
-auto c = gen.get_interest(request, std::uint64_t{1234});  // deterministic; does not touch the engine
-auto d = gen.get_interest("BR", std::uint64_t{1234});
-auto e = gen.get_interest(std::uint64_t{1234});
+auto a = gen.get_interest({.country = "BR"});            // age and sex unknown, default counts
+auto b = gen.get_interest({});                          // a random country, default counts
+auto c = gen.get_interest(request, std::uint64_t{1234}); // deterministic; does not touch the engine
+auto d = gen.get_interest({.country = "BR"}, std::uint64_t{1234});
+auto e = gen.get_interest({}, std::uint64_t{1234});
 ```
+
+The country-only, seed-only and no-argument overloads have been removed. Data loading and layers still belong to the instance; generation options do not.
 
 How a draw works:
 
@@ -92,9 +96,9 @@ How a draw works:
 
 ## Seeding and Deterministic Generation
 
-- `get_interest(request, seed)` and its shorthands give the same result for the same seed, request and data, on every platform.
-- `seed(s)` makes the instance engine deterministic, so a sequence of `get_interest()` calls repeats; `unseed()` reseeds it from the system.
-- `v.seed()` is the seed a result was generated from. With a random country, `get_interest(v.country_code, v.seed())` replays the religion; pass the same request for the rest.
+- `get_interest(request, seed)` gives the same result for the same seed, request and data, on every platform, independent of previous calls.
+- `get_interest(request)` draws a fresh call seed from the instance's entropy-seeded random engine. There are no generator-level `seed()` or `unseed()` controls. For a reproducible sequence, supply an explicit seed for each request.
+- `v.seed()` is the seed a result was generated from. Replay with `get_interest(request, v.seed())`, retaining the original request, including an empty country when one was drawn randomly.
 
 ## Extending Data
 
@@ -146,7 +150,7 @@ gen.extend("mods/new.tsv", dasmig::core::layer_mode::add);
 Every result records the seed and the data it came from:
 
 ```cpp
-auto v = gen.get_interest();
+auto v = gen.get_interest({});
 v.signature().seed; // the call seed
 v.signature().data; // gen.data_hash() when it was generated
 ```
