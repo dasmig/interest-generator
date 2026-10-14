@@ -1,14 +1,41 @@
 #include "catch_amalgamated.hpp"
 #include "../dasmig/interestgen.hpp"
 
+#include <concepts>
+#include <cstdint>
 #include <filesystem>
 #include <fstream>
 #include <map>
 #include <set>
 #include <sstream>
 #include <string>
+#include <string_view>
+#include <utility>
 
 using table = dasmig::intg::table;
+
+template <typename Generator, typename... Args>
+concept accepts_interest_arguments = requires(Generator& gen, Args&&... args) {
+    { gen.get_interest(std::forward<Args>(args)...) } -> std::same_as<dasmig::interest>;
+};
+
+template <typename Generator>
+concept has_generation_seed = requires(Generator& gen) { gen.seed(std::uint64_t{1}); };
+
+template <typename Generator>
+concept has_generation_unseed = requires(Generator& gen) { gen.unseed(); };
+
+static_assert(accepts_interest_arguments<dasmig::intg, const dasmig::interest_request&>);
+static_assert(accepts_interest_arguments<const dasmig::intg, const dasmig::interest_request&, std::uint64_t>);
+static_assert(!accepts_interest_arguments<dasmig::intg>);
+static_assert(!accepts_interest_arguments<dasmig::intg, std::string_view>);
+static_assert(!accepts_interest_arguments<dasmig::intg, std::string_view, std::uint64_t>);
+static_assert(!accepts_interest_arguments<dasmig::intg, const char*>);
+static_assert(!accepts_interest_arguments<dasmig::intg, const char*, std::uint64_t>);
+static_assert(!accepts_interest_arguments<dasmig::intg, std::uint64_t>);
+static_assert(!accepts_interest_arguments<dasmig::intg, std::uint64_t, dasmig::interest_request>);
+static_assert(!has_generation_seed<dasmig::intg>);
+static_assert(!has_generation_unseed<dasmig::intg>);
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -163,25 +190,26 @@ TEST_CASE("the singleton loads data on first use", "[loading]")
 TEST_CASE("get_interest throws when no data is loaded", "[generation]")
 {
     dasmig::intg gen;
-    REQUIRE_THROWS_AS(gen.get_interest(), std::runtime_error);
-    REQUIRE_THROWS_AS(gen.get_interest(std::uint64_t{1}), std::runtime_error);
-    REQUIRE_THROWS_AS(gen.get_interest("US"), std::runtime_error);
+    REQUIRE_THROWS_AS(gen.get_interest({}), std::runtime_error);
+    REQUIRE_THROWS_AS(gen.get_interest({}, std::uint64_t{1}), std::runtime_error);
+    REQUIRE_THROWS_AS(gen.get_interest({.country = "US"}), std::runtime_error);
+    REQUIRE_THROWS_AS(gen.get_interest({.country = "US"}, std::uint64_t{1}), std::runtime_error);
 }
 
 TEST_CASE("an unknown country is rejected", "[generation][errors]")
 {
     const auto gen = make_loaded_generator();
-    REQUIRE_THROWS_AS(gen.get_interest("ZZ", std::uint64_t{1}), std::invalid_argument);
-    REQUIRE_THROWS_AS(gen.get_interest("us", std::uint64_t{1}), std::invalid_argument); // codes are upper case
+    REQUIRE_THROWS_AS(gen.get_interest({.country = "ZZ"}, std::uint64_t{1}), std::invalid_argument);
+    REQUIRE_THROWS_AS(gen.get_interest({.country = "us"}, std::uint64_t{1}), std::invalid_argument); // codes are upper case
     REQUIRE_THROWS_AS(gen.get_interest(request("ZZ", 30, dasmig::sex::male), 1), std::invalid_argument);
 }
 
 TEST_CASE("the country is reported", "[generation]")
 {
     const auto gen = make_loaded_generator();
-    REQUIRE(gen.get_interest("BR", std::uint64_t{1}).country_code == "BR");
-    const auto v = gen.get_interest(std::uint64_t{77});
-    REQUIRE(gen.get_interest(v.country_code, 77).to_json() == v.to_json()); // a random country replays
+    REQUIRE(gen.get_interest({.country = "BR"}, std::uint64_t{1}).country_code == "BR");
+    const auto v = gen.get_interest({}, std::uint64_t{77});
+    REQUIRE(gen.get_interest({.country = v.country_code}, 77).to_json() == v.to_json()); // a random country replays
     REQUIRE(gen.shares(v.country_code).size() > 0);
 }
 
@@ -190,11 +218,11 @@ TEST_CASE("the religion follows the country's shares", "[generation][stats]")
     const auto gen = make_small_generator();
     std::map<std::string, int> counts;
     constexpr int draws = 20000;
-    for (std::uint64_t s = 0; s < draws; ++s) ++counts[gen.get_interest("XA", s).religion];
+    for (std::uint64_t s = 0; s < draws; ++s) ++counts[gen.get_interest({.country = "XA"}, s).religion];
     REQUIRE(counts["Charlie"] == 0); // weight 0 is never drawn
     REQUIRE(counts["Alpha"] == Catch::Approx(draws * 0.75).margin(draws * 0.02));
     REQUIRE(counts["Bravo"] == Catch::Approx(draws * 0.25).margin(draws * 0.02));
-    REQUIRE(gen.get_interest("XA", std::uint64_t{1}).religion_group != "");
+    REQUIRE(gen.get_interest({.country = "XA"}, std::uint64_t{1}).religion_group != "");
 }
 
 TEST_CASE("a random country is uniform and skips countries with no weight", "[generation][stats]")
@@ -202,11 +230,11 @@ TEST_CASE("a random country is uniform and skips countries with no weight", "[ge
     const auto gen = make_small_generator();
     std::map<std::string, int> counts;
     constexpr int draws = 10000;
-    for (std::uint64_t s = 0; s < draws; ++s) ++counts[gen.get_interest(s).country_code];
+    for (std::uint64_t s = 0; s < draws; ++s) ++counts[gen.get_interest({}, s).country_code];
     REQUIRE(counts["XC"] == 0); // every share is 0
     REQUIRE(counts["XA"] == Catch::Approx(draws * 0.5).margin(draws * 0.03));
     REQUIRE(counts["XB"] == Catch::Approx(draws * 0.5).margin(draws * 0.03));
-    REQUIRE_THROWS_AS(gen.get_interest("XC", std::uint64_t{1}), std::invalid_argument);
+    REQUIRE_THROWS_AS(gen.get_interest({.country = "XC"}, std::uint64_t{1}), std::invalid_argument);
 }
 
 TEST_CASE("the religion does not depend on the other request fields", "[generation][seed]")
@@ -214,7 +242,7 @@ TEST_CASE("the religion does not depend on the other request fields", "[generati
     const auto gen = make_loaded_generator();
     for (std::uint64_t s = 0; s < 50; ++s)
     {
-        const auto base = gen.get_interest("FR", s);
+        const auto base = gen.get_interest({.country = "FR"}, s);
         const auto with = gen.get_interest(request("FR", 40, dasmig::sex::female), s);
         REQUIRE(base.religion == with.religion);
         auto many = request("FR", 40, dasmig::sex::female);
@@ -233,8 +261,8 @@ TEST_CASE("get_interest with a seed is deterministic", "[generation][seed]")
     const auto gen = make_loaded_generator();
     for (std::uint64_t s = 0; s < 100; ++s)
     {
-        REQUIRE(gen.get_interest(s).to_json() == gen.get_interest(s).to_json());
-        REQUIRE(gen.get_interest("FR", s).to_json() == gen.get_interest("FR", s).to_json());
+        REQUIRE(gen.get_interest({}, s).to_json() == gen.get_interest({}, s).to_json());
+        REQUIRE(gen.get_interest({.country = "FR"}, s).to_json() == gen.get_interest({.country = "FR"}, s).to_json());
         const auto r = request("DE", 33, dasmig::sex::male);
         REQUIRE(gen.get_interest(r, s).to_json() == gen.get_interest(r, s).to_json());
     }
@@ -246,18 +274,50 @@ TEST_CASE("a result replays from its seed", "[generation][seed]")
     const auto r = request("IN", 25, dasmig::sex::female);
     const auto v = gen.get_interest(r);
     REQUIRE(gen.get_interest(r, v.seed()).to_json() == v.to_json());
-    const auto w = gen.get_interest();
-    REQUIRE(gen.get_interest(w.seed()).to_json() == w.to_json());
+    const auto w = gen.get_interest({});
+    REQUIRE(gen.get_interest({}, w.seed()).to_json() == w.to_json());
 }
 
-TEST_CASE("seed and unseed control the instance engine", "[seed]")
+TEST_CASE("request defaults preserve the unconditioned generation behavior", "[generation][request]")
+{
+    const dasmig::interest_request defaults{};
+    REQUIRE(defaults.country.empty());
+    REQUIRE_FALSE(defaults.age.has_value());
+    REQUIRE_FALSE(defaults.person_sex.has_value());
+    REQUIRE(defaults.hobbies == 3);
+    REQUIRE(defaults.media == 2);
+
+    const auto gen = make_loaded_generator();
+    const auto v = gen.get_interest(defaults, 42);
+    REQUIRE(gen.shares(v.country_code).size() > 0);
+    REQUIRE(v.hobbies.size() == 3);
+    for (const auto* items : {&v.films, &v.games, &v.books, &v.music}) REQUIRE(items->size() == 2);
+    REQUIRE(gen.get_interest({}, 42).to_json() == v.to_json());
+    REQUIRE(gen.get_interest({.hobbies = 3, .media = 2}, 42).to_json() == v.to_json());
+}
+
+TEST_CASE("generation choices are per request and seeded calls ignore prior calls", "[generation][request][seed]")
 {
     auto gen = make_loaded_generator();
-    gen.seed(42);
-    const auto a = gen.get_interest().to_json();
-    gen.seed(42);
-    REQUIRE(gen.get_interest().to_json() == a);
-    REQUIRE(&gen.unseed() == &gen);
+    const auto other = make_loaded_generator();
+    const dasmig::interest_request defaults{};
+    const dasmig::interest_request custom{.country = "JP", .age = 16, .person_sex = dasmig::sex::female,
+                                          .hobbies = 1, .media = 0};
+    const auto hash = gen.data_hash();
+    for (const std::uint64_t s : {0ULL, 42ULL, 0xffffffffffffffffULL})
+    {
+        const auto expected = other.get_interest(defaults, s).to_json();
+        const auto limited = gen.get_interest(custom, s);
+        REQUIRE(limited.country_code == "JP");
+        REQUIRE(limited.hobbies.size() == 1);
+        for (const auto* items : {&limited.films, &limited.games, &limited.books, &limited.music})
+            REQUIRE(items->empty());
+
+        const auto random = gen.get_interest(custom);
+        REQUIRE(gen.get_interest(custom, random.seed()).to_json() == random.to_json());
+        REQUIRE(gen.get_interest(defaults, s).to_json() == expected);
+        REQUIRE(gen.data_hash() == hash);
+    }
 }
 
 TEST_CASE("each kind has a stream of its own", "[generation][seed]")
@@ -489,7 +549,7 @@ TEST_CASE("genres follow age", "[items][data][stats]")
 TEST_CASE("string conversion and streaming give the religion", "[conversion]")
 {
     const auto gen = make_loaded_generator();
-    const auto v = gen.get_interest(std::uint64_t{5});
+    const auto v = gen.get_interest({}, std::uint64_t{5});
     const std::string s = v;
     std::ostringstream os;
     os << v;
@@ -514,12 +574,12 @@ TEST_CASE("known answers for fixed seeds", "[kat]")
     REQUIRE(gen.get_interest(request("US", 30, dasmig::sex::male), 1).to_json() == R"({"country":"US","religion":"Unaffiliated","religion_group":"unaffiliated","hobbies":[{"key":"hosting_dinners","label":"Hosting dinners"},{"key":"football","label":"Football"},{"key":"chess","label":"Chess"}],"films":[{"key":"film_horror","label":"Horror"},{"key":"film_documentary","label":"Documentary"}],"games":[{"key":"game_sports","label":"Sports"},{"key":"game_puzzle","label":"Puzzle"}],"books":[{"key":"book_fantasy","label":"Fantasy"},{"key":"book_crime","label":"Crime and mystery"}],"music":[{"key":"music_rock","label":"Rock"},{"key":"music_metal","label":"Metal"}],"signature":{"seed":"0000000000000001","data":"b02e44f9d7b744e9"}})");
     REQUIRE(gen.get_interest(request("JP", 16, dasmig::sex::female), 2).to_json() == R"({"country":"JP","religion":"Buddhist","religion_group":"buddhist","hobbies":[{"key":"languages","label":"Learning languages"},{"key":"gardening","label":"Gardening"},{"key":"comics","label":"Comics and manga"}],"films":[{"key":"film_scifi","label":"Science fiction"},{"key":"film_comedy","label":"Comedy"}],"games":[{"key":"game_action_adventure","label":"Action-adventure"},{"key":"game_sandbox","label":"Sandbox and building"}],"books":[{"key":"book_romance","label":"Romance"},{"key":"book_crime","label":"Crime and mystery"}],"music":[{"key":"music_rnb","label":"R&B and soul"},{"key":"music_pop","label":"Pop"}],"signature":{"seed":"0000000000000002","data":"b02e44f9d7b744e9"}})");
     REQUIRE(gen.get_interest(request("BR", 70, dasmig::sex::female), 3).to_json() == R"({"country":"BR","religion":"Christian","religion_group":"christian","hobbies":[{"key":"board_games","label":"Board games"},{"key":"writing","label":"Writing"},{"key":"collecting","label":"Collecting"}],"films":[{"key":"film_romance","label":"Romance"},{"key":"film_drama","label":"Drama"}],"games":[{"key":"game_sports","label":"Sports"},{"key":"game_simulation","label":"Simulation"}],"books":[{"key":"book_history","label":"History"},{"key":"book_romance","label":"Romance"}],"music":[{"key":"music_country","label":"Country"},{"key":"music_classical","label":"Classical"}],"signature":{"seed":"0000000000000003","data":"b02e44f9d7b744e9"}})");
-    REQUIRE(gen.get_interest(std::uint64_t{4}).to_json() == R"({"country":"MZ","religion":"Other","religion_group":"other","hobbies":[{"key":"fishing","label":"Fishing"},{"key":"gardening","label":"Gardening"},{"key":"social_media","label":"Social media"}],"films":[{"key":"film_animation","label":"Animation"},{"key":"film_horror","label":"Horror"}],"games":[{"key":"game_shooter","label":"Shooter"},{"key":"game_strategy","label":"Strategy"}],"books":[{"key":"book_scifi","label":"Science fiction"},{"key":"book_thriller","label":"Thriller"}],"music":[{"key":"music_pop","label":"Pop"},{"key":"music_country","label":"Country"}],"signature":{"seed":"0000000000000004","data":"b02e44f9d7b744e9"}})");
+    REQUIRE(gen.get_interest({}, std::uint64_t{4}).to_json() == R"({"country":"MZ","religion":"Other","religion_group":"other","hobbies":[{"key":"fishing","label":"Fishing"},{"key":"gardening","label":"Gardening"},{"key":"social_media","label":"Social media"}],"films":[{"key":"film_animation","label":"Animation"},{"key":"film_horror","label":"Horror"}],"games":[{"key":"game_shooter","label":"Shooter"},{"key":"game_strategy","label":"Strategy"}],"books":[{"key":"book_scifi","label":"Science fiction"},{"key":"book_thriller","label":"Thriller"}],"music":[{"key":"music_pop","label":"Pop"},{"key":"music_country","label":"Country"}],"signature":{"seed":"0000000000000004","data":"b02e44f9d7b744e9"}})");
 
     std::uint64_t h = 0xcbf29ce484222325ULL;
     for (std::uint64_t s = 0; s < 10000; ++s)
     {
-        for (const char c : gen.get_interest(s).to_json())
+        for (const char c : gen.get_interest({}, s).to_json())
         {
             h ^= static_cast<unsigned char>(c);
             h *= 0x100000001b3ULL;
@@ -564,7 +624,7 @@ TEST_CASE("extend overrides, adds and removes religion rows", "[extend]")
     auto gen = make_loaded_generator();
     const auto base_countries = gen.country_count();
     const auto base_hash = gen.data_hash();
-    const auto before = gen.get_interest("US", std::uint64_t{7});
+    const auto before = gen.get_interest({.country = "US"}, std::uint64_t{7});
 
     // A layer that makes the US all "Pastafarian" and adds a new country.
     std::string layer = "country_code\treligion\tgroup\tweight\n";
@@ -580,19 +640,19 @@ TEST_CASE("extend overrides, adds and removes religion rows", "[extend]")
     REQUIRE(gen.data_hash() != base_hash);
     REQUIRE(gen.layers(table::religion).size() == 2);
     REQUIRE(gen.layers(table::interests).size() == 1);
-    const auto after = gen.get_interest("US", std::uint64_t{7});
+    const auto after = gen.get_interest({.country = "US"}, std::uint64_t{7});
     REQUIRE(after.religion == "Pastafarian");
     REQUIRE(after.signature().data == gen.data_hash());
-    REQUIRE(gen.get_interest("XX", std::uint64_t{7}).religion == "Flying Spaghetti");
+    REQUIRE(gen.get_interest({.country = "XX"}, std::uint64_t{7}).religion == "Flying Spaghetti");
 
     gen.extend_from_string(table::religion, "country_code\treligion\tdisabled\nXX\tFlying Spaghetti\t1\n", "remove.tsv");
     REQUIRE(gen.country_count() == base_countries);
-    REQUIRE_THROWS_AS(gen.get_interest("XX", std::uint64_t{7}), std::invalid_argument);
+    REQUIRE_THROWS_AS(gen.get_interest({.country = "XX"}, std::uint64_t{7}), std::invalid_argument);
 
     // Reloading the base drops every layer.
     REQUIRE(gen.load(dasmig::dataset::lite));
     REQUIRE(gen.data_hash() == base_hash);
-    REQUIRE(gen.get_interest("US", std::uint64_t{7}).to_json() == before.to_json());
+    REQUIRE(gen.get_interest({.country = "US"}, std::uint64_t{7}).to_json() == before.to_json());
 }
 
 TEST_CASE("extend adds and removes hobbies", "[extend]")
@@ -604,7 +664,7 @@ TEST_CASE("extend adds and removes hobbies", "[extend]")
     bool seen = false;
     for (std::uint64_t s = 0; s < 20 && !seen; ++s)
     {
-        for (const auto& h : gen.get_interest("US", s).hobbies) seen = seen || h.key == "zorbing";
+        for (const auto& h : gen.get_interest({.country = "US"}, s).hobbies) seen = seen || h.key == "zorbing";
     }
     REQUIRE(seen);
     gen.extend_from_string(table::interests, "kind\tkey\tdisabled\nhobby\tzorbing\t1\n", "remove.tsv");
@@ -615,9 +675,9 @@ TEST_CASE("layer order matters: later layers win", "[extend]")
 {
     auto gen = make_small_generator();
     gen.extend_from_string(table::religion, "country_code\treligion\tgroup\tweight\nXB\tDelta\tother\t0\nXB\tFoxtrot\tother\t1\n", "one.tsv");
-    REQUIRE(gen.get_interest("XB", std::uint64_t{1}).religion == "Foxtrot");
+    REQUIRE(gen.get_interest({.country = "XB"}, std::uint64_t{1}).religion == "Foxtrot");
     gen.extend_from_string(table::religion, "country_code\treligion\tgroup\tweight\nXB\tDelta\tother\t1\nXB\tFoxtrot\tother\t0\n", "two.tsv");
-    REQUIRE(gen.get_interest("XB", std::uint64_t{1}).religion == "Delta");
+    REQUIRE(gen.get_interest({.country = "XB"}, std::uint64_t{1}).religion == "Delta");
 }
 
 TEST_CASE("a bad layer is rejected and leaves the data unchanged", "[extend][errors]")

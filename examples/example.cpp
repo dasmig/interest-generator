@@ -39,11 +39,12 @@ int main()
     print(gen.get_interest({.country = "BR", .age = 70, .person_sex = dasmig::sex::male}));
 
     std::cout << "\nA random person (country, age and sex unknown):\n";
-    print(gen.get_interest());
+    print(gen.get_interest({}));
 
     std::cout << "\nSeed 42 in India, twice:\n";
-    const auto a = gen.get_interest("IN", std::uint64_t{42});
-    const auto b = gen.get_interest("IN", std::uint64_t{42});
+    const dasmig::interest_request request{.country = "IN"};
+    const auto a = gen.get_interest(request, std::uint64_t{42});
+    const auto b = gen.get_interest(request, std::uint64_t{42});
     std::cout << "  " << a.to_json() << '\n'
               << "  " << b.to_json() << '\n';
 
@@ -53,7 +54,7 @@ int main()
                            "example.tsv");
     for (int i = 0; i < 3; ++i)
     {
-        print(gen.get_interest("IS"));
+        print(gen.get_interest({.country = "IS"}));
     }
     return 0;
 }

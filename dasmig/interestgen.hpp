@@ -52,7 +52,11 @@ struct interest_item
     std::string category; ///< Grouping such as "sport" or "film"; may be empty.
 };
 
-/// @brief What to generate an interest for. Every field is optional.
+/// @brief Per-call generation choices. Every field has a default.
+///
+/// Pass an empty request for a random country, unknown age and sex,
+/// three hobbies and two genres per medium. Requests do not change
+/// the generator's configuration.
 struct interest_request
 {
     std::string_view country{};        ///< ISO 3166-1 alpha-2 code; empty draws a country (uniform over those loaded).
@@ -226,7 +230,7 @@ class intg
     // -- Generation -------------------------------------------------------
 
     /// @brief Generate a random interest for a request.
-    /// @param request Country, age, sex and counts, all optional.
+    /// @param request Country, age, sex and counts. Use `{}` for defaults.
     /// @return The interest.
     /// @throws std::runtime_error If no data has been loaded.
     /// @throws std::invalid_argument If the country has no data, or every
@@ -238,9 +242,10 @@ class intg
     }
 
     /// @brief Generate a deterministic interest for a request.
-    /// @param request Country, age, sex and counts, all optional.
+    /// @param request Country, age, sex and counts. Use `{}` for defaults.
     /// @param call_seed Seed; the same seed, request and data give the same
-    ///        interest.
+    ///        interest, independent of prior calls. Does not touch the
+    ///        instance's random engine.
     /// @return The interest.
     /// @throws std::runtime_error If no data has been loaded.
     /// @throws std::invalid_argument As for the unseeded overload.
@@ -248,70 +253,6 @@ class intg
                                         std::uint64_t call_seed) const
     {
         return generate_(request, call_seed);
-    }
-
-    /// @brief Generate a random interest for a specific country.
-    /// @param cca2 ISO 3166-1 alpha-2 country code (e.g. "US", "BR").
-    /// @return The interest (age and sex unknown, default counts).
-    /// @throws std::runtime_error If no data has been loaded.
-    /// @throws std::invalid_argument If the country has no data, or every
-    ///         share of it has weight 0.
-    [[nodiscard]] interest get_interest(std::string_view cca2)
-    {
-        return generate_({.country = cca2}, draw_seed_());
-    }
-
-    /// @brief Generate a deterministic interest for a specific country.
-    /// @param cca2 ISO 3166-1 alpha-2 country code.
-    /// @param call_seed Seed; the same seed, country and data give the same
-    ///        interest.
-    /// @return The interest.
-    /// @throws std::runtime_error If no data has been loaded.
-    /// @throws std::invalid_argument If the country has no data, or every
-    ///         share of it has weight 0.
-    [[nodiscard]] interest get_interest(std::string_view cca2,
-                                        std::uint64_t call_seed) const
-    {
-        return generate_({.country = cca2}, call_seed);
-    }
-
-    /// @brief Generate a random interest from a random country.
-    /// @return The interest.
-    /// @throws std::runtime_error If no data has been loaded.
-    /// @throws std::invalid_argument If no country has a positive weight.
-    [[nodiscard]] interest get_interest()
-    {
-        return generate_({}, draw_seed_());
-    }
-
-    /// @brief Generate a deterministic interest from a random country.
-    /// @param call_seed Seed.
-    /// @return The interest.
-    /// @throws std::runtime_error If no data has been loaded.
-    /// @throws std::invalid_argument If no country has a positive weight.
-    [[nodiscard]] interest get_interest(std::uint64_t call_seed) const
-    {
-        return generate_({}, call_seed);
-    }
-
-    // -- Seeding ----------------------------------------------------------
-
-    /// @brief Seed the internal random engine for deterministic
-    ///        sequences.
-    /// @param seed_value Seed.
-    /// @return `*this`.
-    intg& seed(std::uint64_t seed_value)
-    {
-        _engine.seed(seed_value);
-        return *this;
-    }
-
-    /// @brief Reseed the engine with a non-deterministic source.
-    /// @return `*this`.
-    intg& unseed()
-    {
-        _engine.unseed();
-        return *this;
     }
 
     // -- Queries ----------------------------------------------------------
