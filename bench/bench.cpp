@@ -23,5 +23,9 @@ int main(int argc, char** argv)
         return gen.get_interest({}, seed).to_json();
     });
 
+    run.batches("get_interest_batch", [&](std::size_t count, std::size_t threads, std::uint64_t seed) {
+        return gen.get_interest_batch({}, {.count = count, .threads = threads}, seed);
+    });
+
     return run.finish();
 }
