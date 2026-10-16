@@ -541,6 +541,8 @@ class intg
         std::array<std::map<std::string, std::uint32_t, std::less<>>, dimension_count_> value_ids;
         std::vector<target_factors> targets;
         std::array<std::vector<std::array<std::uint32_t, 2>>, kind_count_> item_targets;
+        // Every item of a kind, by index; a draw passes each person's weights.
+        std::array<core::weighted_table<std::size_t>, kind_count_> item_tables;
         std::vector<band_data> bands;                    // in table row order
         std::map<std::string, std::string, std::less<>> region_of;
         std::vector<std::string> unresolved;
@@ -734,6 +736,7 @@ class intg
             auto [kind, item] = parse_item_(row);
             known[item.key] = true;
             if (!item.cls.empty()) known["class:" + item.cls] = true;
+            m.item_tables.at(kind).add(m.items.at(kind).size(), item.weight);
             m.items.at(kind).push_back(std::move(item));
         }
         // A later row for the same target, dimension and value replaces an
@@ -856,26 +859,31 @@ class intg
         return w;
     }
 
-    // Draw up to n items of one kind without replacement.
+    // Draw up to n items of one kind without replacement. The table of every
+    // item was built at load; this person's weight replaces each base weight,
+    // and an item outside its ages or already drawn weighs 0. A 0 adds
+    // nothing to the cumulative sums and is never picked, so the draws are
+    // those of a table of the eligible items alone. @p weights is scratch.
     void draw_items_(std::size_t kind, std::size_t n, const person& p, core::rng& r,
-                     std::vector<interest_item>& out) const
+                     std::vector<double>& weights, std::vector<interest_item>& out) const
     {
+        if (n == 0) return;
         const auto& items = _model.items.at(kind);
-        core::weighted_table<std::size_t> table;
+        weights.assign(items.size(), 0.0);
         for (std::size_t i = 0; i < items.size(); ++i)
         {
             const auto& item = items[i];
             if (p.age && (*p.age < item.min_age || *p.age > item.max_age)) continue;
-            table.add(i, item_weight_(kind, i, p));
+            weights[i] = item_weight_(kind, i, p);
         }
-        std::vector<bool> taken(items.size(), false);
-        const auto adjust = [&taken](const std::size_t& i, double base) { return taken[i] ? 0.0 : base; };
+        const auto& table = _model.item_tables.at(kind);
+        const auto adjust = [&weights](const std::size_t& i, double /*base*/) { return weights[i]; };
         for (std::size_t k = 0; k < n; ++k)
         {
             const auto picked = table.try_pick_index(r, adjust);
             if (!picked) break;
             const std::size_t i = table.entries()[*picked].value;
-            taken[i] = true;
+            weights[i] = 0.0;
             out.push_back({.key = items[i].key, .label = items[i].label, .category = items[i].category});
         }
     }
@@ -936,10 +944,11 @@ class intg
 
         resolve_ids_(p);
         std::array<std::vector<interest_item>*, kind_count_> out{&v.hobbies, &v.films, &v.games, &v.books, &v.music};
+        std::vector<double> weights;
         for (std::size_t k = 0; k < kind_count_; ++k)
         {
             auto r = call.split(kind_streams_[k]);
-            draw_items_(k, k == 0 ? req.hobbies : req.media, p, r, *out.at(k));
+            draw_items_(k, k == 0 ? req.hobbies : req.media, p, r, weights, *out.at(k));
         }
         return v;
     }
