@@ -19,7 +19,7 @@
 #include <string>
 #include <string_view>
 #include <system_error>
-#include <unordered_map>
+#include <limits>
 #include <utility>
 #include <vector>
 
@@ -497,6 +497,14 @@ class intg
 
     enum class dimension : std::uint8_t { sex, age_band, region, country, religion };
     static constexpr std::array<std::string_view, 5> dimension_names_{"sex", "age_band", "region", "country", "religion"};
+    static constexpr std::size_t dimension_count_ = dimension_names_.size();
+
+    // Marks a value no factor uses, and an item without a class.
+    static constexpr std::uint32_t none_ = std::numeric_limits<std::uint32_t>::max();
+
+    // A target's factors (an item key or "class:<cls>"): per dimension, the
+    // value ids it has a factor for. Rows are few per target, so a scan wins.
+    using target_factors = std::array<std::vector<std::pair<std::uint32_t, double>>, dimension_count_>;
 
     struct item_data
     {
@@ -527,21 +535,16 @@ class intg
         std::map<std::string, country_data, std::less<>> countries;
         std::vector<std::string> codes; // countries with a positive total, sorted
         std::array<std::vector<item_data>, kind_count_> items;
-        std::unordered_map<std::string, double> factors; // target, dimension, value -> factor
+        // Affinity factors, resolved at load so a draw does no string work:
+        // each dimension's values get an id, each target its factors by id,
+        // and each item its key's and class's target (none_ when absent).
+        std::array<std::map<std::string, std::uint32_t, std::less<>>, dimension_count_> value_ids;
+        std::vector<target_factors> targets;
+        std::array<std::vector<std::array<std::uint32_t, 2>>, kind_count_> item_targets;
         std::vector<band_data> bands;                    // in table row order
         std::map<std::string, std::string, std::less<>> region_of;
         std::vector<std::string> unresolved;
     };
-
-    static std::string factor_key_(std::string_view target, dimension d, std::string_view value)
-    {
-        std::string k;
-        k.reserve(target.size() + value.size() + 12);
-        k.append(target).push_back('\x1f');
-        k.append(dimension_names_[static_cast<std::size_t>(d)]).push_back('\x1f');
-        k.append(value);
-        return k;
-    }
 
     static std::size_t kind_of_(const core::tsv_row& row)
     {
@@ -733,6 +736,10 @@ class intg
             if (!item.cls.empty()) known["class:" + item.cls] = true;
             m.items.at(kind).push_back(std::move(item));
         }
+        // A later row for the same target, dimension and value replaces an
+        // earlier one.
+        std::map<std::string, std::array<std::map<std::string, double, std::less<>>, dimension_count_>, std::less<>>
+            affinity;
         for (const auto& row : tbls.at(index_(table::affinity)).rows())
         {
             const auto a = parse_affinity_(row);
@@ -741,7 +748,34 @@ class intg
                 m.unresolved.push_back(std::format("{}:{}: unknown target '{}'", row.source(), row.line(), a.target));
                 continue;
             }
-            m.factors[factor_key_(a.target, a.dim, a.value)] = a.factor;
+            affinity[a.target].at(static_cast<std::size_t>(a.dim))[a.value] = a.factor;
+        }
+        std::map<std::string_view, std::uint32_t, std::less<>> target_ids;
+        for (const auto& [target, dims] : affinity)
+        {
+            target_ids.emplace(target, static_cast<std::uint32_t>(m.targets.size()));
+            auto& factors = m.targets.emplace_back();
+            for (std::size_t d = 0; d < dimension_count_; ++d)
+            {
+                auto& ids = m.value_ids.at(d);
+                for (const auto& [value, factor] : dims.at(d))
+                {
+                    const auto id = ids.try_emplace(value, static_cast<std::uint32_t>(ids.size())).first->second;
+                    factors.at(d).emplace_back(id, factor);
+                }
+            }
+        }
+        const auto target_id = [&](std::string_view target) {
+            const auto it = target_ids.find(target);
+            return it == target_ids.end() ? none_ : it->second;
+        };
+        for (std::size_t k = 0; k < kind_count_; ++k)
+        {
+            for (const auto& item : m.items.at(k))
+            {
+                m.item_targets.at(k).push_back(
+                    {target_id(item.key), item.cls.empty() ? none_ : target_id("class:" + item.cls)});
+            }
         }
         for (const auto& row : tbls.at(index_(table::age_bands)).rows()) m.bands.push_back(parse_band_(row));
         for (const auto& row : tbls.at(index_(table::regions)).rows())
@@ -769,34 +803,55 @@ class intg
         std::string band;         // empty when unknown
         std::string religion;     // group of the drawn religion
         std::optional<int> age;
+        std::array<std::uint32_t, dimension_count_> ids{}; // value ids, from resolve_ids_()
     };
 
-    [[nodiscard]] double factor_(std::string_view target, dimension d, std::string_view value) const
+    // The person's value id in each dimension: none_ for an empty value
+    // (no factor applies) or a value no factor uses. The country is looked
+    // up even when empty, as a country row always was.
+    void resolve_ids_(person& p) const
     {
-        if (value.empty()) return 1.0;
-        const auto it = _model.factors.find(factor_key_(target, d, value));
-        return it == _model.factors.end() ? 1.0 : it->second;
+        const auto id = [this](dimension d, std::string_view value, bool empty_matches) {
+            if (value.empty() && !empty_matches) return none_;
+            const auto& ids = _model.value_ids.at(static_cast<std::size_t>(d));
+            const auto it = ids.find(value);
+            return it == ids.end() ? none_ : it->second;
+        };
+        p.ids = {id(dimension::sex, p.sex, false), id(dimension::age_band, p.band, false),
+                 id(dimension::region, p.region, false), id(dimension::country, p.cca2, true),
+                 id(dimension::religion, p.religion, false)};
     }
 
-    // A country row replaces the region row of the same target.
-    [[nodiscard]] double geo_factor_(std::string_view target, const person& p) const
+    [[nodiscard]] static const double* find_factor_(const target_factors& t, dimension d, const person& p)
     {
-        const auto c = _model.factors.find(factor_key_(target, dimension::country, p.cca2));
-        if (c != _model.factors.end()) return c->second;
-        return factor_(target, dimension::region, p.region);
-    }
-
-    [[nodiscard]] double item_weight_(const item_data& i, const person& p) const
-    {
-        double w = i.weight;
-        const std::string class_target = i.cls.empty() ? std::string{} : "class:" + i.cls;
-        for (const std::string_view target : {std::string_view{i.key}, std::string_view{class_target}})
+        const auto i = static_cast<std::size_t>(d);
+        const auto id = p.ids.at(i);
+        if (id == none_) return nullptr;
+        for (const auto& [value, factor] : t.at(i))
         {
-            if (target.empty()) continue;
-            w *= factor_(target, dimension::sex, p.sex);
-            w *= factor_(target, dimension::age_band, p.band);
-            w *= factor_(target, dimension::religion, p.religion);
-            w *= geo_factor_(target, p);
+            if (value == id) return &factor;
+        }
+        return nullptr;
+    }
+
+    // The weight times the key's and then the class's factors for sex, age
+    // band, religion and place (a country row replaces the region row of the
+    // same target). A missing factor is 1, so it is skipped: multiplying by
+    // 1.0 is exact, and the order of the others is kept, so the weight is
+    // the same bits as when every factor was looked up by name.
+    [[nodiscard]] double item_weight_(std::size_t kind, std::size_t index, const person& p) const
+    {
+        double w = _model.items.at(kind)[index].weight;
+        for (const auto t : _model.item_targets.at(kind)[index])
+        {
+            if (t == none_) continue;
+            const auto& factors = _model.targets[t];
+            for (const auto d : {dimension::sex, dimension::age_band, dimension::religion})
+            {
+                if (const auto* f = find_factor_(factors, d, p)) w *= *f;
+            }
+            if (const auto* c = find_factor_(factors, dimension::country, p)) w *= *c;
+            else if (const auto* r = find_factor_(factors, dimension::region, p)) w *= *r;
         }
         return w;
     }
@@ -811,7 +866,7 @@ class intg
         {
             const auto& item = items[i];
             if (p.age && (*p.age < item.min_age || *p.age > item.max_age)) continue;
-            table.add(i, item_weight_(item, p));
+            table.add(i, item_weight_(kind, i, p));
         }
         std::vector<bool> taken(items.size(), false);
         const auto adjust = [&taken](const std::size_t& i, double base) { return taken[i] ? 0.0 : base; };
@@ -879,6 +934,7 @@ class intg
             }
         }
 
+        resolve_ids_(p);
         std::array<std::vector<interest_item>*, kind_count_> out{&v.hobbies, &v.films, &v.games, &v.books, &v.music};
         for (std::size_t k = 0; k < kind_count_; ++k)
         {
