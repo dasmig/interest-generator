@@ -2,7 +2,7 @@
 # Run: doxygen Doxyfile
 
 PROJECT_NAME           = "Interest Generator"
-PROJECT_NUMBER         = 2.0.0
+PROJECT_NUMBER         = 2.1.0
 PROJECT_BRIEF          = "Religion, hobbies and favourite media by country, age and sex for C++23"
 PROJECT_LOGO           =
 
