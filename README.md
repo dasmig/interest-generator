@@ -19,11 +19,11 @@ Religion, hobbies and favourite media by country, age and sex. A call draws a **
 
 - **Country-based Religion**. Each country's shares come from the CIA World Factbook, with hand-written rows where it has none (see [Data and Method](doc/data.md) for what is estimated).
 
-- **Batch Generation**. Generate thousands of results from one seed, on several threads with the same output for any thread count, optionally unique by a key, and stream them as JSON Lines or CSV (see the usage guide).
-
 - **Hobbies and Media by Sex, Age and Country**. An item's weight is multiplied by factors for the person's sex, age band, country or region, and religion. The sex, age and country differences in activities are measured (Eurostat time-use surveys, Europe), the catalogue and the genre tastes are curated, and each factor row says which.
 
 - **Request-First Generation**. All per-call choices live in `interest_request`; use `get_interest(request)` for random generation or `get_interest(request, seed)` for reproducible results. `interest::seed()` records the seed for replay.
+
+- **Batch Generation**. Generate thousands of results from one seed, on several threads with the same output for any thread count, optionally unique by a key, and stream them as JSON Lines or CSV (see the usage guide).
 
 - **Identical Everywhere**. A seed gives the same result on every compiler, standard library and CPU (GCC, Clang, MSVC, Emscripten; x86-64 and ARM64), checked by known-answer tests.
 
@@ -94,6 +94,24 @@ Tested with:
 |-----------|---------|---------|---------|
 | [dasmig-core](https://github.com/dasmig/dasmig-core) | 1.0 | Yes (`core.hpp`, `core/`) | Platform-independent random engine and distributions, data layers, JSON |
 | [Catch2](https://github.com/catchorg/Catch2) | 3.x | Yes (amalgamated) | Unit testing |
+
+## Related Libraries
+
+| Library | Description |
+|---------|-------------|
+| [address-generator](https://github.com/dasmig/address-generator) | Postal addresses with real streets by place |
+| [biodata-generator](https://github.com/dasmig/biodata-generator) | Procedural human physical characteristics |
+| [birth-generator](https://github.com/dasmig/birth-generator) | Demographically plausible birthdays |
+| [city-generator](https://github.com/dasmig/city-generator) | Weighted city selection by population |
+| [country-generator](https://github.com/dasmig/country-generator) | Weighted country selection by population |
+| [email-generator](https://github.com/dasmig/email-generator) | Email addresses in each country's style |
+| [entity-generator](https://github.com/dasmig/entity-generator) | ECS-based entity generation |
+| [name-generator](https://github.com/dasmig/name-generator) | Culturally appropriate full names |
+| [nickname-generator](https://github.com/dasmig/nickname-generator) | Gamer-style nicknames |
+| [occupation-generator](https://github.com/dasmig/occupation-generator) | Employment status, education and occupation by country, age and sex |
+| [persona-generator](https://github.com/dasmig/persona-generator) | Complete characters composed from the other generators |
+| [phone-generator](https://github.com/dasmig/phone-generator) | Phone numbers valid in each country's numbering plan |
+| [trait-generator](https://github.com/dasmig/trait-generator) | Personality traits with conflicts, synergies and Big Five axes |
 
 ## License
 
