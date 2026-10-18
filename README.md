@@ -57,7 +57,7 @@ const dasmig::interest_request request{.country = "BR", .age = 34, .person_sex =
 auto v = gen.get_interest(request);
 std::cout << v << '\n';           // the religion, e.g. "Christian"
 for (const auto& h : v.hobbies) std::cout << h.label << '\n'; // also films, games, books, music
-std::cout << v.to_json() << '\n'; // {"country":"BR","religion":...,"hobbies":[...],...,"signature":{...}}
+std::cout << v.to_json() << '\n'; // {"country_code":"BR","religion":...,"hobbies":[...],...,"signature":{...}}
 
 // The same seed and request give the same result everywhere.
 auto again = gen.get_interest(request, v.seed());

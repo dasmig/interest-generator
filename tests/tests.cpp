@@ -571,10 +571,10 @@ TEST_CASE("known answers for fixed seeds", "[kat]")
     REQUIRE(gen.has_data());
     REQUIRE(gen.data_hash() == 0xb02e44f9d7b744e9ULL);
 
-    REQUIRE(gen.get_interest(request("US", 30, dasmig::sex::male), 1).to_json() == R"({"country":"US","religion":"Unaffiliated","religion_group":"unaffiliated","hobbies":[{"key":"hosting_dinners","label":"Hosting dinners"},{"key":"football","label":"Football"},{"key":"chess","label":"Chess"}],"films":[{"key":"film_horror","label":"Horror"},{"key":"film_documentary","label":"Documentary"}],"games":[{"key":"game_sports","label":"Sports"},{"key":"game_puzzle","label":"Puzzle"}],"books":[{"key":"book_fantasy","label":"Fantasy"},{"key":"book_crime","label":"Crime and mystery"}],"music":[{"key":"music_rock","label":"Rock"},{"key":"music_metal","label":"Metal"}],"signature":{"seed":"0000000000000001","data":"b02e44f9d7b744e9"}})");
-    REQUIRE(gen.get_interest(request("JP", 16, dasmig::sex::female), 2).to_json() == R"({"country":"JP","religion":"Buddhist","religion_group":"buddhist","hobbies":[{"key":"languages","label":"Learning languages"},{"key":"gardening","label":"Gardening"},{"key":"comics","label":"Comics and manga"}],"films":[{"key":"film_scifi","label":"Science fiction"},{"key":"film_comedy","label":"Comedy"}],"games":[{"key":"game_action_adventure","label":"Action-adventure"},{"key":"game_sandbox","label":"Sandbox and building"}],"books":[{"key":"book_romance","label":"Romance"},{"key":"book_crime","label":"Crime and mystery"}],"music":[{"key":"music_rnb","label":"R&B and soul"},{"key":"music_pop","label":"Pop"}],"signature":{"seed":"0000000000000002","data":"b02e44f9d7b744e9"}})");
-    REQUIRE(gen.get_interest(request("BR", 70, dasmig::sex::female), 3).to_json() == R"({"country":"BR","religion":"Christian","religion_group":"christian","hobbies":[{"key":"board_games","label":"Board games"},{"key":"writing","label":"Writing"},{"key":"collecting","label":"Collecting"}],"films":[{"key":"film_romance","label":"Romance"},{"key":"film_drama","label":"Drama"}],"games":[{"key":"game_sports","label":"Sports"},{"key":"game_simulation","label":"Simulation"}],"books":[{"key":"book_history","label":"History"},{"key":"book_romance","label":"Romance"}],"music":[{"key":"music_country","label":"Country"},{"key":"music_classical","label":"Classical"}],"signature":{"seed":"0000000000000003","data":"b02e44f9d7b744e9"}})");
-    REQUIRE(gen.get_interest({}, std::uint64_t{4}).to_json() == R"({"country":"MZ","religion":"Other","religion_group":"other","hobbies":[{"key":"fishing","label":"Fishing"},{"key":"gardening","label":"Gardening"},{"key":"social_media","label":"Social media"}],"films":[{"key":"film_animation","label":"Animation"},{"key":"film_horror","label":"Horror"}],"games":[{"key":"game_shooter","label":"Shooter"},{"key":"game_strategy","label":"Strategy"}],"books":[{"key":"book_scifi","label":"Science fiction"},{"key":"book_thriller","label":"Thriller"}],"music":[{"key":"music_pop","label":"Pop"},{"key":"music_country","label":"Country"}],"signature":{"seed":"0000000000000004","data":"b02e44f9d7b744e9"}})");
+    REQUIRE(gen.get_interest(request("US", 30, dasmig::sex::male), 1).to_json() == R"({"country_code":"US","religion":"Unaffiliated","religion_group":"unaffiliated","hobbies":[{"key":"hosting_dinners","label":"Hosting dinners"},{"key":"football","label":"Football"},{"key":"chess","label":"Chess"}],"films":[{"key":"film_horror","label":"Horror"},{"key":"film_documentary","label":"Documentary"}],"games":[{"key":"game_sports","label":"Sports"},{"key":"game_puzzle","label":"Puzzle"}],"books":[{"key":"book_fantasy","label":"Fantasy"},{"key":"book_crime","label":"Crime and mystery"}],"music":[{"key":"music_rock","label":"Rock"},{"key":"music_metal","label":"Metal"}],"signature":{"seed":"0000000000000001","data":"b02e44f9d7b744e9"}})");
+    REQUIRE(gen.get_interest(request("JP", 16, dasmig::sex::female), 2).to_json() == R"({"country_code":"JP","religion":"Buddhist","religion_group":"buddhist","hobbies":[{"key":"languages","label":"Learning languages"},{"key":"gardening","label":"Gardening"},{"key":"comics","label":"Comics and manga"}],"films":[{"key":"film_scifi","label":"Science fiction"},{"key":"film_comedy","label":"Comedy"}],"games":[{"key":"game_action_adventure","label":"Action-adventure"},{"key":"game_sandbox","label":"Sandbox and building"}],"books":[{"key":"book_romance","label":"Romance"},{"key":"book_crime","label":"Crime and mystery"}],"music":[{"key":"music_rnb","label":"R&B and soul"},{"key":"music_pop","label":"Pop"}],"signature":{"seed":"0000000000000002","data":"b02e44f9d7b744e9"}})");
+    REQUIRE(gen.get_interest(request("BR", 70, dasmig::sex::female), 3).to_json() == R"({"country_code":"BR","religion":"Christian","religion_group":"christian","hobbies":[{"key":"board_games","label":"Board games"},{"key":"writing","label":"Writing"},{"key":"collecting","label":"Collecting"}],"films":[{"key":"film_romance","label":"Romance"},{"key":"film_drama","label":"Drama"}],"games":[{"key":"game_sports","label":"Sports"},{"key":"game_simulation","label":"Simulation"}],"books":[{"key":"book_history","label":"History"},{"key":"book_romance","label":"Romance"}],"music":[{"key":"music_country","label":"Country"},{"key":"music_classical","label":"Classical"}],"signature":{"seed":"0000000000000003","data":"b02e44f9d7b744e9"}})");
+    REQUIRE(gen.get_interest({}, std::uint64_t{4}).to_json() == R"({"country_code":"MZ","religion":"Other","religion_group":"other","hobbies":[{"key":"fishing","label":"Fishing"},{"key":"gardening","label":"Gardening"},{"key":"social_media","label":"Social media"}],"films":[{"key":"film_animation","label":"Animation"},{"key":"film_horror","label":"Horror"}],"games":[{"key":"game_shooter","label":"Shooter"},{"key":"game_strategy","label":"Strategy"}],"books":[{"key":"book_scifi","label":"Science fiction"},{"key":"book_thriller","label":"Thriller"}],"music":[{"key":"music_pop","label":"Pop"},{"key":"music_country","label":"Country"}],"signature":{"seed":"0000000000000004","data":"b02e44f9d7b744e9"}})");
 
     std::uint64_t h = 0xcbf29ce484222325ULL;
     for (std::uint64_t s = 0; s < 10000; ++s)
@@ -585,7 +585,7 @@ TEST_CASE("known answers for fixed seeds", "[kat]")
             h *= 0x100000001b3ULL;
         }
     }
-    REQUIRE(h == 0xbf4d37e1cb1d7b59ULL);
+    REQUIRE(h == 0xecf56ce30cb884e3ULL);
 }
 
 // ---------------------------------------------------------------------------
@@ -600,7 +600,7 @@ TEST_CASE("to_json and signature", "[json]")
     REQUIRE(v.seed() == 99);
     REQUIRE(v.signature().data == gen.data_hash());
     const auto json = v.to_json();
-    REQUIRE(json.starts_with(R"({"country":"DE","religion":")"));
+    REQUIRE(json.starts_with(R"({"country_code":"DE","religion":")"));
     REQUIRE(json.find(R"("hobbies":[{"key":")") != std::string::npos);
     for (const auto* name : {R"("films":[)", R"("games":[)", R"("books":[)", R"("music":[)"})
     {
@@ -763,7 +763,7 @@ TEST_CASE("compiled-in data needs no files and matches them", "[embed]")
     REQUIRE(gen.layers(table::religion).front().source == "embedded:lite/religion.tsv");
     REQUIRE(gen.data_hash() == 0xb02e44f9d7b744e9ULL); // same as the file
     REQUIRE(gen.get_interest(request("US", 30, dasmig::sex::male), 1).to_json() ==
-            R"({"country":"US","religion":"Unaffiliated","religion_group":"unaffiliated","hobbies":[{"key":"hosting_dinners","label":"Hosting dinners"},{"key":"football","label":"Football"},{"key":"chess","label":"Chess"}],"films":[{"key":"film_horror","label":"Horror"},{"key":"film_documentary","label":"Documentary"}],"games":[{"key":"game_sports","label":"Sports"},{"key":"game_puzzle","label":"Puzzle"}],"books":[{"key":"book_fantasy","label":"Fantasy"},{"key":"book_crime","label":"Crime and mystery"}],"music":[{"key":"music_rock","label":"Rock"},{"key":"music_metal","label":"Metal"}],"signature":{"seed":"0000000000000001","data":"b02e44f9d7b744e9"}})");
+            R"({"country_code":"US","religion":"Unaffiliated","religion_group":"unaffiliated","hobbies":[{"key":"hosting_dinners","label":"Hosting dinners"},{"key":"football","label":"Football"},{"key":"chess","label":"Chess"}],"films":[{"key":"film_horror","label":"Horror"},{"key":"film_documentary","label":"Documentary"}],"games":[{"key":"game_sports","label":"Sports"},{"key":"game_puzzle","label":"Puzzle"}],"books":[{"key":"book_fantasy","label":"Fantasy"},{"key":"book_crime","label":"Crime and mystery"}],"music":[{"key":"music_rock","label":"Rock"},{"key":"music_metal","label":"Metal"}],"signature":{"seed":"0000000000000001","data":"b02e44f9d7b744e9"}})");
 }
 #endif
 
@@ -838,5 +838,5 @@ TEST_CASE("interest batch: known answer of 10,000 items", "[batch][kat]")
     gen.for_each_interest(request, {.count = 10000, .threads = 4}, 1,
                         [&](std::uint64_t, const dasmig::interest& item)
                         { hash = dasmig::core::hash_combine(hash, dasmig::core::fnv1a64(item.to_json())); });
-    REQUIRE(hash == 0xa12454318a6a2bd9ULL);
+    REQUIRE(hash == 0xecdf4522f5e41642ULL);
 }

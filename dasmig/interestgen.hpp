@@ -107,7 +107,7 @@ class interest
     void to_json(core::json_writer& w) const
     {
         w.begin_object()
-            .field("country", country_code)
+            .field("country_code", country_code)
             .field("religion", religion)
             .field("religion_group", religion_group);
         write_items_(w, "hobbies", hobbies);
@@ -122,7 +122,7 @@ class interest
 
     /// @brief This interest as a JSON document.
     /// @return Compact JSON, for example
-    ///   `{"country":"BR","religion":"...","religion_group":"...","hobbies":[{"key":"...","label":"..."}],...,"signature":{...}}`.
+    ///   `{"country_code":"BR","religion":"...","religion_group":"...","hobbies":[{"key":"...","label":"..."}],...,"signature":{...}}`.
     [[nodiscard]] std::string to_json() const
     {
         core::json_writer w;
