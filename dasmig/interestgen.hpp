@@ -32,20 +32,10 @@
 /// @author Diego Dasso Migotto (diegomigotto at hotmail dot com)
 /// @see See doc/usage.md for the narrative tutorial.
 
-DASMIG_CORE_REQUIRE(1, 1);
+DASMIG_CORE_REQUIRE(1, 2);
 
 namespace dasmig
 {
-
-#ifndef DASMIG_SEX_DEFINED
-#define DASMIG_SEX_DEFINED
-/// @brief Biological sex.
-enum class sex : std::uint8_t
-{
-    male,  ///< Male.
-    female ///< Female.
-};
-#endif
 
 /// @brief One hobby or favourite genre in a result.
 struct interest_item
@@ -649,9 +639,7 @@ class intg
     static std::pair<std::string, religion_share> parse_share_(const core::tsv_row& row)
     {
         std::string cca2 = row.get<std::string>("country_code");
-        const bool code_ok = cca2.size() == 2 && cca2[0] >= 'A' && cca2[0] <= 'Z' &&
-                             cca2[1] >= 'A' && cca2[1] <= 'Z';
-        if (!code_ok) throw row.error("country_code", "expected two capital letters (ISO 3166-1 alpha-2)");
+        if (!core::is_alpha2(cca2)) throw row.error("country_code", "expected two capital letters (ISO 3166-1 alpha-2)");
         religion_share s;
         s.religion = row.get<std::string>("religion");
         s.group = row.get<std::string>("group");
@@ -692,7 +680,7 @@ class intg
         a.target = row.get<std::string>("target");
         a.dim = dimension_of_(row);
         a.value = row.get<std::string>("value");
-        if (a.dim == dimension::sex && a.value != "male" && a.value != "female")
+        if (a.dim == dimension::sex && !core::parse_sex(a.value))
         {
             throw row.error("value", std::format("expected male or female, got '{}'", a.value));
         }
@@ -982,7 +970,7 @@ class intg
         const auto it = _model.countries.find(cca2);
         if (it == _model.countries.end())
         {
-            throw std::invalid_argument(std::format("Unknown country code: {}", cca2));
+            throw core::unknown_country_error(cca2);
         }
         const auto& c = it->second;
         if (!(c.weights.total_weight() > 0.0))
@@ -1004,7 +992,7 @@ class intg
         p.religion = share.group;
         p.age = req.age ? std::optional<int>{*req.age} : std::nullopt;
         if (const auto rg = _model.region_of.find(cca2); rg != _model.region_of.end()) p.region = rg->second;
-        if (req.person_sex) p.sex = *req.person_sex == sex::male ? "male" : "female";
+        if (req.person_sex) p.sex = std::string{core::sex_name(*req.person_sex)};
         if (p.age && !_model.bands.empty())
         {
             const auto b = std::ranges::find_if(_model.bands, [&](const band_data& x) {
