@@ -23,6 +23,8 @@ Religion, hobbies and favourite media by country, age and sex. A call draws a **
 
 - **Request-First Generation**. All per-call choices live in `interest_request`; use `get_interest(request)` for random generation or `get_interest(request, seed)` for reproducible results. `interest::seed()` records the seed for replay.
 
+- **Deterministic Seeding**. `get_interest(request, seed)` is a pure function of the request, the seed and the data, and `interest::seed()` replays a previous result.
+
 - **Batch Generation**. Generate thousands of results from one seed, on several threads with the same output for any thread count, optionally unique by a key, and stream them as JSON Lines or CSV (see the usage guide).
 
 - **Identical Everywhere**. A seed gives the same result on every compiler, standard library and CPU (GCC, Clang, MSVC, Emscripten; x86-64 and ARM64), checked by known-answer tests.
